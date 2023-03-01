@@ -1,4 +1,5 @@
 import {
+  LocalFireDepartmentOutlined,
   Person2Outlined,
   SearchOutlined,
   ShoppingCartOutlined,
@@ -109,6 +110,24 @@ const MenuItem = styled.ul`
 
 const ListItem = styled.li`
   margin-right: 50px;
+  display: flex;
+  align-items: center;
+`;
+
+const Deals = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.border};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: 8px;
+  padding: 12px;
+`;
+
+const DealIcon = styled.span``;
+const DealText = styled.span`
+  font-size: 18px;
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const Header = () => {
@@ -149,11 +168,28 @@ const Header = () => {
       </Wrapper>
       <Wrapper type="menu">
         <MenuItem>
-          <ListItem><Link to="/">Home</Link></ListItem>
-          <ListItem><Link to="/about">About</Link></ListItem>
-          <ListItem>Shop</ListItem>
-          <ListItem>Contact</ListItem>
-          <ListItem>Home</ListItem>
+          <ListItem type="deals">
+            <Deals>
+              <DealIcon>
+                <LocalFireDepartmentOutlined />
+              </DealIcon>
+              <Link to="/">
+                <DealText>Deals</DealText>
+              </Link>
+            </Deals>
+          </ListItem>
+          <ListItem>
+            <Link to="/">Home</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/about">About</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/about">Contact</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/about">Mega Menu</Link>
+          </ListItem>
         </MenuItem>
       </Wrapper>
     </Container>
