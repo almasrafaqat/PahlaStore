@@ -140,23 +140,13 @@ const DropMenu = styled.ul`
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 `;
 
-const ItemList = styled.li`
-  list-style: none;
 
-  &:hover ${DropMenu} {
-    transition: all 0.3s ease;
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
-  }
-`;
 
 const ItemLink = styled(Link)`
   padding: 9px 15px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;
-  color: #f2f2f2;
   transition: all 0.3s ease;
 
   &:hover {
@@ -173,6 +163,25 @@ const MegaBox = styled.div`
   width: 100%;
   padding: 0px 30px;
   top: 85px;
+  opacity: 0;
+  visibility : hidden;
+`;
+
+const ItemList = styled.li`
+  list-style: none;
+
+  &:hover ${DropMenu }  {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover ${MegaBox }  {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
 `;
 
 const Content = styled.div`
