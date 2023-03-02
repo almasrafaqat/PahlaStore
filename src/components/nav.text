@@ -1,0 +1,199 @@
+/** Navbar Design */
+const Nav = styled.div`
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+
+  // background: #242526;
+`;
+
+
+const NavContainerWrapper = styled.div`
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const UlLinks = styled.ul`
+  display: inline-flex;
+`;
+
+const LI = styled.li`
+  list-style: none;
+
+  &:hover {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
+
+const LiLink = styled(Link)`
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #3a3b3c;
+  }
+`;
+
+
+const UlDropMenu = styled.ul`
+  position: absolute;
+  background: #242526;
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 1;
+  // visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+`;
+
+
+const MegaBox = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  // opacity: 0;
+  // visibility: hidden;
+`;
+
+
+const Content = styled.div`
+  // background: #242526;
+  padding: 25px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+`;
+
+
+const Row = styled.div`
+  width: calc(25% - 30px);
+  line-height: 45px;
+`;
+
+const HeaderTitle = styled.header`
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+`;
+
+const UlMegaLink = styled.ul`
+  margin-left: -40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+`;
+=========
+
+      <Nav>
+        <NavContainerWrapper>
+          <UlLinks>
+            <LI>
+              <LiLink to="/">Home</LiLink>
+            </LI>
+            <LI>
+              <LiLink to="/">About</LiLink>
+            </LI>
+            <LI>
+              <LiLink>Dropdown Menu</LiLink>
+              <UlDropMenu>
+                <LI>DopDown 1</LI>
+                <LI>DopDown 2</LI>
+                <LI>DopDown 3</LI>
+                <LI>DopDown 4</LI>
+              </UlDropMenu>
+            </LI>
+
+            <LI>
+              <LiLink>Mega Menu</LiLink>
+              <MegaBox>
+                <Content>
+                  <Row>
+                    <HeaderTitle>Design Services</HeaderTitle>
+                    <UlMegaLink>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                    </UlMegaLink>
+                  </Row>
+                  <Row>
+                    <HeaderTitle>Design Services</HeaderTitle>
+                    <UlMegaLink>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                    </UlMegaLink>
+                  </Row>
+                  <Row>
+                    <HeaderTitle>Design Services</HeaderTitle>
+                    <UlMegaLink>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                    </UlMegaLink>
+                  </Row>
+                  <Row>
+                    <HeaderTitle>Design Services</HeaderTitle>
+                    <UlMegaLink>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                      <LI>
+                        <LiLink>Graphics</LiLink>
+                      </LI>
+                    </UlMegaLink>
+                  </Row>
+                </Content>
+              </MegaBox>
+            </LI>
+          </UlLinks>
+        </NavContainerWrapper>
+      </Nav>
