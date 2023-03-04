@@ -7,9 +7,12 @@ import {
 import { Badge } from "@mui/material";
 import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
+import Nav from "../nav/nav.component";
 
 const Container = styled.div`
   height: 60px;
+  line-height: 60px;
+  margin-bottom: 70px;
 `;
 
 const Wrapper = styled.div`
@@ -34,7 +37,7 @@ const Center = styled.div`
   flex: 3;
 `;
 
-const SearchWrapper = styled.div`
+const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -55,13 +58,11 @@ const CategoryOption = styled.option`
   font-size: 16px;
   font-weight: 300;
 `;
-
-const SearchDiv = styled.div`
+const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
-
 const Input = styled.input`
   outline: none;
   border: none;
@@ -79,11 +80,10 @@ const SearchIcon = styled(SearchOutlined)`
 `;
 
 const Right = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: space-evenly;
 `;
-
 const CartContainer = styled.div`
   display: flex;
   align-items: center;
@@ -100,229 +100,47 @@ const UserContainer = styled.div`
 
 const UserIcon = styled(Person2Outlined)``;
 
-/** Navbar Design */
-
-/**Mega Menu */
-
-const Nav = styled.div`
-  padding: 0px 20px;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-`;
-
-const NavWrapper = styled.div`
-  max-width: 1300px;
-  height: 70px;
-  line-height: 70px;
-  position: relative;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const MenuItem = styled.ul`
-  display: inline-flex;
-`;
-
-const DropMenu = styled.ul`
-  position: absolute;
-  background: #242526;
-  width: 180px;
-  top: 85px;
-  line-height: 45px;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: visible;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-`;
-
-
-
-const ItemLink = styled(Link)`
-  padding: 9px 15px;
-  border-radius: 5px;
+const Text = styled.span`
   font-size: 18px;
   font-weight: 500;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: #3a3b3c;
-  }
-`;
-
-/**Mega Menu */
-
-const MegaBox = styled.div`
-  background: gray;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 0px 30px;
-  top: 85px;
-  opacity: 0;
-  visibility : hidden;
-`;
-
-const ItemList = styled.li`
-  list-style: none;
-
-  &:hover ${DropMenu }  {
-    transition: all 0.3s ease;
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
-  }
-  &:hover ${MegaBox }  {
-    transition: all 0.3s ease;
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
-  }
-`;
-
-const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  padding: 30px 20px;
-  width: 100%;
-`;
-
-const HeaderTitle = styled.header`
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: 500;
-`;
-
-const Row = styled.div`
-  width: calc(25% - 30px);
-  line-height: 45px;
-`;
-
-const MegaItem = styled.ul`
-  margin-left: -40px;
-  border-left: 1px solid rgba(255, 255, 255, 0.09);
 `;
 
 const Header = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Logo>
-            <Link>Almas.</Link>
-          </Logo>
-        </Left>
-        <Center>
-          <SearchWrapper>
-            <CategorySelect>
-              <CategoryOption disabled>Select Category</CategoryOption>
-              <CategoryOption>Laptops</CategoryOption>
-              <CategoryOption>Smartphone</CategoryOption>
-              <CategoryOption>Women Dresses</CategoryOption>
-            </CategorySelect>
-            <SearchDiv>
-              <Input placeholder="Search the Products" />
-              <SearchIcon />
-            </SearchDiv>
-          </SearchWrapper>
-        </Center>
-        <Right>
-          <CartContainer>
-            <Badge overlap="rectangular" badgeContent="0" color="primary">
+    <>
+      <Container>
+        <Wrapper>
+          <Left>
+            <Logo>Almas.</Logo>
+          </Left>
+          <Center>
+            <SearchContainer>
+              <CategorySelect>
+                <CategoryOption disabled>Select Category</CategoryOption>
+                <CategoryOption>Laptops</CategoryOption>
+                <CategoryOption>Smartphone</CategoryOption>
+                <CategoryOption>Women Dresses</CategoryOption>
+              </CategorySelect>
+              <InputContainer>
+                <Input placeholder="Searh the Products" />
+                <SearchIcon />
+              </InputContainer>
+            </SearchContainer>
+          </Center>
+          <Right>
+            <CartContainer>
               <CartIcon />
-            </Badge>
-            <span style={{ marginLeft: "10px" }}>Cart</span>
-          </CartContainer>
-          <UserContainer>
-            <UserIcon />
-            <span style={{ marginLeft: "5px" }}>User</span>
-          </UserContainer>
-        </Right>
-      </Wrapper>
-      <Nav>
-        <NavWrapper>
-          <MenuItem>
-            <ItemList>
-              <ItemLink to="/">Home</ItemLink>
-            </ItemList>
-            <ItemList>
-              <ItemLink to="/">About</ItemLink>
-            </ItemList>
-            <ItemList>
-              <ItemLink to="/">DropDown</ItemLink>
-              <DropMenu type="dropdown">
-                <ItemList>
-                  <ItemLink>DropDown 1</ItemLink>
-                </ItemList>
-                <ItemList>
-                  <ItemLink>DropDown 1</ItemLink>
-                </ItemList>
-                <ItemList>
-                  <ItemLink>DropDown 1</ItemLink>
-                </ItemList>
-                <ItemList>
-                  <ItemLink>DropDown 1</ItemLink>
-                </ItemList>
-              </DropMenu>
-            </ItemList>
-            <ItemList>
-              <ItemLink>Mega Menu</ItemLink>
-              <MegaBox>
-                <Content>
-                  <Row>
-                    <HeaderTitle>Programming</HeaderTitle>
-                    <MegaItem>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                    </MegaItem>
-                  </Row>
-                  <Row>
-                    <HeaderTitle>Coding</HeaderTitle>
-                    <MegaItem>
-                      <ItemList>
-                        <ItemLink>Coding 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Coding 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Coding 1</ItemLink>
-                      </ItemList>
-                    </MegaItem>
-                  </Row>
-                  <Row>
-                    <HeaderTitle>Programming</HeaderTitle>
-                    <MegaItem>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                      <ItemList>
-                        <ItemLink>Service 1</ItemLink>
-                      </ItemList>
-                    </MegaItem>
-                  </Row>
-                </Content>
-              </MegaBox>
-            </ItemList>
-          </MenuItem>
-        </NavWrapper>
-      </Nav>
-    </Container>
+              <Text>Cart</Text>
+            </CartContainer>
+            <UserContainer>
+              <UserIcon /> <Text>User</Text>
+            </UserContainer>
+          </Right>
+        </Wrapper>
+        
+      </Container>
+      <Nav />
+    </>
   );
 };
 
