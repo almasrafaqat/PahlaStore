@@ -26,7 +26,7 @@ const MenuLink = styled(Link)`
   transition: all 0.3s ease;
 
   &:hover {
-    background: #3a3b3c;
+    background: teal;
     color: #fff;
   }
 `;
@@ -72,47 +72,42 @@ const Content = styled.div`
   background: #ececec;
   padding: 25px 20px;
   width: 100%;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   border-radius: 8;
-`;
-
-const Row = styled.div`
-  width: calc(25% - 30px);
-  line-height: 45px;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`
+`;
 
 const HeaderTitle = styled.header`
-color: teal;
-font-size: 20px;
-font-weight: 500;
+  color: teal;
+  font-size: 20px;
+  font-weight: 500;
 `;
 
 const MegaItem = styled(MenuItem)`
   display: block;
-  
- 
 `;
 
 const MegaItemChild = styled(MegaItem)`
   margin-left: -40px;
   border-left: 1px solid teal;
+`;
 
-  &:nth-child(1){
-    border-left: 5px solid teal;
-    margin-left: 90px;
+const Row = styled.div`
+  width: calc(25% - 30px);
+  line-height: 45px;
+
+  &:nth-child(2) ${MegaItemChild} {
+    border: 0px;
   }
 `;
 
-
-
 const MegaLinks = styled(Link)`
-   padding: 0px;
+  padding: 0px;
   padding: 0 20px;
   font-size: 17px;
   display: block;
@@ -125,7 +120,7 @@ const MegaLinks = styled(Link)`
 
 const MenuList = styled.li`
   list-style: none;
-  padding: ${props => props.type === 'mega-list' ? "0 20px" : ""};
+  padding: ${(props) => (props.type === "mega-list" ? "0 20px" : "")};
 
   &:hover ${DropDownItem} {
     transition: all 0.4s ease;
@@ -198,39 +193,39 @@ const Nav = () => {
                     </MegaItemChild>
                   </Row>
                   <Row>
-                  <HeaderTitle>Graphic Service</HeaderTitle>
-                  <MegaItemChild>
-                    <MenuList type="mega-list">
-                      <MegaLinks>Graphic Service 1 </MegaLinks>
-                    </MenuList>
-                    <MenuList type="mega-list">
-                      <MegaLinks>Graphic Service 2 </MegaLinks>
-                    </MenuList>
-                    <MenuList type="mega-list">
-                      <MegaLinks>Graphic Service 3 </MegaLinks>
-                    </MenuList>
-                    <MenuList type="mega-list">
-                      <MegaLinks>Graphic Service 4 </MegaLinks>
-                    </MenuList>
-                  </MegaItemChild>
-                </Row>
-                <Row>
-                <HeaderTitle>Graphic Service</HeaderTitle>
-                <MegaItemChild>
-                  <MenuList type="mega-list">
-                    <MegaLinks>Graphic Service 1 </MegaLinks>
-                  </MenuList>
-                  <MenuList type="mega-list">
-                    <MegaLinks>Graphic Service 2 </MegaLinks>
-                  </MenuList>
-                  <MenuList type="mega-list">
-                    <MegaLinks>Graphic Service 3 </MegaLinks>
-                  </MenuList>
-                  <MenuList type="mega-list">
-                    <MegaLinks>Graphic Service 4 </MegaLinks>
-                  </MenuList>
-                </MegaItemChild>
-              </Row>
+                    <HeaderTitle>Graphic Service</HeaderTitle>
+                    <MegaItemChild>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 1 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 2 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 3 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 4 </MegaLinks>
+                      </MenuList>
+                    </MegaItemChild>
+                  </Row>
+                  <Row>
+                    <HeaderTitle>Graphic Service</HeaderTitle>
+                    <MegaItemChild>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 1 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 2 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 3 </MegaLinks>
+                      </MenuList>
+                      <MenuList type="mega-list">
+                        <MegaLinks>Graphic Service 4 </MegaLinks>
+                      </MenuList>
+                    </MegaItemChild>
+                  </Row>
                 </Content>
               </MegaBox>
             </MegaItem>
