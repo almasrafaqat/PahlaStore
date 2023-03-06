@@ -3,8 +3,10 @@ import {
     Person2Outlined,
     SearchOutlined,
     ShoppingCartOutlined,
+
 } from "@mui/icons-material";
-import { Badge } from "@mui/material";
+import { Badge, Menu } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
 
@@ -25,14 +27,51 @@ const Wrapper = styled.div`
   `;
 
 const Left = styled.div`
-    flex: 1;
+   
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   `;
 
 const Logo = styled.div`
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
   `;
+
+const IconWrapper = styled.div`
+    display: flex;
+    font-size: 14px;
+    
+`;
+
+const CartContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin : 0px 20px;
+  `;
+
+const CartIcon = styled(ShoppingCartOutlined)`
+    cursor: pointer;
+    color: teal;
+  `;
+
+const UserContainer = styled.div`
+    display: flex;
+    align-items: center;
+  `;
+
+const UserIcon = styled(Person2Outlined)`
+    color: teal;
+`;
+
+const Text = styled.span`
+    font-size: 14px;
+    font-weight: 500;
+  `;
+
+
+/**  Center */
 
 const Center = styled.div`
     flex: 3;
@@ -81,33 +120,6 @@ const SearchIcon = styled(SearchOutlined)`
     }
   `;
 
-const Right = styled.div`
-   
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-  `;
-const CartContainer = styled.div`
-    display: flex;
-    align-items: center;
-  `;
-
-const CartIcon = styled(ShoppingCartOutlined)`
-    cursor: pointer;
-  `;
-
-const UserContainer = styled.div`
-    display: flex;
-    align-items: center;
-  `;
-
-const UserIcon = styled(Person2Outlined)``;
-
-const Text = styled.span`
-    font-size: 18px;
-    font-weight: 500;
-  `;
 
 
 
@@ -118,6 +130,18 @@ const HeaderMobile = () => {
                 <Wrapper>
                     <Left>
                         <Logo>Almas.</Logo>
+                        <IconWrapper>
+                            <CartContainer>
+                                <CartIcon />
+                                <Text>Cart</Text>
+                            </CartContainer>
+                            <UserContainer>
+
+                                <UserIcon /> <Text>User</Text>
+                            </UserContainer>
+                            <MenuIcon />
+                        </IconWrapper>
+
                     </Left>
                     <Center>
                         <SearchContainer>
@@ -133,15 +157,7 @@ const HeaderMobile = () => {
                             </InputContainer>
                         </SearchContainer>
                     </Center>
-                    <Right>
-                        <CartContainer>
-                            <CartIcon />
-                            <Text>Cart</Text>
-                        </CartContainer>
-                        <UserContainer>
-                            <UserIcon /> <Text>User</Text>
-                        </UserContainer>
-                    </Right>
+
                 </Wrapper>
 
             </Container>
