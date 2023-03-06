@@ -49,7 +49,6 @@ const DropDownItem = styled(MenuItem)`
   top: 80px;
   position: absolute;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
   opacity: 0;
   visibility: hidden;
 `;
@@ -73,7 +72,7 @@ const Content = styled.div`
   padding: 25px 20px;
   width: 100%;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 8;
+  
 `;
 
 const Image = styled.img`
