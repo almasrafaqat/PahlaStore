@@ -26,7 +26,7 @@ const MenuLink = styled(Link)`
   transition: all 0.3s ease;
 
   &:hover {
-    background: teal;
+    background: ${({ theme }) => theme.colors.primary};
     color: #fff;
   }
 `;
@@ -72,7 +72,6 @@ const Content = styled.div`
   padding: 25px 20px;
   width: 100%;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  
 `;
 
 const Image = styled.img`

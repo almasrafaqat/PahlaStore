@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Mobile768 } from "../../responsive";
 
 const Container = styled.div`
   height: 30px;
@@ -10,6 +11,8 @@ const Container = styled.div`
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 50px;
+
+  ${Mobile768({ marginBottom: "0px" })};
 `;
 
 const Announcement = () => {

@@ -5,6 +5,7 @@ import {
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import { Badge } from "@mui/material";
+
 import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
 import Nav from "../nav/nav.component";
@@ -87,10 +88,11 @@ const Right = styled.div`
 const CartContainer = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 const CartIcon = styled(ShoppingCartOutlined)`
-  cursor: pointer;
+  
 `;
 
 const UserContainer = styled.div`
@@ -111,7 +113,9 @@ const Header = () => {
       <Container>
         <Wrapper>
           <Left>
-            <Logo>Almas.</Logo>
+            <Link to="/">
+              <Logo>Almas.</Logo>
+            </Link>
           </Left>
           <Center>
             <SearchContainer>
@@ -128,16 +132,22 @@ const Header = () => {
             </SearchContainer>
           </Center>
           <Right>
-            <CartContainer>
-              <CartIcon />
-              <Text>Cart</Text>
-            </CartContainer>
-            <UserContainer>
-              <UserIcon /> <Text>User</Text>
-            </UserContainer>
+            <Link to="/cart">
+              <CartContainer>
+                <Badge badgeContent="0" color="success">
+                  <CartIcon style={{fontSize: "32px"}} />
+                </Badge>
+
+                <Text style={{ marginLeft: "12px" }}>Cart</Text>
+              </CartContainer>
+            </Link>
+            <Link>
+              <UserContainer>
+                <UserIcon style={{fontSize: "36px"}} /> <Text>User</Text>
+              </UserContainer>
+            </Link>
           </Right>
         </Wrapper>
-        
       </Container>
       <Nav />
     </>
