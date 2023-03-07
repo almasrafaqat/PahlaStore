@@ -14,10 +14,8 @@ const HomePage = () => {
   return (
     <Container>
       <Announcement />
-      <Wrapper className="Desktop">
-        <Header />
-      </Wrapper>
-      <Wrapper className="Mobile">
+      
+      <Wrapper>
         <HeaderMobile />
       </Wrapper>
 

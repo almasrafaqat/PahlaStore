@@ -164,7 +164,7 @@ const HeaderMobile = () => {
           </Center>
         </Wrapper>
       </Container>
-      <NavMobile/>
+      <NavMobile />
     </>
   );
 };
