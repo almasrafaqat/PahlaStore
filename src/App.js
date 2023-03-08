@@ -6,6 +6,7 @@ import About from "./components/about/about.component";
 import Header from "./components/header/header.component";
 import Announcement from "./components/announcement/announcement.component";
 import Cart from "./components/cart/cart.component";
+import Practice from "./components/practice/practice";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/practice" element={<Practice/>} />
         </Routes>
       </Router>
     </ThemeProvider>

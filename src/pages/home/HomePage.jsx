@@ -16,7 +16,7 @@ const HomePage = () => {
       <Announcement />
       
       <Wrapper>
-        <HeaderMobile />
+        <Header />
       </Wrapper>
 
       <Footer />
