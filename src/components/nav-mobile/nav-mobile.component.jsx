@@ -19,6 +19,11 @@ const Wrapper = styled.div`
   padding: 30px 10px;
   line-height: 50px;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  
+
+  &::-webkit-scrollbar{
+    width: 0;
+  }
 `;
 
 const Header = styled.div`
@@ -57,38 +62,49 @@ const MenuLink = styled(Link)`
 `;
 
 const DropdownItem = styled.ul`
-  background-color: gray;
+
   padding-left: 20px;
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.9s ease;
   position: static;
-  top: 500px;
   max-height: 0;
+  overflow: hidden;
+  
+  
 `;
 
 const DropdownList = styled.li`
   list-style: none;
-  margin: 0;
+  margin-top: 0;
+  &:first-child{
+    margin-top: 15px;
+  }
 `;
 
-const DropdownLink = styled(MenuLink)``;
+const DropdownLink = styled(MenuLink)`
+  font-size: 16px;
+  font-weight: 500;
+`;
 
 /**Mega Menu */
 
 const MegaBox = styled.div`
-  position: static;
+  
   margin-top: 20px;
-  opactiy: 0;
+  opacity: 0;
   visibility: hidden;
   max-height: 0;
   transition: all 0.7s ease;
+  overflow: hidden;
 `;
+
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 20px 20px 0 20px;
 `;
 
 const Row = styled.div`
@@ -96,21 +112,29 @@ const Row = styled.div`
   margin-bottom: 15px;
   border-top: 1px solid teal;
 
-  &:first-child {
+
+  &:nth-child(1), :nth-child(2) {
     border-top: 0px;
   }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+`;
 
 const HeaderTitle = styled.header`
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
 `;
 
-const MegaItem = styled.ul``;
+const MegaItem = styled.ul`
+  padding-left: 20px;
+`;
 
-const MegaList = styled.ul``;
+const MegaList = styled.li`
+  list-style: none;
+  margin: 0;
+`;
 
 const MegaLink = styled(MenuLink)`
   font-size: 16px;
