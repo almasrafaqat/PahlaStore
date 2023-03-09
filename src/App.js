@@ -13,11 +13,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart/>} />
-          <Route path="/practice" element={<Practice/>} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/practice" element={<Practice />} />
         </Routes>
       </Router>
     </ThemeProvider>

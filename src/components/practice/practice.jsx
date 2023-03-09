@@ -91,6 +91,11 @@ const Content = styled.div`
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 `;
 
+const MegaItem = styled.ul`
+  margin-left: -40px;
+  border-left: 1px solid teal;
+`;
+
 const Row = styled.div`
   width: calc(25% -30px);
   line-height: 45px;
@@ -113,10 +118,7 @@ const HeaderTitle = styled.header`
   font-weight: 500;
 `;
 
-const MegaItem = styled.ul`
-  margin-left: -40px;
-  border-left: 1px solid teal;
-`;
+
 
 const MegaLink = styled(DropdownLink)`
   padding: 0 20px;
