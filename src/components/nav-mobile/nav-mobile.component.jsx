@@ -1,4 +1,9 @@
-import { ClearSharp } from "@mui/icons-material";
+import {
+  ArrowDropDown,
+  ArrowDropDownCircle,
+  ClearSharp,
+} from "@mui/icons-material";
+import { useState } from "react";
 import styled from "styled-components";
 import { UserEventContext } from "../../context/EventsContext";
 import { Link } from "../../GlobalStyle";
@@ -22,7 +27,7 @@ const Wrapper = styled.div`
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
 
   &::-webkit-scrollbar {
-    width: 0;
+    width: 0px;
   }
 `;
 
@@ -64,8 +69,8 @@ const MenuLink = styled(Link)`
 const DropdownItem = styled.ul`
   padding-left: 20px;
   width: 100%;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: all 0.9s ease;
   position: static;
   max-height: 0;
@@ -89,10 +94,8 @@ const DropdownLink = styled(MenuLink)`
 
 const MegaBox = styled.div`
   margin-top: 20px;
-  opacity: 0;
-  visibility: hidden;
   max-height: 0;
-  transition: all 0.7s ease;
+  transition: all 0.9s ease;
   overflow: hidden;
 `;
 
@@ -139,22 +142,29 @@ const MegaLink = styled(MenuLink)`
 const MenuList = styled.li`
   list-style: none;
   margin: 15px 10px;
+`;
 
-  &:hover ${DropdownItem} {
-    opacity: 1;
-    visibility: visible;
-    max-height: 100%;
-  }
-
-  &:hover ${MegaBox} {
-    opacity: 1;
-    visibility: visible;
-    max-height: 100%;
-  }
+const ArrowIcon = styled(ArrowDropDown)`
+  margin-left: 12px;
 `;
 
 const NavMobile = () => {
-  const {  setMenuOpen } = UserEventContext();
+  const { menuOpen, setMenuOpen } = UserEventContext();
+  const [visible, setVisible] = useState(false);
+
+  const DropdownHanlder = (event) => {
+    event.preventDefault();
+    var target = event.target.element;
+    console.log("event: ", target);
+    var UlItem = event.target.nextElementSibling;
+    if (UlItem.style.maxHeight) {
+      UlItem.style.maxHeight = null;
+      setVisible(false);
+    } else {
+      UlItem.style.maxHeight = UlItem.scrollHeight + "px";
+      setVisible(true);
+    }
+  };
   return (
     <Container>
       <Wrapper>
@@ -162,7 +172,7 @@ const NavMobile = () => {
           <Logo>Almas.</Logo>
           <CloseIcon
             onClick={() => {
-              setMenuOpen(boolen => !boolen);
+              setMenuOpen((boolen) => !boolen);
             }}
           />
         </Header>
@@ -175,10 +185,19 @@ const NavMobile = () => {
             <MenuLink>About</MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink>Dropdown</MenuLink>
+            <MenuLink onClick={DropdownHanlder}>
+              Dropdown
+              <ArrowIcon
+                style={{
+                  fontSize: "24px",
+                  transition: "all 0.5s ease",
+                  transform: `rotate(${visible ? 0 : "0.5turn"})`,
+                }}
+              />
+            </MenuLink>
             <DropdownItem>
               <DropdownList>
-                <DropdownLink>Dropdown 1</DropdownLink>
+                <DropdownLink>Dropdown 1 </DropdownLink>
               </DropdownList>
               <DropdownList>
                 <DropdownLink>Dropdown 2</DropdownLink>
@@ -192,7 +211,16 @@ const NavMobile = () => {
             </DropdownItem>
           </MenuList>
           <MenuList>
-            <MenuLink>Mega Menu</MenuLink>
+            <MenuLink onClick={DropdownHanlder}>
+              Mega Menu
+              <ArrowIcon
+                style={{
+                  fontSize: "24px",
+                  transition: "all 0.5s ease",
+                  transform: `rotate(${visible ? 0 : "0.5turn"})`,
+                }}
+              />
+            </MenuLink>
             <MegaBox>
               <Content>
                 <Row>
