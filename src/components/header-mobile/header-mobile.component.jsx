@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
 import NavMobile from "../nav-mobile/nav-mobile.component";
+import { UserEventContext } from "../../context/EventsContext";
 
 const Container = styled.div`
   height: 60px;
@@ -73,7 +74,7 @@ const MenuIconContainer = styled.div`
 
 const IconMenu = styled(MenuIcon)`
   cursor: pointer;
-`
+`;
 
 /**  Center */
 
@@ -125,9 +126,8 @@ const SearchIcon = styled(SearchOutlined)`
   }
 `;
 
-
-
 const HeaderMobile = () => {
+  const { menuOpen, setMenuOpen } = UserEventContext();
   return (
     <>
       <Container>
@@ -143,8 +143,12 @@ const HeaderMobile = () => {
               <UserContainer>
                 <UserIcon style={{ fontSize: "28px" }} />
               </UserContainer>
-              <MenuIconContainer>
-                <IconMenu />
+              <MenuIconContainer
+                onClick={() => {
+                  setMenuOpen((boolen) => !boolen);
+                }}
+              >
+                {!menuOpen && <IconMenu />}
               </MenuIconContainer>
             </IconWrapper>
           </Left>
@@ -164,7 +168,7 @@ const HeaderMobile = () => {
           </Center>
         </Wrapper>
       </Container>
-      <NavMobile />
+      {menuOpen && <NavMobile style={{ left: "0px" }} />}
     </>
   );
 };

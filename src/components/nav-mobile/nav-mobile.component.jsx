@@ -1,5 +1,6 @@
 import { ClearSharp } from "@mui/icons-material";
 import styled from "styled-components";
+import { UserEventContext } from "../../context/EventsContext";
 import { Link } from "../../GlobalStyle";
 import { Mobile576, Mobile768 } from "../../responsive";
 
@@ -19,9 +20,8 @@ const Wrapper = styled.div`
   padding: 30px 10px;
   line-height: 50px;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-  
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 0;
   }
 `;
@@ -62,7 +62,6 @@ const MenuLink = styled(Link)`
 `;
 
 const DropdownItem = styled.ul`
-
   padding-left: 20px;
   width: 100%;
   opacity: 0;
@@ -71,14 +70,12 @@ const DropdownItem = styled.ul`
   position: static;
   max-height: 0;
   overflow: hidden;
-  
-  
 `;
 
 const DropdownList = styled.li`
   list-style: none;
   margin-top: 0;
-  &:first-child{
+  &:first-child {
     margin-top: 15px;
   }
 `;
@@ -91,7 +88,6 @@ const DropdownLink = styled(MenuLink)`
 /**Mega Menu */
 
 const MegaBox = styled.div`
-  
   margin-top: 20px;
   opacity: 0;
   visibility: hidden;
@@ -99,7 +95,6 @@ const MegaBox = styled.div`
   transition: all 0.7s ease;
   overflow: hidden;
 `;
-
 
 const Content = styled.div`
   display: flex;
@@ -112,8 +107,8 @@ const Row = styled.div`
   margin-bottom: 15px;
   border-top: 1px solid teal;
 
-
-  &:nth-child(1), :nth-child(2) {
+  &:nth-child(1),
+  :nth-child(2) {
     border-top: 0px;
   }
 `;
@@ -159,12 +154,17 @@ const MenuList = styled.li`
 `;
 
 const NavMobile = () => {
+  const {  setMenuOpen } = UserEventContext();
   return (
     <Container>
       <Wrapper>
         <Header>
           <Logo>Almas.</Logo>
-          <CloseIcon />
+          <CloseIcon
+            onClick={() => {
+              setMenuOpen(boolen => !boolen);
+            }}
+          />
         </Header>
 
         <MenuItem>
