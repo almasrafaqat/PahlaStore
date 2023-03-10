@@ -1,8 +1,7 @@
 import {
-  ArrowDropDown,
-  ArrowDropDownCircle,
   ClearSharp,
 } from "@mui/icons-material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState } from "react";
 import styled from "styled-components";
 import { UserEventContext } from "../../context/EventsContext";
@@ -59,6 +58,10 @@ const MenuLink = styled(Link)`
   padding: 0 20px;
   display: block;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
@@ -88,6 +91,7 @@ const DropdownList = styled.li`
 const DropdownLink = styled(MenuLink)`
   font-size: 16px;
   font-weight: 500;
+  
 `;
 
 /**Mega Menu */
@@ -144,27 +148,48 @@ const MenuList = styled.li`
   margin: 15px 10px;
 `;
 
-const ArrowIcon = styled(ArrowDropDown)`
-  margin-left: 12px;
+const ArrowIcon = styled(KeyboardArrowDownIcon)`
+  
 `;
 
+
+
 const NavMobile = () => {
-  const { menuOpen, setMenuOpen } = UserEventContext();
-  const [visible, setVisible] = useState(false);
+  const { setMenuOpen } = UserEventContext();
+  const [visible, setVisible] = useState(
+    { dropdown: false, megaMenu: false },
+
+  );
 
   const DropdownHanlder = (event) => {
     event.preventDefault();
-    var target = event.target.element;
-    console.log("event: ", target);
+    var name = event.target.name;
+
+    // console.log("event: ", name);
     var UlItem = event.target.nextElementSibling;
     if (UlItem.style.maxHeight) {
       UlItem.style.maxHeight = null;
-      setVisible(false);
+      if (name === "dropdown") {
+        setVisible({ dropdown: false });
+      }
+      if (name === "megaMenu") {
+        setVisible({ megaMenu: false });
+      }
+
+
+
     } else {
       UlItem.style.maxHeight = UlItem.scrollHeight + "px";
-      setVisible(true);
+      if (name === "dropdown") {
+        setVisible({ dropdown: true });
+      }
+      if (name === "megaMenu") {
+        setVisible({ megaMenu: true });
+      }
     }
   };
+
+
   return (
     <Container>
       <Wrapper>
@@ -185,13 +210,14 @@ const NavMobile = () => {
             <MenuLink>About</MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink onClick={DropdownHanlder}>
+            <MenuLink name="dropdown" onClick={DropdownHanlder}>
               Dropdown
               <ArrowIcon
+
                 style={{
-                  fontSize: "24px",
+                  fontSize: "28px",
                   transition: "all 0.5s ease",
-                  transform: `rotate(${visible ? 0 : "0.5turn"})`,
+                  transform: `rotate(${visible.dropdown ? "0.5turn" : 0})`,
                 }}
               />
             </MenuLink>
@@ -211,13 +237,13 @@ const NavMobile = () => {
             </DropdownItem>
           </MenuList>
           <MenuList>
-            <MenuLink onClick={DropdownHanlder}>
+            <MenuLink name="megaMenu" onClick={DropdownHanlder}>
               Mega Menu
               <ArrowIcon
                 style={{
-                  fontSize: "24px",
+                  fontSize: "28px",
                   transition: "all 0.5s ease",
-                  transform: `rotate(${visible ? 0 : "0.5turn"})`,
+                  transform: `rotate(${visible.megaMenu ? "0.5turn" : 0})`,
                 }}
               />
             </MenuLink>
