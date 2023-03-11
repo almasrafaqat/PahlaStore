@@ -61,7 +61,10 @@ const MenuLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: ${(props) => props.active === "active" ? "teal" : ""};
+  color: ${(props) => props.active === "active" ? "white" : ""};
 
+  
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
@@ -210,7 +213,7 @@ const NavMobile = () => {
             <MenuLink>About</MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink name="dropdown" onClick={DropdownHanlder}>
+            <MenuLink active={`${visible.dropdown ? "active" : "inactive"}`} name="dropdown" onClick={DropdownHanlder} >
               Dropdown
               <ArrowIcon
 
@@ -237,7 +240,7 @@ const NavMobile = () => {
             </DropdownItem>
           </MenuList>
           <MenuList>
-            <MenuLink name="megaMenu" onClick={DropdownHanlder}>
+            <MenuLink active={`${visible.megaMenu ? "active" : "inactive"}`} name="megaMenu" onClick={DropdownHanlder}>
               Mega Menu
               <ArrowIcon
                 style={{
@@ -328,7 +331,7 @@ const NavMobile = () => {
           </MenuList>
         </MenuItem>
       </Wrapper>
-    </Container>
+    </Container >
   );
 };
 

@@ -152,23 +152,10 @@ const HeaderMobile = () => {
               </MenuIconContainer>
             </IconWrapper>
           </Left>
-          <Center>
-            <SearchContainer>
-              <CategorySelect>
-                <CategoryOption disabled>Select Category</CategoryOption>
-                <CategoryOption>Laptops</CategoryOption>
-                <CategoryOption>Smartphone</CategoryOption>
-                <CategoryOption>Women Dresses</CategoryOption>
-              </CategorySelect>
-              <InputContainer>
-                <Input placeholder="Searh the Products" />
-                <SearchIcon />
-              </InputContainer>
-            </SearchContainer>
-          </Center>
+       
         </Wrapper>
       </Container>
-      {menuOpen && <NavMobile style={{ left: "0px" }} />}
+      {menuOpen && <NavMobile />}
     </>
   );
 };
