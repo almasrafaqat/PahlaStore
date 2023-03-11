@@ -1,0 +1,246 @@
+const Navbar = styled.div``;
+
+const Container = styled.div`
+  position: fixed;
+  padding: 30px 10px;
+  background-color: ${({ theme }) => theme.colors.border};
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  max-width: 350px;
+  line-height: 30px;
+  overflow-y: auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.9s ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: red;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: yellow;
+  }
+`;
+
+const Header = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 3px;
+`;
+
+const Logo = styled.div`
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+const CloseIcon = styled(ClearSharp)`
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+    border-radius: 50%;
+  }
+`;
+
+/** Navbar */
+
+const MenuItem = styled.ul``;
+
+const MenuLink = styled(Link)`
+  padding: 0px 20px;
+  display: block;
+  font-size: 20px;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
+  }
+`;
+
+/** Dropdown */
+
+const DropdownItem = styled.ul`
+  position: static;
+  width: 100%;
+  padding-left: 20px;
+  max-height: 100%;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  margin-top: 15px;
+`;
+/** Hover */
+const MenuList = styled.li`
+  list-style: none;
+  margin: 15px 10px;
+  &:hover ${DropdownItem} {
+    max-height: 100%;
+  }
+`;
+
+const DropdownList = styled.li`
+  list-style: none;
+  margin: 0;
+`;
+
+const DropdownLink = styled(MenuLink)`
+  font-size: 17px;
+  font-weight: 400;
+  padding: 0 0 0 15px;
+`;
+
+/** Mega Menu */
+
+const MegaBox = styled.div`
+  padding: 0 20px;
+`;
+
+const Content = styled.div`
+  padding: 20px 20px 0 20px;
+`;
+
+const Row = styled.div`
+  margin-top: 20px;
+  border-top: 1px solid ${({ theme }) => theme.colors.primary};
+  width: 100%;
+  margin-bottom: 15px;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-top: 0px;
+  }
+`;
+
+const Image = styled.img`
+  border-radius: 3px;
+`;
+
+const HeaderTitle = styled.header`
+  font-size: 19px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+const MegaItem = styled.ul`
+  padding-left: 15px;
+`;
+
+const MegaList = styled(DropdownList)``;
+
+const MegaLink = styled(DropdownLink)``; 
+
+<Header>
+          <Logo>Almas.</Logo>
+          <CloseIcon />
+        </Header>
+        <MenuItem>
+          <MenuList>
+            <MenuLink>Home</MenuLink>
+          </MenuList>
+          <MenuList>
+            <MenuLink>About</MenuLink>
+          </MenuList>
+          <MenuList>
+            <MenuLink>Dropdown</MenuLink>
+            <DropdownItem>
+              <DropdownList>
+                <DropdownLink>Laravel</DropdownLink>
+              </DropdownList>
+              <DropdownList>
+                <DropdownLink>Django </DropdownLink>
+              </DropdownList>
+              <DropdownList>
+                <DropdownLink>React JS</DropdownLink>
+              </DropdownList>
+              <DropdownList>
+                <DropdownLink>Angular JS</DropdownLink>
+              </DropdownList>
+            </DropdownItem>
+          </MenuList>
+          <MenuList>
+            <MenuLink>Mega Menu</MenuLink>
+            <MegaBox>
+              <Content>
+                <Row>
+                  <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyoBVQg0JEHNq-rbOPU1WWxj9U3ArpmMlhulg6CjUf3XkRTSUCZqNWNjIYJZ58u56JGs&usqp=CAU" />
+                </Row>
+                <Row>
+                  <HeaderTitle>Programming Course</HeaderTitle>
+                  <MegaItem>
+                    <MegaList>
+                      <MegaLink>Frontend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Backend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Full Stack Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Database Developer</MegaLink>
+                    </MegaList>
+                  </MegaItem>
+                </Row>
+                <Row>
+                  <HeaderTitle>Programming Course</HeaderTitle>
+                  <MegaItem>
+                    <MegaList>
+                      <MegaLink>Frontend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Backend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Full Stack Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Database Developer</MegaLink>
+                    </MegaList>
+                  </MegaItem>
+                </Row>
+                <Row>
+                  <HeaderTitle>Programming Course</HeaderTitle>
+                  <MegaItem>
+                    <MegaList>
+                      <MegaLink>Frontend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Backend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Full Stack Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Database Developer</MegaLink>
+                    </MegaList>
+                  </MegaItem>
+                </Row>
+                <Row>
+                  <HeaderTitle>Programming Course</HeaderTitle>
+                  <MegaItem>
+                    <MegaList>
+                      <MegaLink>Frontend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Backend Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Full Stack Web Developer</MegaLink>
+                    </MegaList>
+                    <MegaList>
+                      <MegaLink>Database Developer</MegaLink>
+                    </MegaList>
+                  </MegaItem>
+                </Row>
+              </Content>
+            </MegaBox>
+          </MenuList>
+        </MenuItem>
