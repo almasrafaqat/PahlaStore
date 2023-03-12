@@ -1,210 +1,169 @@
-import {
-  ClearSharp,
-} from "@mui/icons-material";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useState } from "react";
+import { ClearSharp } from "@mui/icons-material";
 import styled from "styled-components";
-import { UserEventContext } from "../../context/EventsContext";
 import { Link } from "../../GlobalStyle";
-import { Mobile576, Mobile768 } from "../../responsive";
 
-const Container = styled.div``;
-
-const Wrapper = styled.div`
+const Navbar = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100%;
   max-width: 350px;
-  z-index: 999;
-  overflow-y: auto;
-  background: #ececec;
-  display: block;
-  padding: 30px 10px;
-  line-height: 50px;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  height: 100vh;
+  
+`;
 
-  &::-webkit-scrollbar {
-    width: 0px;
-  }
+const Container = styled.div`
+  background-color: #ececec;
+  height: 100%;
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  line-height: 20px;
+  overflow-y: auto;
+  
 `;
 
 const Header = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: teal;
-  padding: 0 20px;
+  padding: 10px;
   border-radius: 3px;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const Logo = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  text-transform: uppercase;
-  color: white;
   letter-spacing: 3px;
+  text-transform: uppercase;
 `;
 
 const CloseIcon = styled(ClearSharp)`
-  color: white;
   cursor: pointer;
+  
+  &:hover{
+    transform: scale(1.4);
+    transition: all 0.3s ease-in-out;
+  }
 `;
 
-const MenuItem = styled.ul``;
+/** Navbar Menu */
+
+const MenuItem = styled.ul`
+  
+`;
+
+const MenuList = styled.li`
+  list-style: none;
+  margin: 10px 10px;
+`;
 
 const MenuLink = styled(Link)`
-  padding: 0 20px;
   display: block;
+  width: 100%;
+  padding : 9px 15px;
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: ${(props) => props.active === "active" ? "teal" : ""};
-  color: ${(props) => props.active === "active" ? "white" : ""};
-
+  border-radius: 5px;
   
-
-  &:hover {
+  &:hover{
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.white};
   }
 `;
 
+const SubLink = styled(MenuLink)`
+  font-size: 16px;
+`;
+
+/** Dropdown Menu */
+
 const DropdownItem = styled.ul`
   padding-left: 20px;
-  width: 100%;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.9s ease;
-  position: static;
-  max-height: 0;
+  /* max-height: 0; */
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
 `;
 
-const DropdownList = styled.li`
-  list-style: none;
-  margin-top: 0;
-  &:first-child {
-    margin-top: 15px;
+const DropdownList = styled(MenuList)`
+  margin:0;
+  &:first-child{
+    margin-top: 10px;
   }
 `;
 
-const DropdownLink = styled(MenuLink)`
-  font-size: 16px;
-  font-weight: 500;
-  
-`;
 
-/**Mega Menu */
+/** Mega Menu */
 
 const MegaBox = styled.div`
   margin-top: 20px;
-  max-height: 0;
-  transition: all 0.9s ease;
-  overflow: hidden;
 `;
 
 const Content = styled.div`
+
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0 20px;
 `;
 
 const Row = styled.div`
-  width: 100%;
-  margin-bottom: 15px;
-  border-top: 1px solid teal;
+  padding: 20px 0;
+  border-top: 1px solid ${({theme}) => theme.colors.primary};
 
-  &:nth-child(1),
-  :nth-child(2) {
-    border-top: 0px;
+  &:nth-child(1), &:nth-child(2){
+    border-top: 0;
   }
 `;
 
 const Image = styled.img`
-  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 `;
 
 const HeaderTitle = styled.header`
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 500;
 `;
 
-const MegaItem = styled.ul`
-  padding-left: 20px;
-`;
+const MegaItem = styled(DropdownItem)``;
 
-const MegaList = styled.li`
-  list-style: none;
-  margin: 0;
-`;
+const MegaList = styled(DropdownList)``;
 
-const MegaLink = styled(MenuLink)`
-  font-size: 16px;
-  font-weight: 500;
-`;
 
-const MenuList = styled.li`
-  list-style: none;
-  margin: 15px 10px;
-`;
+/**Footer */
+const Footer = styled.div``;
 
-const ArrowIcon = styled(KeyboardArrowDownIcon)`
-  
-`;
+const InfoContainer = styled.div``;
+
+const SocialContainer = styled.div``;
+
+const CopyRightContainer = styled.div``;
+
+
+
 
 
 
 const NavMobile = () => {
-  const { setMenuOpen } = UserEventContext();
-  const [visible, setVisible] = useState(
-    { dropdown: false, megaMenu: false },
 
-  );
-
-  const DropdownHanlder = (event) => {
+  const DropMenuHandler = (event) => {
     event.preventDefault();
-    var name = event.target.name;
+    const UL = event.target.nextElementSibling;
 
-    // console.log("event: ", name);
-    var UlItem = event.target.nextElementSibling;
-    if (UlItem.style.maxHeight) {
-      UlItem.style.maxHeight = null;
-      if (name === "dropdown") {
-        setVisible({ dropdown: false });
-      }
-      if (name === "megaMenu") {
-        setVisible({ megaMenu: false });
-      }
-
-
-
+    if (UL.style.maxHeight) {
+      UL.style.maxHeight = null;
     } else {
-      UlItem.style.maxHeight = UlItem.scrollHeight + "px";
-      if (name === "dropdown") {
-        setVisible({ dropdown: true });
-      }
-      if (name === "megaMenu") {
-        setVisible({ megaMenu: true });
-      }
+      UL.style.maxHeight = UL.scrollHeight + "px";
     }
-  };
-
+  }
 
   return (
-    <Container>
-      <Wrapper>
+    <Navbar>
+      <Container>
         <Header>
           <Logo>Almas.</Logo>
-          <CloseIcon
-            onClick={() => {
-              setMenuOpen((boolen) => !boolen);
-            }}
-          />
+          <CloseIcon />
         </Header>
-
         <MenuItem>
           <MenuList>
             <MenuLink>Home</MenuLink>
@@ -213,125 +172,77 @@ const NavMobile = () => {
             <MenuLink>About</MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink active={`${visible.dropdown ? "active" : "inactive"}`} name="dropdown" onClick={DropdownHanlder} >
-              Dropdown
-              <ArrowIcon
-
-                style={{
-                  fontSize: "28px",
-                  transition: "all 0.5s ease",
-                  transform: `rotate(${visible.dropdown ? "0.5turn" : 0})`,
-                }}
-              />
-            </MenuLink>
+            <MenuLink onClick={DropMenuHandler}>Dropdown</MenuLink>
             <DropdownItem>
               <DropdownList>
-                <DropdownLink>Dropdown 1 </DropdownLink>
+                <SubLink>Laravel</SubLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink>Dropdown 2</DropdownLink>
+                <SubLink>React JS</SubLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink>Dropdown 3</DropdownLink>
+                <SubLink>MYsql</SubLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink>Dropdown 4</DropdownLink>
+                <SubLink>Python</SubLink>
               </DropdownList>
             </DropdownItem>
           </MenuList>
           <MenuList>
-            <MenuLink active={`${visible.megaMenu ? "active" : "inactive"}`} name="megaMenu" onClick={DropdownHanlder}>
-              Mega Menu
-              <ArrowIcon
-                style={{
-                  fontSize: "28px",
-                  transition: "all 0.5s ease",
-                  transform: `rotate(${visible.megaMenu ? "0.5turn" : 0})`,
-                }}
-              />
-            </MenuLink>
+            <MenuLink>Mega Menu</MenuLink>
             <MegaBox>
               <Content>
                 <Row>
-                  <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyoBVQg0JEHNq-rbOPU1WWxj9U3ArpmMlhulg6CjUf3XkRTSUCZqNWNjIYJZ58u56JGs&usqp=CAU" />
+                <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyoBVQg0JEHNq-rbOPU1WWxj9U3ArpmMlhulg6CjUf3XkRTSUCZqNWNjIYJZ58u56JGs&usqp=CAU" />
                 </Row>
                 <Row>
-                  <HeaderTitle>Graphic Course</HeaderTitle>
+                  <HeaderTitle>Programming Course</HeaderTitle>
                   <MegaItem>
                     <MegaList>
-                      <MegaLink>Logo Design</MegaLink>
+                      <SubLink>Frontend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>UX UL Web Design</MegaLink>
+                      <SubLink>Backend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>3D 2D Design</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Adobe Photoshop</MegaLink>
+                      <SubLink>Full Stack Web Developer</SubLink>
                     </MegaList>
                   </MegaItem>
                 </Row>
                 <Row>
-                  <HeaderTitle>Programming</HeaderTitle>
+                  <HeaderTitle>Programming Course</HeaderTitle>
                   <MegaItem>
                     <MegaList>
-                      <MegaLink>Laravel </MegaLink>
+                      <SubLink>Frontend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>React JS</MegaLink>
+                      <SubLink>Backend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>HTML</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Paython</MegaLink>
+                      <SubLink>Full Stack Web Developer</SubLink>
                     </MegaList>
                   </MegaItem>
                 </Row>
                 <Row>
-                  <HeaderTitle>Digital Marketing</HeaderTitle>
+                  <HeaderTitle>Freelancing Course</HeaderTitle>
                   <MegaItem>
                     <MegaList>
-                      <MegaLink>Google SEO</MegaLink>
+                      <SubLink>Frontend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>Google Adwords</MegaLink>
+                      <SubLink>Backend Web Developer</SubLink>
                     </MegaList>
                     <MegaList>
-                      <MegaLink>Google Adsense</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Google My Business</MegaLink>
-                    </MegaList>
-                  </MegaItem>
-                </Row>
-                <Row>
-                  <HeaderTitle>Freelancing</HeaderTitle>
-                  <MegaItem>
-                    <MegaList>
-                      <MegaLink>Digital Marketer</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Frontend Web Developer</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Backend Web Developer</MegaLink>
-                    </MegaList>
-                    <MegaList>
-                      <MegaLink>Full Stack Developer</MegaLink>
+                      <SubLink>Full Stack Web Developer</SubLink>
                     </MegaList>
                   </MegaItem>
                 </Row>
               </Content>
             </MegaBox>
           </MenuList>
-          <MenuList>
-            <MenuLink>Feedback</MenuLink>
-          </MenuList>
         </MenuItem>
-      </Wrapper>
-    </Container >
+      </Container>
+    </Navbar>
   );
 };
 
