@@ -12,7 +12,7 @@ export const Navbar = styled.div`
 export const Container = styled.div`
   padding: 0px 20px;
   position: relative;
-  max-width: 1300px;
+  // max-width: 1300px;
   margin: auto;
 `;
 

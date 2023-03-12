@@ -1,168 +1,81 @@
-import { ClearSharp } from "@mui/icons-material";
-import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
-
-const Navbar = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 350px;
-  height: 100vh;
-  
-`;
-
-const Container = styled.div`
-  background-color: #ececec;
-  height: 100%;
-  width: 100%;
-  padding: 20px 20px 0 20px;
-  line-height: 20px;
-  overflow-y: auto;
-  
-`;
-
-const Header = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 3px;
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-const Logo = styled.div`
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-`;
-
-const CloseIcon = styled(ClearSharp)`
-  cursor: pointer;
-  
-  &:hover{
-    transform: scale(1.4);
-    transition: all 0.3s ease-in-out;
-  }
-`;
-
-/** Navbar Menu */
-
-const MenuItem = styled.ul`
-  
-`;
-
-const MenuList = styled.li`
-  list-style: none;
-  margin: 10px 10px;
-`;
-
-const MenuLink = styled(Link)`
-  display: block;
-  width: 100%;
-  padding : 9px 15px;
-  font-size: 20px;
-  border-radius: 5px;
-  
-  &:hover{
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.white};
-  }
-`;
-
-const SubLink = styled(MenuLink)`
-  font-size: 16px;
-`;
-
-/** Dropdown Menu */
-
-const DropdownItem = styled.ul`
-  padding-left: 20px;
-  /* max-height: 0; */
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-`;
-
-const DropdownList = styled(MenuList)`
-  margin:0;
-  &:first-child{
-    margin-top: 10px;
-  }
-`;
-
-
-/** Mega Menu */
-
-const MegaBox = styled.div`
-  margin-top: 20px;
-`;
-
-const Content = styled.div`
-
-  display: flex;
-  flex-direction: column;
-`;
-
-const Row = styled.div`
-  padding: 20px 0;
-  border-top: 1px solid ${({theme}) => theme.colors.primary};
-
-  &:nth-child(1), &:nth-child(2){
-    border-top: 0;
-  }
-`;
-
-const Image = styled.img`
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-`;
-
-const HeaderTitle = styled.header`
-  font-size: 20px;
-  font-weight: 500;
-`;
-
-const MegaItem = styled(DropdownItem)``;
-
-const MegaList = styled(DropdownList)``;
-
-
-/**Footer */
-const Footer = styled.div``;
-
-const InfoContainer = styled.div``;
-
-const SocialContainer = styled.div``;
-
-const CopyRightContainer = styled.div``;
-
-
-
-
-
+import { useGlobalContext } from "../../context/GlobalContext";
+import {
+  ArrowIcon,
+  CloseIcon,
+  Container,
+  Content,
+  CopyRightContainer,
+  DropdownItem,
+  DropdownList,
+  FacebookIcon,
+  FlexContainer,
+  Footer,
+  Header,
+  HeaderTitle,
+  IconBg,
+  Image,
+  InfoContainer,
+  InstagramIcon,
+  LocationIcon,
+  Logo,
+  MegaBox,
+  MegaItem,
+  MegaList,
+  MenuItem,
+  MenuLink,
+  MenuList,
+  Navbar,
+  Row,
+  SocialContainer,
+  SubLink,
+  TelephoneIcon,
+  Text,
+  TwitterIcon,
+  UserIcon,
+  YoutubeIcon,
+} from "./nav-mobile.style";
 
 const NavMobile = () => {
+  const { isMenuOpen, setIsMenuOpen, isDropdownOpen, setIsDropdownOpen } =
+    useGlobalContext();
 
+  /** Dropdown Height */
   const DropMenuHandler = (event) => {
     event.preventDefault();
     const UL = event.target.nextElementSibling;
+    const name = event.target.name;
 
     if (UL.style.maxHeight) {
       UL.style.maxHeight = null;
+      if (name === "dropdown") {
+        setIsDropdownOpen({ dropdown: false });
+      }
+      if (name === "mega-menu") {
+        setIsDropdownOpen({ megaMenu: false });
+      }
     } else {
       UL.style.maxHeight = UL.scrollHeight + "px";
+
+      if (name === "dropdown") {
+        setIsDropdownOpen({ dropdown: true });
+      }
+      if (name === "mega-menu") {
+        setIsDropdownOpen({ megaMenu: true });
+      }
     }
-  }
+  };
 
   return (
     <Navbar>
       <Container>
         <Header>
           <Logo>Almas.</Logo>
-          <CloseIcon />
+          <CloseIcon
+            onClick={() => {
+              setIsMenuOpen((boolen) => !boolen);
+            }}
+          />
         </Header>
         <MenuItem>
           <MenuList>
@@ -172,7 +85,22 @@ const NavMobile = () => {
             <MenuLink>About</MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink onClick={DropMenuHandler}>Dropdown</MenuLink>
+            <MenuLink
+              active={`${isDropdownOpen.dropdown ? "active" : "inactive"}`}
+              name="dropdown"
+              onClick={DropMenuHandler}
+            >
+              Dropdown
+              <ArrowIcon
+                style={{
+                  fontSize: "28px",
+                  transition: "all 0.5s ease",
+                  transform: `rotate(${
+                    isDropdownOpen.dropdown ? "0.5turn" : 0
+                  })`,
+                }}
+              />
+            </MenuLink>
             <DropdownItem>
               <DropdownList>
                 <SubLink>Laravel</SubLink>
@@ -189,11 +117,26 @@ const NavMobile = () => {
             </DropdownItem>
           </MenuList>
           <MenuList>
-            <MenuLink>Mega Menu</MenuLink>
+            <MenuLink
+              active={`${isDropdownOpen.megaMenu ? "active" : "inactive"}`}
+              name="mega-menu"
+              onClick={DropMenuHandler}
+            >
+              Mega Menu
+              <ArrowIcon
+                style={{
+                  fontSize: "28px",
+                  transition: "all 0.5s ease",
+                  transform: `rotate(${
+                    isDropdownOpen.megaMenu ? "0.5turn" : 0
+                  })`,
+                }}
+              />
+            </MenuLink>
             <MegaBox>
               <Content>
                 <Row>
-                <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyoBVQg0JEHNq-rbOPU1WWxj9U3ArpmMlhulg6CjUf3XkRTSUCZqNWNjIYJZ58u56JGs&usqp=CAU" />
+                  <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyoBVQg0JEHNq-rbOPU1WWxj9U3ArpmMlhulg6CjUf3XkRTSUCZqNWNjIYJZ58u56JGs&usqp=CAU" />
                 </Row>
                 <Row>
                   <HeaderTitle>Programming Course</HeaderTitle>
@@ -241,6 +184,59 @@ const NavMobile = () => {
             </MegaBox>
           </MenuList>
         </MenuItem>
+        <Footer>
+          <InfoContainer>
+            <FlexContainer>
+              <LocationIcon />
+              <Link>
+                <Text>Our Location</Text>
+              </Link>
+            </FlexContainer>
+            <FlexContainer>
+              <UserIcon />
+              <Link>
+                <Text>Sign In /Sing Up</Text>
+              </Link>
+            </FlexContainer>
+            <FlexContainer>
+              <TelephoneIcon />
+              <Link>
+                <Text>(+01)-4444-8888</Text>
+              </Link>
+            </FlexContainer>
+          </InfoContainer>
+          <SocialContainer>
+            <Text type="social">Follow US</Text>
+            <FlexContainer>
+              <Link>
+                <IconBg>
+                  <FacebookIcon />
+                </IconBg>
+              </Link>
+              <Link>
+                <IconBg>
+                  <YoutubeIcon />
+                </IconBg>
+              </Link>
+              <Link>
+                <IconBg>
+                  <TwitterIcon />
+                </IconBg>
+              </Link>
+              <Link>
+                <IconBg>
+                  <InstagramIcon />
+                </IconBg>
+              </Link>
+            </FlexContainer>
+            <CopyRightContainer>
+              <FlexContainer>
+                Copyright 2023 - {new Date().getFullYear()} © PahlaStore. All
+                rights reserved. Powered by AlmasThemes.
+              </FlexContainer>
+            </CopyRightContainer>
+          </SocialContainer>
+        </Footer>
       </Container>
     </Navbar>
   );

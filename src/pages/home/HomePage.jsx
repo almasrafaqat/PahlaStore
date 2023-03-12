@@ -16,7 +16,7 @@ const HomePage = () => {
       <Wrapper className="Desktop">
         <Header />
       </Wrapper>
-      <Wrapper className="obile">
+      <Wrapper className="Mobile">
         <HeaderMobile />
       </Wrapper>
 

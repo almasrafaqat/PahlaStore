@@ -15,7 +15,7 @@ import {
   MenuList,
   Navbar,
   Row,
-} from "./nav.component.style";
+} from "./nav.style";
 
 const Nav = () => {
   return (

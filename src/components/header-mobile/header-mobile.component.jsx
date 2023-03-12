@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
 import NavMobile from "../nav-mobile/nav-mobile.component";
-import { UserEventContext } from "../../context/EventsContext";
+import { useGlobalContext } from "../../context/GlobalContext";
 
 const Container = styled.div`
   height: 60px;
@@ -127,7 +127,7 @@ const SearchIcon = styled(SearchOutlined)`
 `;
 
 const HeaderMobile = () => {
-  const { menuOpen, setMenuOpen } = UserEventContext();
+  const { isMenuOpen, setIsMenuOpen } = useGlobalContext();
   return (
     <>
       <Container>
@@ -145,17 +145,30 @@ const HeaderMobile = () => {
               </UserContainer>
               <MenuIconContainer
                 onClick={() => {
-                  setMenuOpen((boolen) => !boolen);
+                  setIsMenuOpen((boolen) => !boolen);
                 }}
               >
-                {!menuOpen && <IconMenu />}
+                {!isMenuOpen && <IconMenu />}
               </MenuIconContainer>
             </IconWrapper>
           </Left>
-       
+          <Center>
+            <SearchContainer>
+              <CategorySelect>
+                <CategoryOption disabled>Select Category</CategoryOption>
+                <CategoryOption>Laptops</CategoryOption>
+                <CategoryOption>Smartphone</CategoryOption>
+                <CategoryOption>Women Dresses</CategoryOption>
+              </CategorySelect>
+              <InputContainer>
+                <Input placeholder="Searh the Products" />
+                <SearchIcon />
+              </InputContainer>
+            </SearchContainer>
+          </Center>
         </Wrapper>
       </Container>
-      {menuOpen && <NavMobile />}
+      {isMenuOpen && <NavMobile />}
     </>
   );
 };
