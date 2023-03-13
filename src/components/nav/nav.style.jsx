@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import { Link } from "../../GlobalStyle";
+import { Link, MarginBottomContainer } from "../../GlobalStyle";
 
-export const Navbar = styled.div`
+export const Navbar = styled(MarginBottomContainer)`
   border-top: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   height: 70px;
   line-height: 70px;
   width: 100%;
+  z-index: 2;
 `;
 
 export const Container = styled.div`
   padding: 0px 20px;
   position: relative;
-  // max-width: 1300px;
   margin: auto;
 `;
 
@@ -44,6 +44,7 @@ export const DropdownItem = styled.ul`
   visibility: hidden;
   opacity: 0;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 `;
 
 export const DropdownList = styled.li`
@@ -70,6 +71,7 @@ export const MegaBox = styled.div`
   transition: all 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
 `;
 
 export const Content = styled.div`

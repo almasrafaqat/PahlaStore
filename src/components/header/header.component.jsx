@@ -7,10 +7,10 @@ import {
 import { Badge } from "@mui/material";
 
 import styled from "styled-components";
-import { Link } from "../../GlobalStyle";
+import { Link, MarginBottomContainer, PrimaryLogo } from "../../GlobalStyle";
 import Nav from "../nav/nav.component";
 
-const Container = styled.div`
+const Container = styled(MarginBottomContainer)`
   height: 60px;
   line-height: 60px;
   margin-bottom: 70px;
@@ -28,10 +28,8 @@ const Left = styled.div`
   flex: 1;
 `;
 
-const Logo = styled.div`
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 600;
+const Logo = styled(PrimaryLogo)`
+  
 `;
 
 const Center = styled.div`

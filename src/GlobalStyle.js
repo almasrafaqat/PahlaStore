@@ -42,3 +42,14 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.black};
 `;
+
+export const PrimaryLogo = styled.div`
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+`;
+
+export const MarginBottomContainer = styled.div`
+margin-bottom: 70px;
+`;
