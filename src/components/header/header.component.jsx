@@ -36,6 +36,7 @@ const Logo = styled.div`
 
 const Center = styled.div`
   flex: 3;
+
 `;
 
 const SearchContainer = styled.div`
@@ -44,6 +45,7 @@ const SearchContainer = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
   padding: 10px;
+
 `;
 
 const CategorySelect = styled.select`
@@ -135,7 +137,7 @@ const Header = () => {
             <Link to="/cart">
               <CartContainer>
                 <Badge badgeContent="0" color="success">
-                  <CartIcon style={{fontSize: "32px"}} />
+                  <CartIcon style={{ fontSize: "32px" }} />
                 </Badge>
 
                 <Text style={{ marginLeft: "12px" }}>Cart</Text>
@@ -143,7 +145,7 @@ const Header = () => {
             </Link>
             <Link>
               <UserContainer>
-                <UserIcon style={{fontSize: "36px"}} /> <Text>User</Text>
+                <UserIcon style={{ fontSize: "36px" }} /> <Text>User</Text>
               </UserContainer>
             </Link>
           </Right>

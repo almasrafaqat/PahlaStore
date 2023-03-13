@@ -10,6 +10,7 @@ import styled from "styled-components";
 import { Link } from "../../GlobalStyle";
 import NavMobile from "../nav-mobile/nav-mobile.component";
 import { useGlobalContext } from "../../context/GlobalContext";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   height: 60px;
@@ -21,10 +22,8 @@ const Wrapper = styled.div`
   height: 100%;
   padding: 30px 20px;
   flex-direction: column;
-  column-gap: 3%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 3%;
+
 `;
 
 const Left = styled.div`
@@ -53,7 +52,7 @@ const CartContainer = styled.div`
 
 const CartIcon = styled(ShoppingCartOutlined)`
   cursor: pointer;
-  color: teal;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const UserContainer = styled.div`
@@ -63,7 +62,7 @@ const UserContainer = styled.div`
 `;
 
 const UserIcon = styled(Person2Outlined)`
-  color: teal;
+   color: ${({ theme }) => theme.colors.primary};
 `;
 
 const MenuIconContainer = styled.div`
@@ -74,6 +73,7 @@ const MenuIconContainer = styled.div`
 
 const IconMenu = styled(MenuIcon)`
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 /**  Center */
@@ -81,6 +81,7 @@ const IconMenu = styled(MenuIcon)`
 const Center = styled.div`
   flex: 3;
   margin: 20px 0px;
+ 
 `;
 
 const SearchContainer = styled.div`

@@ -95,9 +95,8 @@ const NavMobile = () => {
                 style={{
                   fontSize: "28px",
                   transition: "all 0.5s ease",
-                  transform: `rotate(${
-                    isDropdownOpen.dropdown ? "0.5turn" : 0
-                  })`,
+                  transform: `rotate(${isDropdownOpen.dropdown ? "0.5turn" : 0
+                    })`,
                 }}
               />
             </MenuLink>
@@ -127,9 +126,8 @@ const NavMobile = () => {
                 style={{
                   fontSize: "28px",
                   transition: "all 0.5s ease",
-                  transform: `rotate(${
-                    isDropdownOpen.megaMenu ? "0.5turn" : 0
-                  })`,
+                  transform: `rotate(${isDropdownOpen.megaMenu ? "0.5turn" : 0
+                    })`,
                 }}
               />
             </MenuLink>
