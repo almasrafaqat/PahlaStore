@@ -8,6 +8,33 @@ export const GlobalContextProvider = ({ children }) => {
     dropdown: false,
     megaMenu: false,
   });
+
+  /** Dropdown Height */
+  const DropMenuHandler = (event) => {
+    event.preventDefault();
+    const UL = event.target.nextElementSibling;
+    const name = event.target.name;
+
+    if (UL.style.maxHeight) {
+      UL.style.maxHeight = null;
+      if (name === "dropdown") {
+        setIsDropdownOpen({ dropdown: false });
+      }
+      if (name === "mega-menu") {
+        setIsDropdownOpen({ megaMenu: false });
+      }
+    } else {
+      UL.style.maxHeight = UL.scrollHeight + "px";
+
+      if (name === "dropdown") {
+        setIsDropdownOpen({ dropdown: true });
+      }
+      if (name === "mega-menu") {
+        setIsDropdownOpen({ megaMenu: true });
+      }
+    }
+  };
+
   /** For Slider */
 
   const [slideIndex, setSlideIndex] = useState(0);
@@ -27,6 +54,7 @@ export const GlobalContextProvider = ({ children }) => {
     setIsDropdownOpen,
     slideIndex,
     SlideHandler,
+    DropMenuHandler,
   };
 
   return (
