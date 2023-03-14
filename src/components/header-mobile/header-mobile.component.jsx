@@ -1,131 +1,26 @@
-import {
-  LocalFireDepartmentOutlined,
-  Person2Outlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
-import { Badge, Menu } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import styled from "styled-components";
-import { Link } from "../../GlobalStyle";
+import { Badge } from "@mui/material";
 import NavMobile from "../nav-mobile/nav-mobile.component";
 import { useGlobalContext } from "../../context/GlobalContext";
-import { mobile } from "../../responsive";
-
-const Container = styled.div`
-  height: 60px;
-  line-height: 60px;
-  margin-bottom: 150px;
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  padding: 30px 20px;
-  flex-direction: column;
-  gap: 3%;
-
-`;
-
-const Left = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`;
-
-const Logo = styled.div`
-  text-transform: uppercase;
-  font-size: 28px;
-  font-weight: 600;
-`;
-
-/**Right */
-
-const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const CartContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const CartIcon = styled(ShoppingCartOutlined)`
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-const UserContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0px 15px;
-`;
-
-const UserIcon = styled(Person2Outlined)`
-   color: ${({ theme }) => theme.colors.primary};
-`;
-
-const MenuIconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
-
-const IconMenu = styled(MenuIcon)`
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-/**  Center */
-
-const Center = styled.div`
-  flex: 3;
-  margin: 20px 0px;
- 
-`;
-
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 8px;
-  padding: 10px;
-`;
-
-const CategorySelect = styled.select`
-  outline: none;
-  border: none;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 5px;
-  color: #253d4e;
-  min-width: 110px;
-`;
-
-const CategoryOption = styled.option`
-  font-size: 16px;
-  font-weight: 300;
-`;
-const InputContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`;
-const Input = styled.input`
-  outline: none;
-  border: none;
-  width: 100%;
-`;
-
-const SearchIcon = styled(SearchOutlined)`
-  color: gray;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.4);
-    transition: all 0.5s ease;
-  }
-`;
+import {
+  CartContainer,
+  CartIcon,
+  CategoryOption,
+  CategorySelect,
+  Center,
+  Container,
+  IconMenu,
+  IconWrapper,
+  Input,
+  InputContainer,
+  Left,
+  Logo,
+  MenuIconContainer,
+  SearchContainer,
+  SearchIcon,
+  UserContainer,
+  UserIcon,
+  Wrapper,
+} from "./header-mobile.style";
 
 const HeaderMobile = () => {
   const { isMenuOpen, setIsMenuOpen } = useGlobalContext();

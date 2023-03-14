@@ -18,7 +18,6 @@ export const GlobalContextProvider = ({ children }) => {
     } else {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
-    console.log("slideIndex:", slideIndex);
   };
 
   const value = {

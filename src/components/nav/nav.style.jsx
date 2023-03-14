@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link, MarginBottomContainer } from "../../GlobalStyle";
 
-export const Navbar = styled(MarginBottomContainer)`
+export const Navbar = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.border};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   height: 70px;
   line-height: 70px;
   width: 100%;
