@@ -19,7 +19,7 @@ export const theme = {
     white: "#fff",
     black: " #212529",
     helper: "#8490ff",
-    primary: "teal",
+    primary: "#008080",
     border: "#ececec",
     bg: "#F6F8FA",
     footer_bg: "#0a1435",
@@ -52,4 +52,15 @@ export const PrimaryLogo = styled.div`
 
 export const MarginBottomContainer = styled.div`
 margin-bottom: 70px;
+`;
+
+export const ButtonPrimary = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: ${({theme}) => theme.colors.primary};
+  color: ${({theme}) => theme.colors.white};
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
 `;
