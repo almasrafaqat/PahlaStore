@@ -1,0 +1,58 @@
+export const Categories = [
+  {
+    id: 1,
+    title: "Milks and Dairies",
+    imageUrl: "/images/cat7.png",
+    items: 24,
+    bg: "#FFFCEB",
+  },
+  {
+    id: 2,
+    title: "Clothing & beauty",
+    imageUrl: "/images/cat2.png",
+    items: 25,
+    bg: "#ecffec",
+  },
+  {
+    id: 3,
+    title: "Pet Foods & Toy",
+    imageUrl: "/images/cat3.png",
+    items: 26,
+    bg: "#feefea",
+  },
+  {
+    id: 4,
+    title: "Milks and Dairies",
+    imageUrl: "/images/cat4.png",
+    items: 27,
+    bg: "#feefea",
+  },
+  {
+    id: 5,
+    title: "Milks and Dairies",
+    imageUrl: "/images/cat5.png",
+    items: 28,
+    bg: "#fff3ff",
+  },
+  {
+    id: 6,
+    title: "Milks and Dairies",
+    imageUrl: "/images/cat6.png",
+    items: 29,
+    bg: "#f2fce4",
+  },
+  {
+    id: 7,
+    title: "Red Apple",
+    imageUrl: "/images/cat6.png",
+    items: 30,
+    bg: "#f2fce4",
+  },
+  {
+    id: 8,
+    title: "Red Apple",
+    imageUrl: "/images/cat6.png",
+    items: 30,
+    bg: "#f2fce4",
+  },
+];
