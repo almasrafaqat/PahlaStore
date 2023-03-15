@@ -3,6 +3,7 @@ import Announcement from "../../components/announcement/announcement.component";
 import Footer from "../../components/footer/footer.component";
 import HeaderMobile from "../../components/header-mobile/header-mobile.component";
 import Header from "../../components/header/header.component";
+import HomeCategories from "../../components/home-category/home-categories.component";
 import Newletter from "../../components/newletter/newletter.component";
 import Slider from "../../components/slider/slider.component";
 import "../../responsive.css";
@@ -21,6 +22,7 @@ const HomePage = () => {
         <HeaderMobile />
       </Wrapper>
       <Slider />
+      <HomeCategories/>
 
       <Footer />
     </Container>

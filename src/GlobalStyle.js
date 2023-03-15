@@ -64,3 +64,7 @@ export const ButtonPrimary = styled.button`
   cursor: pointer;
 
 `;
+
+export const PaddingContainer = styled.div`
+  padding: 0 30px;
+`;

@@ -1,19 +1,35 @@
+import { HeadsetMicOutlined, LocalFireDepartmentOutlined } from "@mui/icons-material";
 import styled from "styled-components";
-import { Link, MarginBottomContainer } from "../../GlobalStyle";
+import { Link, MarginBottomContainer, theme } from "../../GlobalStyle";
 
 export const Navbar = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.colors.border};
+ 
   height: 70px;
-  line-height: 70px;
   width: 100%;
   z-index: 2;
+  margin-bottom: 50px;
+ 
 `;
 
 export const Container = styled.div`
-  padding: 0px 20px;
+
   position: relative;
   margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
+
+export const HotDealContainer = styled.div`
+
+margin-right: 10px;
+  
+`;
+
+export const HotDeal = styled(LocalFireDepartmentOutlined)``;
+
+export const Text = styled.span``;
 
 export const MenuItem = styled.ul`
   display: inline-flex;
@@ -25,8 +41,13 @@ export const MenuLink = styled(Link)`
   font-size: 18px;
   font-weight: 500;
   transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  background-color: ${props => props.type === "hotdeal" && "#008080"};
+  color: ${props => props.type === "hotdeal" && "#fff"};
   &:hover {
     background: ${({ theme }) => theme.colors.primary};
+    background: ${props => props.type === "hotdeal" && "#20B2AA"};
     color: ${({ theme }) => theme.colors.white};
   }
 `;
@@ -128,4 +149,30 @@ export const MenuList = styled.li`
     visibility: visible;
     opacity: 1;
   }
+`;
+
+export const HotLineContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const HotIcon = styled(HeadsetMicOutlined)`
+ 
+`;
+
+export const TextContainer = styled.div`
+  flex-direction: column;
+  margin-left: 20px;
+`;
+
+export const Telephone = styled.div`
+  color: teal;
+  font-size: 20px;
+  font-weight: 400;
+`;
+
+export const SubText = styled.span`
+  font-size:12px;
+  /* font-weight: 200; */
 `;

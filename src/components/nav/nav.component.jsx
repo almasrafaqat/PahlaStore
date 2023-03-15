@@ -5,6 +5,10 @@ import {
   DropdownLink,
   DropdownList,
   HeaderTitle,
+  HotDeal,
+  HotDealContainer,
+  HotIcon,
+  HotLineContainer,
   Image,
   MegaBox,
   MegaItem,
@@ -15,6 +19,10 @@ import {
   MenuList,
   Navbar,
   Row,
+  SubText,
+  Telephone,
+  Text,
+  TextContainer,
 } from "./nav.style";
 
 const Nav = () => {
@@ -22,6 +30,11 @@ const Nav = () => {
     <Navbar>
       <Container>
         <MenuItem>
+          <HotDealContainer>
+            <MenuList >
+              <MenuLink type="hotdeal"> <HotDeal />   <Text>Hot Deal</Text>   </MenuLink>
+            </MenuList>
+          </HotDealContainer>
           <MenuList>
             <MenuLink> Home </MenuLink>
           </MenuList>
@@ -107,6 +120,13 @@ const Nav = () => {
             </MegaBox>
           </MenuList>
         </MenuItem>
+        <HotLineContainer>
+          <HotIcon style={{fontSize: "48px"}}/>
+          <TextContainer>
+            <Telephone>(+01) - 8888 475</Telephone>
+            <SubText>24/7 Support Center</SubText>
+          </TextContainer>
+        </HotLineContainer>
       </Container>
     </Navbar>
   );
