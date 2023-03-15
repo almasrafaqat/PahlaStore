@@ -41,7 +41,7 @@ export const CategoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid  ${props => props.bg};
+    border: 1px solid teal;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     transform: scale(1);
