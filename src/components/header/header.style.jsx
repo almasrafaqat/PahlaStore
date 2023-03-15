@@ -12,7 +12,7 @@ import {  MarginBottomContainer, PaddingContainer, PrimaryLogo } from "../../Glo
 export const Container = styled(MarginBottomContainer)`
     height: 60px;
     line-height: 60px;
-    margin-bottom: 70px;
+
   `;
 
 export const Wrapper = styled(PaddingContainer)`

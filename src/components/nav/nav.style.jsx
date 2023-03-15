@@ -1,30 +1,33 @@
-import { HeadsetMicOutlined, LocalFireDepartmentOutlined } from "@mui/icons-material";
+import {
+  HeadsetMicOutlined,
+  LocalFireDepartmentOutlined,
+} from "@mui/icons-material";
 import styled from "styled-components";
-import { Link, MarginBottomContainer, theme } from "../../GlobalStyle";
+import {
+  Link,
+  MarginBottomContainer,
+  PaddingContainer,
+  theme,
+} from "../../GlobalStyle";
 
-export const Navbar = styled.div`
- 
+export const Navbar = styled(MarginBottomContainer)`
   height: 70px;
   width: 100%;
   z-index: 2;
   margin-bottom: 50px;
- 
 `;
 
 export const Container = styled.div`
-
   position: relative;
   margin: auto;
-  padding: 15px 20px;
+  padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 export const HotDealContainer = styled.div`
-
-margin-right: 10px;
-  
+  margin-right: 10px;
 `;
 
 export const HotDeal = styled(LocalFireDepartmentOutlined)``;
@@ -43,11 +46,11 @@ export const MenuLink = styled(Link)`
   transition: all 0.4s ease-in-out;
   display: flex;
   align-items: center;
-  background-color: ${props => props.type === "hotdeal" && "#008080"};
-  color: ${props => props.type === "hotdeal" && "#fff"};
+  background-color: ${(props) => props.type === "hotdeal" && "#008080"};
+  color: ${(props) => props.type === "hotdeal" && "#fff"};
   &:hover {
     background: ${({ theme }) => theme.colors.primary};
-    background: ${props => props.type === "hotdeal" && "#20B2AA"};
+    background: ${(props) => props.type === "hotdeal" && "#20B2AA"};
     color: ${({ theme }) => theme.colors.white};
   }
 `;
@@ -157,9 +160,7 @@ export const HotLineContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const HotIcon = styled(HeadsetMicOutlined)`
- 
-`;
+export const HotIcon = styled(HeadsetMicOutlined)``;
 
 export const TextContainer = styled.div`
   flex-direction: column;
@@ -173,6 +174,6 @@ export const Telephone = styled.div`
 `;
 
 export const SubText = styled.span`
-  font-size:12px;
+  font-size: 12px;
   /* font-weight: 200; */
 `;
