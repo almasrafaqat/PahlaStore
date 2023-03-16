@@ -12,7 +12,6 @@ import {  MarginBottomContainer, PaddingContainer, PrimaryLogo } from "../../Glo
 export const Container = styled(MarginBottomContainer)`
     height: 60px;
     line-height: 60px;
-
   `;
 
 export const Wrapper = styled(PaddingContainer)`
@@ -20,6 +19,7 @@ export const Wrapper = styled(PaddingContainer)`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   `;
 
 export const Left = styled.div`

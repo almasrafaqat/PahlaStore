@@ -1,15 +1,9 @@
 import { Categories } from "../../data";
-import { Link } from "../../GlobalStyle";
+import CategoryCard from "../category-card/category-card.component";
 import {
   Box,
-  CategoryContainer,
   Container,
   Heading,
-  Image,
-  ImageContainer,
-  InfoContainer,
-  Text,
-  Title,
   Wrapper,
 } from "./home-categories.style";
 
@@ -21,17 +15,7 @@ const HomeCategories = () => {
         <Box>
           {Categories.map((category) => {
             return (
-              <CategoryContainer key={category.id} bg={category.bg}>
-                <ImageContainer>
-                  <Image src={category.imageUrl} />
-                </ImageContainer>
-                <InfoContainer>
-                  <Title>
-                    <Link>{category.title}</Link>
-                  </Title>
-                </InfoContainer>
-                <Text>{category.items} Items</Text>
-              </CategoryContainer>
+              <CategoryCard key={category.id} category={category} />
             );
           })}
         </Box>

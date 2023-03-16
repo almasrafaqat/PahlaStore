@@ -17,10 +17,9 @@ export const Navbar = styled(MarginBottomContainer)`
   margin-bottom: 50px;
 `;
 
-export const Container = styled.div`
+export const Container = styled(PaddingContainer)`
   position: relative;
   margin: auto;
-  padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
