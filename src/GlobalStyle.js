@@ -57,8 +57,8 @@ margin-bottom: 70px;
 export const ButtonPrimary = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: ${({theme}) => theme.colors.primary};
-  color: ${({theme}) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -68,3 +68,23 @@ export const ButtonPrimary = styled.button`
 export const PaddingContainer = styled.div`
   padding: 0 30px;
 `;
+
+
+export const HeadingPrimary = styled.h1`
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+`
+
+export const TextPrimary = styled.span``;
+
+export const TitlePrimary = styled.h6`
+    font-size: 16px;
+`;
+
+export const FlexContainer = styled.div`
+   display: flex;
+  flex-wrap: wrap; 
+`;
+

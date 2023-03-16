@@ -10,7 +10,7 @@ export const CategoryContainer = styled.div`
     flex: 1 1 auto;
     background: ${props => props.bg};
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 10px;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,6 @@ export const CategoryContainer = styled.div`
     border: 1px solid teal;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    transform: scale(1);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 
     &:hover {
