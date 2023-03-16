@@ -26,7 +26,7 @@ const Slider = () => {
         <SlideBox>
           <Slide bg="#FAF0E6">
             <ImageContainer>
-              <Image src="/images/headphone.png" />
+              <Image src="/images/slider1.png" />
             </ImageContainer>
             <InfoContainer>
               <Title>
@@ -43,7 +43,7 @@ const Slider = () => {
         <SlideBox>
           <Slide bg="#E6E6FA">
             <ImageContainer>
-              <Image src="/images/ecom.png" />
+              <Image src="/images/slider2.png" />
             </ImageContainer>
             <InfoContainer>
               <Title>
@@ -60,7 +60,7 @@ const Slider = () => {
         <SlideBox>
           <Slide bg="#F0FFFF">
             <ImageContainer>
-              <Image src="/images/headphone.png" />
+              <Image src="/images/slider3.png" />
             </ImageContainer>
             <InfoContainer>
               <Title>

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
+import { mobile } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -51,7 +52,7 @@ export const PrimaryLogo = styled.div`
 `;
 
 export const MarginBottomContainer = styled.div`
-margin-bottom: 70px;
+  margin-bottom: 70px;
 `;
 
 export const ButtonPrimary = styled.button`
@@ -62,29 +63,26 @@ export const ButtonPrimary = styled.button`
   border: none;
   border-radius: 2px;
   cursor: pointer;
-
 `;
 
 export const PaddingContainer = styled.div`
   padding: 0 30px;
+  ${mobile({ padding: "10px" })}
 `;
 
-
 export const HeadingPrimary = styled.h1`
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: 2px;
-
-`
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+`;
 
 export const TextPrimary = styled.span``;
 
 export const TitlePrimary = styled.h6`
-    font-size: 16px;
+  font-size: 16px;
 `;
 
 export const FlexContainer = styled.div`
-   display: flex;
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 `;
-
