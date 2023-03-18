@@ -67,7 +67,6 @@ const Slider = () => {
                 Vestibulum quis aliquam enim. Cras massa tellus, bibendum 3
               </Title>
               <Description>
-                {" "}
                 eu gravida lacus. Vestibulum ante ipsum primis in faucibus orci
                 luctus et ultrices posuere cubilia curae; Integer et neque
               </Description>

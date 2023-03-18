@@ -1,21 +1,55 @@
-import React from 'react'
-import { Container, Item } from './best-sells.style'
+import React from "react";
+import { Products } from "../../data";
+import ProductCard from "../product-card/product-card.component";
+import {
+  ArrowContainer,
+  ArrowLeft,
+  ArrowRight,
+  Box,
+  Button,
+  Container,
+  Header,
+  Heading,
+  Item,
+  MegaBox,
+  ProductBannerContainer,
+  ProductBannerImage,
+  ProductContainer,
+  Title,
+  Wrapper,
+} from "./best-sells.style";
 
 const BestSells = () => {
   return (
     <Container>
-        <Item>lorem ipsum   lorem ispsum lorem ipsum   lorem ispsum lorem ipsum   lorem ispsum </Item>
-        <Item>Item 2 </Item>
-        <Item>Item 3 </Item>
-        <Item>Item 4</Item>
-        <Item>Item 5</Item>
-        <Item>Item 6</Item>
-        <Item>Item 7</Item>
-        <Item>Item 8</Item>
-        <Item>Item 9</Item>
+      <Wrapper>
+        <Box>
+          <Header>
+            <Heading>Daily Best Sells</Heading>
+          </Header>
+          <MegaBox>
+            <ProductBannerContainer>
+              <ProductBannerImage src="/images/probanner.jpg" />
+              <Title>Bring nature into your home</Title>
+              <Button>Show Now!</Button>
+            </ProductBannerContainer>
 
+            <ProductContainer>
+              <ArrowContainer direction="left">
+                <ArrowLeft />
+              </ArrowContainer>
+              {Products.slice(0, 4).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+              <ArrowContainer direction="right">
+                <ArrowRight />
+              </ArrowContainer>
+            </ProductContainer>
+          </MegaBox>
+        </Box>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default BestSells
+export default BestSells;

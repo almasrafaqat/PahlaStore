@@ -33,8 +33,7 @@ export const theme = {
 
     gradient:
       "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
-    shad:
-      "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
+    shad: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
     shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
 
@@ -77,7 +76,7 @@ export const PaddingContainer = styled.div`
 
 export const HeadingPrimary = styled.h1`
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
 `;
 
@@ -90,4 +89,19 @@ export const TitlePrimary = styled.h6`
 export const FlexContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+`;
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-auto-columns: minmax(15rem, auto);
+  // grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-rows: 25rem;
+  grid-auto-rows: minmax(20rem, auto);
+  grid-gap: 0.3rem;
+`;
+
+export const BoxPrimary = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;

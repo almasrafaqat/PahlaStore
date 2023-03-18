@@ -1,5 +1,6 @@
 
 import {
+  BoxPrimary,
   FlexContainer,
   HeadingPrimary,
   MarginBottomContainer,
@@ -12,10 +13,8 @@ export const Container = styled(MarginBottomContainer)``;
 
 export const Wrapper = styled(PaddingContainer)``;
 
-export const Box = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+export const Box = styled(BoxPrimary)`
+  
 `;
 
 export const Header = styled.div``;
