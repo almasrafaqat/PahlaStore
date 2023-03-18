@@ -18,17 +18,22 @@ export const theme = {
     heading: "rgb(24 24 29)",
     text: "rgba(29 ,29, 29, .8)",
     white: "#fff",
+    star: "#ffaa0f",
+    gray: "#adadad",
     black: " #212529",
     helper: "#8490ff",
     primary: "#008080",
+    hover: "#20B2AA",
     border: "#ececec",
     bg: "#F6F8FA",
     footer_bg: "#0a1435",
     btn: "rgb(98 84 243)",
     hr: "#ffffff",
+    shadow: "0 6px 15px rgba(0, 0, 0, 0.15);",
+
     gradient:
       "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
-    shadow:
+    shad:
       "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
     shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
@@ -46,18 +51,18 @@ export const Link = styled(NavLink)`
 
 export const PrimaryLogo = styled.div`
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 1px;
 `;
 
 export const MarginBottomContainer = styled.div`
-  margin-bottom: 70px;
+  margin-bottom: 4.5rem;
 `;
 
 export const ButtonPrimary = styled.button`
-  padding: 10px;
-  font-size: 20px;
+  padding: 0.6rem;
+  font-size: 1.3rem;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
   border: none;
@@ -66,12 +71,12 @@ export const ButtonPrimary = styled.button`
 `;
 
 export const PaddingContainer = styled.div`
-  padding: 0 30px;
-  ${mobile({ padding: "10px" })}
+  padding: 0 1.9rem;
+  ${mobile({ padding: "0.6rem" })}
 `;
 
 export const HeadingPrimary = styled.h1`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 2px;
 `;
@@ -79,7 +84,7 @@ export const HeadingPrimary = styled.h1`
 export const TextPrimary = styled.span``;
 
 export const TitlePrimary = styled.h6`
-  font-size: 16px;
+  font-size: 1rem;
 `;
 
 export const FlexContainer = styled.div`

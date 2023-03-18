@@ -7,14 +7,13 @@ import {
   Link,
   MarginBottomContainer,
   PaddingContainer,
-  theme,
 } from "../../GlobalStyle";
 
 export const Navbar = styled(MarginBottomContainer)`
   height: 70px;
   width: 100%;
   z-index: 2;
-  margin-bottom: 50px;
+  margin-bottom: 1.3rem;
 `;
 
 export const Container = styled(PaddingContainer)`
@@ -26,7 +25,7 @@ export const Container = styled(PaddingContainer)`
 `;
 
 export const HotDealContainer = styled.div`
-  margin-right: 10px;
+  margin-right: 0.4rem;
 `;
 
 export const HotDeal = styled(LocalFireDepartmentOutlined)``;
@@ -38,9 +37,9 @@ export const MenuItem = styled.ul`
 `;
 
 export const MenuLink = styled(Link)`
-  padding: 9px 15px;
+  padding: 0.6rem 0.9rem;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   display: flex;
@@ -65,7 +64,7 @@ export const DropdownItem = styled.ul`
   transition: all 0.4s ease-in-out;
   visibility: hidden;
   opacity: 0;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.colors.shadow};
   z-index: 2;
 `;
 
@@ -74,11 +73,11 @@ export const DropdownList = styled.li`
 `;
 
 export const DropdownLink = styled(MenuLink)`
-  padding: 0 0 0 15px;
+  padding: 0 0 0 0.9rem;
   width: 100%;
   display: block;
   border-radius: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 `;
 
@@ -89,11 +88,12 @@ export const MegaBox = styled.div`
   top: 85px;
   left: 0;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 1.8rem;
   transition: all 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
   z-index: 2;
+ 
 `;
 
 export const Content = styled.div`
@@ -101,14 +101,17 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 25px 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  padding: 1.6rem 1.3rem 0px 1.3rem;
+  box-shadow: ${({ theme }) => theme.colors.shadow};
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 100%; 
+  height: 80%;
   object-fit: cover;
+  text-align: center;
+  margin: auto;
+  border-radius: 0.3rem;
 `;
 
 export const HeaderTitle = styled.header`
@@ -123,7 +126,7 @@ export const MegaItem = styled.ul`
 
 /** Row Border none */
 export const Row = styled.div`
-  line-height: 45px;
+  line-height: 50px;
   width: calc(25% - 30px);
 
   &:nth-child(1) ${MegaItem}, &:nth-child(2) ${MegaItem} {
@@ -133,7 +136,7 @@ export const Row = styled.div`
 
 export const MegaList = styled.li`
   list-style: none;
-  padding: 0 20px;
+  padding: 0 1.3rem;
 `;
 
 export const MegaLink = styled(DropdownLink)``;

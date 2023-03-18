@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Announcement from "../../components/announcement/announcement.component";
+import BestSells from "../../components/best-sells/best.sells.component";
 import Footer from "../../components/footer/footer.component";
 import HeaderMobile from "../../components/header-mobile/header-mobile.component";
 import Header from "../../components/header/header.component";
@@ -23,9 +24,9 @@ const HomePage = () => {
         <HeaderMobile />
       </Wrapper>
       <Slider />
-      <HomeCategories/>
-      <HomeProducts/>
-
+      <HomeCategories />
+      <HomeProducts />
+      <BestSells />
       <Footer />
     </Container>
   );

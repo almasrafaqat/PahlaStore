@@ -8,11 +8,13 @@ import {
   ImageContainer,
   Card,
   RatingContainer,
-  RatingIcon,
   TagContainer,
   Text,
   Title,
   InfoContainer,
+  StartFull,
+  StarEmpty,
+  StarHalf,
 } from "./product.card.style";
 
 const ProductCard = ({ product }) => {
@@ -27,7 +29,11 @@ const ProductCard = ({ product }) => {
       <InfoContainer>
         <Title>All Natural Italian-Style Chicken Meatballs </Title>
         <RatingContainer>
-          <RatingIcon />
+          <StartFull />
+          <StartFull />
+          <StartFull />
+          <StarHalf />
+          <StarEmpty />
         </RatingContainer>
         <Brand>
           By <Text type="brand">Apple</Text>
