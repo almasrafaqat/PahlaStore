@@ -1,0 +1,5 @@
+<ProductBannerContainer>
+              <ProductBannerImage src="/images/probanner.jpg" />
+              <Title>Bring nature into your home</Title>
+              <Button>Show Now!</Button>
+            </ProductBannerContainer>

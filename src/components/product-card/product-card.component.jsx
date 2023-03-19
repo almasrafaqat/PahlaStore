@@ -17,9 +17,10 @@ import {
   StarHalf,
 } from "./product.card.style";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, type }) => {
+  
   return (
-    <Card>
+    <Card type={type}>
       <TagContainer>
         <Text>Hot</Text>
       </TagContainer>

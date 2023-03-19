@@ -1,7 +1,7 @@
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import styled from "styled-components";
 
-import { ButtonPrimary, MarginBottomContainer } from "../../GlobalStyle"
+import { ArrowContainerPrimary, ArrowLeftPrimary, ArrowRightPrimary, ButtonPrimary, MarginBottomContainer } from "../../GlobalStyle"
 
 export const Container = styled(MarginBottomContainer)`
     width: 100%;
@@ -13,28 +13,12 @@ export const Container = styled(MarginBottomContainer)`
    
 `;
 
-export const ArrowContainer = styled.div`
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.white};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top:0;
-    bottom:0;
-    margin: auto;
-    left: ${props => props.direction === 'left' && "20px"};
-    right: ${props => props.direction === 'right' && "20px"};
-    cursor: pointer;
-    opacity: 0.5;
-    z-index:2;
+export const ArrowContainer = styled(ArrowContainerPrimary)`
+   
 `;
 
-export const ArrowLeft = styled(KeyboardArrowLeft)``;
-export const ArrowRight = styled(KeyboardArrowRight)``;
+export const ArrowLeft = styled(ArrowLeftPrimary)``;
+export const ArrowRight = styled(ArrowRightPrimary)``;
 
 export const Wrapper = styled.div`
 

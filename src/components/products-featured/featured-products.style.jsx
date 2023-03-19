@@ -2,6 +2,7 @@
 import {
   BoxPrimary,
   FlexContainer,
+  GridContainer,
   HeadingPrimary,
   MarginBottomContainer,
   PaddingContainer,
@@ -21,8 +22,8 @@ export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)``;
 
-export const ProductContainer = styled(FlexContainer)`
-  margin: 0 auto;
+export const ProductContainer = styled(GridContainer)`
+  
 `;
 
 

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { TextPrimary } from "../../GlobalStyle";
-import { StarHalfOutlined,  StarOutlined, StarOutlineOutlined } from "@mui/icons-material";
+import {
+  StarHalfOutlined,
+  StarOutlined,
+  StarOutlineOutlined,
+} from "@mui/icons-material";
 
 export const Card = styled.div`
   position: relative;
@@ -10,13 +14,14 @@ export const Card = styled.div`
   flex: 1 calc(20% - 10px);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid ${({theme}) => theme.colors.border};
   transition: 0.3s ease-in-out;
   cursor: pointer;
   max-height: 450px;
 
   &:hover {
     transform: translate(0px, -8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
 `;
 
@@ -39,15 +44,14 @@ export const Text = styled(TextPrimary)`
 `;
 
 export const ImageContainer = styled.div`
-   width: 200px;
+  width: 200px;
   height: 200px;
   margin: 0 auto;
 `;
 
 export const Image = styled.img`
- 
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: contain;
 `;
@@ -60,9 +64,8 @@ export const Title = styled.h4``;
 
 export const RatingContainer = styled.div`
   margin: 0.19rem 0;
-  color: ${({theme}) => theme.colors.star};
+  color: ${({ theme }) => theme.colors.star};
 `;
-
 
 export const StartFull = styled(StarOutlined)``;
 export const StarEmpty = styled(StarOutlineOutlined)``;
@@ -77,7 +80,7 @@ export const AddToCardContainer = styled.div`
   width: 100%;
   bottom: 3%;
   left: 0;
-  right:0;
+  right: 0;
   margin: 0 auto;
   padding: 0 10px;
 `;

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import { useGlobalContext } from "../../context/GlobalContext";
 import { Products } from "../../data";
+import { SliderSettings } from "../../GlobalStyle";
 import ProductCard from "../product-card/product-card.component";
+
 import {
   ArrowContainer,
   ArrowLeft,
@@ -17,9 +21,11 @@ import {
   ProductContainer,
   Title,
   Wrapper,
-} from "./best-sells.style";
+} from "./best-selling.style";
 
-const BestSells = () => {
+const BestSelling = () => {
+  const { slider, setSliderRef } = useGlobalContext();
+
   return (
     <Container>
       <Wrapper>
@@ -29,19 +35,27 @@ const BestSells = () => {
           </Header>
           <MegaBox>
             <ProductBannerContainer>
-              <ProductBannerImage src="/images/probanner.jpg" />
+              <ProductBannerImage src="/images/bestsellbanner.png" />
               <Title>Bring nature into your home</Title>
               <Button>Show Now!</Button>
             </ProductBannerContainer>
-
             <ProductContainer>
-              <ArrowContainer direction="left">
+              <ArrowContainer
+                direction="left"
+                onClick={() => slider?.slickPrev()}
+              >
                 <ArrowLeft />
               </ArrowContainer>
-              {Products.slice(0, 4).map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-              <ArrowContainer direction="right">
+              <Slider ref={setSliderRef} {...SliderSettings}>
+                {Products.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </Slider>
+
+              <ArrowContainer
+                direction="right"
+                onClick={() => slider?.slickNext()}
+              >
                 <ArrowRight />
               </ArrowContainer>
             </ProductContainer>
@@ -52,4 +66,4 @@ const BestSells = () => {
   );
 };
 
-export default BestSells;
+export default BestSelling;

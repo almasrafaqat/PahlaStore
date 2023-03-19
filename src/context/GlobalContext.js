@@ -3,12 +3,18 @@ import { createContext, useContext, useState } from "react";
 const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
+
+  /**Open Sidebar for Mobile View */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  /** Active color on dropdown */
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     dropdown: false,
     megaMenu: false,
   });
 
+  /** Slider Arrow Left & Right  */
+  const [slider, setSliderRef] = useState(null);
   /** Dropdown Height */
   const DropMenuHandler = (event) => {
     event.preventDefault();
@@ -55,6 +61,9 @@ export const GlobalContextProvider = ({ children }) => {
     slideIndex,
     SlideHandler,
     DropMenuHandler,
+    slider,
+    setSliderRef
+
   };
 
   return (

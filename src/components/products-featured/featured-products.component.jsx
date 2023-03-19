@@ -7,9 +7,9 @@ import {
   Heading,
   ProductContainer,
   Wrapper,
-} from "./home-products.style";
+} from "./featured-products.style";
 
-const HomeProducts = () => {
+const FeaturedProducts = () => {
   return (
     <Container>
       <Wrapper>
@@ -30,4 +30,4 @@ const HomeProducts = () => {
   );
 };
 
-export default HomeProducts;
+export default FeaturedProducts;
