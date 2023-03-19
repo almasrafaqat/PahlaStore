@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
-import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import {
+  KeyboardArrowLeft,
+  KeyboardArrowRight,
+  StarHalfOutlined,
+  StarOutlined,
+  StarOutlineOutlined,
+} from "@mui/icons-material";
 import { mobile } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
@@ -106,6 +112,33 @@ export const BoxPrimary = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+`;
+
+/** Stars Rating */
+
+export const RatingContainerPrimary = styled.div`
+  margin: 0.19rem 0;
+  color: ${({ theme }) => theme.colors.star};
+`;
+
+export const StarFullPrimary = styled(StarOutlined)``;
+export const StarEmptyPrimary = styled(StarOutlineOutlined)``;
+export const StarHalfPrimary = styled(StarHalfOutlined)``;
+
+/** Price Container */
+
+export const PriceContainerPrimary = styled.div``;
+
+export const PricePrimary = styled(TextPrimary)`
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 0.6rem;
+`;
+
+export const DiscountPricePrimary = styled(PricePrimary)`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.gray};
+  text-decoration: line-through;
 `;
 
 /** Arrows  */

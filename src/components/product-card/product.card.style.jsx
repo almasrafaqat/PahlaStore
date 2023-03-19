@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { TextPrimary } from "../../GlobalStyle";
+import {
+  RatingContainerPrimary,
+  StarEmptyPrimary,
+  StarFullPrimary,
+  StarHalfPrimary,
+  TextPrimary,
+} from "../../GlobalStyle";
 import {
   StarHalfOutlined,
   StarOutlined,
@@ -14,7 +20,7 @@ export const Card = styled.div`
   flex: 1 calc(20% - 10px);
   display: flex;
   flex-direction: column;
-  border: 1px solid ${({theme}) => theme.colors.border};
+  border: 1px solid ${({ theme }) => theme.colors.border};
   transition: 0.3s ease-in-out;
   cursor: pointer;
   max-height: 450px;
@@ -62,14 +68,11 @@ export const InfoContainer = styled.div`
 
 export const Title = styled.h4``;
 
-export const RatingContainer = styled.div`
-  margin: 0.19rem 0;
-  color: ${({ theme }) => theme.colors.star};
-`;
+export const RatingContainer = styled(RatingContainerPrimary)``;
 
-export const StartFull = styled(StarOutlined)``;
-export const StarEmpty = styled(StarOutlineOutlined)``;
-export const StarHalf = styled(StarHalfOutlined)``;
+export const StartFull = styled(StarFullPrimary)``;
+export const StarEmpty = styled(StarEmptyPrimary)``;
+export const StarHalf = styled(StarHalfPrimary)``;
 
 export const Brand = styled.div`
   margin-bottom: 20px;
