@@ -17,8 +17,20 @@ export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)`
   font-size: 24px;
-  border-bottom: 1px solid;
-  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
+//   padding-bottom: 20px;
+  padding: 20px 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #bce3c9;
+  }
 `;
 
 export const BoxColumn = styled.div`
