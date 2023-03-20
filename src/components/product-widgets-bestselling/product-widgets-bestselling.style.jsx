@@ -11,15 +11,16 @@ import {
   StarHalfPrimary,
 } from "../../GlobalStyle";
 
-export const Box = styled(BoxPrimary)``;
+export const Box = styled(BoxPrimary)`
+  margin: 0 20px;
+`;
 
 export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)`
   font-size: 24px;
   border-bottom: 1px solid #ececec;
-//   padding-bottom: 20px;
-  padding: 20px 20px;
+  padding-bottom: 20px;
   position: relative;
 
   &::after {
