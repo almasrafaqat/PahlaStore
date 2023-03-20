@@ -7,9 +7,19 @@ const ProductWidgets = () => {
     <Container>
       <Wrapper>
         <FlexBox>
-            <ProductWidgetsBestSelling/>
-            <ProductWidgetsBestSelling/>
-            <ProductWidgetsBestSelling/>
+            <div style={{flex: "1"}}>
+            <ProductWidgetsBestSelling title="Top Selling"/>
+            </div>
+            <div style={{flex: "1"}}>
+            <ProductWidgetsBestSelling title="Trending Products"/>
+            </div>
+            <div style={{flex: "1"}}>
+            <ProductWidgetsBestSelling title="Recently added"/>
+            </div>
+            <div style={{flex: "1"}}>
+            <ProductWidgetsBestSelling title="Top Rated"/>
+            </div>
+            
         </FlexBox>
       </Wrapper>
     </Container>

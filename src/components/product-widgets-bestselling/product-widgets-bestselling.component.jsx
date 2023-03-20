@@ -1,3 +1,4 @@
+import FormatPrice from "../../helpers/FormatPrice";
 import {
   Box,
   DiscountPrice,
@@ -16,18 +17,18 @@ import {
   Title,
 } from "./product-widgets-bestselling.style";
 
-const ProductWidgetsBestSelling = () => {
+const ProductWidgetsBestSelling = ({ title }) => {
   return (
     <Box>
       <Header>
-        <Heading>Best Selling</Heading>
+        <Heading>{title} </Heading>
       </Header>
       <ProductContainer>
         <ImageContainer>
           <Image src="/images/headphone.png" />
         </ImageContainer>
         <InfoContainer>
-          <Title>Huwei Mobile Phone</Title>
+          <Title>Nestle Original Coffee-Mate Coffee Creamer</Title>
           <RatingContainer>
             <StartFull />
             <StartFull />
@@ -36,8 +37,12 @@ const ProductWidgetsBestSelling = () => {
             <StarEmpty />
           </RatingContainer>
           <PriceContainer>
-            <Price>1200</Price>
-            <DiscountPrice>15000</DiscountPrice>
+            <Price>
+              <FormatPrice price={1200} />
+            </Price>
+            <DiscountPrice>
+              <FormatPrice price={1500} />
+            </DiscountPrice>
           </PriceContainer>
         </InfoContainer>
       </ProductContainer>
