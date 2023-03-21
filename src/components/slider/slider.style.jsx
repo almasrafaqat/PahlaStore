@@ -1,4 +1,3 @@
-import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import styled from "styled-components";
 
 import { ArrowContainerPrimary, ArrowLeftPrimary, ArrowRightPrimary, ButtonPrimary, MarginBottomContainer } from "../../GlobalStyle"

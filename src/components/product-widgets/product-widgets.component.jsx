@@ -1,25 +1,20 @@
 import React from "react";
-import ProductWidgetsBestSelling from "../product-widgets-bestselling/product-widgets-bestselling.component";
+import { Products } from "../../data";
+import ProductWidgetCard from "../product-widgets-card/product-widgets-card.component";
 import { Container, FlexBox, Wrapper } from "./product-widgets.style";
 
 const ProductWidgets = () => {
+  const FeaturedProducts = Products.filter((product) => product.featured);
+  const NewProducts = Products.filter((product) => product.tag === "new");
+
   return (
     <Container>
       <Wrapper>
         <FlexBox>
-            <div style={{flex: "1"}}>
-            <ProductWidgetsBestSelling title="Top Selling"/>
-            </div>
-            <div style={{flex: "1"}}>
-            <ProductWidgetsBestSelling title="Trending Products"/>
-            </div>
-            <div style={{flex: "1"}}>
-            <ProductWidgetsBestSelling title="Recently added"/>
-            </div>
-            <div style={{flex: "1"}}>
-            <ProductWidgetsBestSelling title="Top Rated"/>
-            </div>
-            
+          <ProductWidgetCard products={FeaturedProducts} title="Trending Products" />
+          <ProductWidgetCard products={NewProducts} title="Recent Products" />
+          <ProductWidgetCard products={FeaturedProducts} title="Trending Products" />
+          <ProductWidgetCard products={NewProducts} title="Recent Products" />
         </FlexBox>
       </Wrapper>
     </Container>

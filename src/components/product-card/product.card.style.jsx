@@ -6,18 +6,14 @@ import {
   StarHalfPrimary,
   TextPrimary,
 } from "../../GlobalStyle";
-import {
-  StarHalfOutlined,
-  StarOutlined,
-  StarOutlineOutlined,
-} from "@mui/icons-material";
+
 
 export const Card = styled.div`
   position: relative;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   margin: 5px;
   border-radius: 10px;
-  flex: 1 calc(20% - 10px);
+  flex: 1 calc(20% - 0.5rem);
   display: flex;
   flex-direction: column;
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -37,10 +33,9 @@ export const TagContainer = styled.div`
   width: 70px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 25px;
-
   top: 0;
   left: 0;
-  padding: 10px;
+  padding: 0.5rem;
 `;
 
 export const Text = styled(TextPrimary)`
