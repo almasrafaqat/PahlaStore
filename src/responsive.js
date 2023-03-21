@@ -8,7 +8,13 @@ export const Mobile768 = (props) => {
   `;
 };
 
-
+export const Mobile1810 = (props) => {
+  return css`
+    @media only screen and (max-width: 1809.98px) {
+      ${props}
+    }
+  `;
+};
 
 export const mobile = (props) => {
   return css`

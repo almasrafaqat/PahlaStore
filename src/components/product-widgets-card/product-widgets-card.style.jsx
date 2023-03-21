@@ -10,13 +10,12 @@ import {
   StarFullPrimary,
   StarHalfPrimary,
 } from "../../GlobalStyle";
-
+import { Mobile1810 } from "../../responsive";
 
 export const WidgetBox = styled(BoxPrimary)`
   margin-right: 1.3rem;
   flex: 1;
   margin-bottom: 1.7rem;
-  
 `;
 
 export const Header = styled.div``;
@@ -42,15 +41,16 @@ export const BoxColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
- 
-
 `;
 
 export const ProductContainer = styled.div`
+  padding: 0.3rem 0.6rem 0.3rem 0;
   display: grid;
-  grid-template-columns: 25% 75%;
-  grid-column-gap: 1.3rem;
-  
+  grid-auto-columns: minmax(15rem, auto);
+  grid-template-columns: 20% 70%;
+  grid-template-rows: 50px 50px 50px;
+  grid-column-gap: 1rem;
+
 `;
 
 export const ImageContainer = styled.div`
@@ -59,19 +59,17 @@ export const ImageContainer = styled.div`
   border-radius: 15px;
   width: 120px;
   height: 120px;
-  
 `;
 
 export const Image = styled.img`
- object-fit: contain;
- width: 90%;
- height: 90%;
- margin: auto 0;
- 
+  object-fit: contain;
+  width: 90%;
+  height: 90%;
+  margin: auto 0;
 `;
 
 export const InfoContainer = styled.div`
- 
+  margin-left: 10px;
 `;
 
 export const Title = styled.h6`
@@ -80,6 +78,7 @@ export const Title = styled.h6`
   line-height: 1;
   color: #253d4e;
   letter-spacing: 1px;
+  padding: 0.3rem;
 `;
 
 export const RatingContainer = styled(RatingContainerPrimary)`
