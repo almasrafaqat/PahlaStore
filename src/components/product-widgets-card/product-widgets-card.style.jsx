@@ -55,20 +55,22 @@ export const ProductContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  /* text-align: center; */
+  text-align: center;
   background-color: aliceblue;
   border-radius: 10px;
   width: 150px;
-  /* height: 100px;  */
-  /* margin: auto; */
+  height: 100px; 
+  margin: auto;
+  overflow: hidden;
   
 `;
 
 export const Image = styled.img`
   object-fit: contain;
-  max-width: 100%;
+  max-width: 80%;
+  max-height: 80%;
 
-  display: block;
+  /* display: block; */
   
 
 `;
