@@ -46,22 +46,23 @@ export const BoxColumn = styled.div`
 export const ProductContainer = styled.div`
   padding: 0.3rem 0.6rem 0.3rem 0;
   display: grid;
-  grid-auto-columns: minmax(15rem, auto);
+  /* grid-auto-columns: minmax(15rem, auto); */
   /* grid-template-columns: 20% 70%; */
-  grid-template-columns:  minmax(20%,min-content) minmax(min-content,70%);
+  grid-template-columns:  minmax(min-content,30%) minmax(min-content,70%);
   grid-column-gap: 1rem;
  
 
 `;
 
 export const ImageContainer = styled.div`
-  text-align: center;
+  /* text-align: center; */
   background-color: aliceblue;
   border-radius: 10px;
   width: 150px;
   height: 100px; 
-  margin: auto;
+  /* margin: auto; */
   overflow: hidden;
+  position: relative;
   
 `;
 
@@ -69,6 +70,12 @@ export const Image = styled.img`
   object-fit: contain;
   max-width: 80%;
   max-height: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 
   /* display: block; */
   
