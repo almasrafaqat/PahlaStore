@@ -47,29 +47,35 @@ export const ProductContainer = styled.div`
   padding: 0.3rem 0.6rem 0.3rem 0;
   display: grid;
   grid-auto-columns: minmax(15rem, auto);
-  grid-template-columns: 20% 70%;
-  grid-template-rows: 50px 50px 50px;
+  /* grid-template-columns: 20% 70%; */
+  grid-template-columns:  minmax(20%,min-content) minmax(min-content,70%);
   grid-column-gap: 1rem;
+ 
 
 `;
 
 export const ImageContainer = styled.div`
-  text-align: center;
+  /* text-align: center; */
   background-color: aliceblue;
-  border-radius: 15px;
-  width: 120px;
-  height: 120px;
+  border-radius: 10px;
+  width: 150px;
+  /* height: 100px;  */
+  /* margin: auto; */
+  
 `;
 
 export const Image = styled.img`
   object-fit: contain;
-  width: 90%;
-  height: 90%;
-  margin: auto 0;
+  max-width: 100%;
+
+  display: block;
+  
+
 `;
 
 export const InfoContainer = styled.div`
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  /* grid-column: 2 / -1; */
 `;
 
 export const Title = styled.h6`
