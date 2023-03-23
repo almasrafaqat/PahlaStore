@@ -46,21 +46,16 @@ export const BoxColumn = styled.div`
 export const ProductContainer = styled.div`
   padding: 0.3rem 0.6rem 0.3rem 0;
   display: grid;
-  /* grid-auto-columns: minmax(15rem, auto); */
-  /* grid-template-columns: 20% 70%; */
-  grid-template-columns:  minmax(min-content,30%) minmax(min-content,70%);
+  grid-template-columns: fit-content(150px) 1fr;
   grid-column-gap: 1rem;
- 
 
 `;
 
 export const ImageContainer = styled.div`
-  /* text-align: center; */
-  background-color: aliceblue;
+  background-color: ${({theme}) => theme.colors.lightgray};
   border-radius: 10px;
   width: 150px;
   height: 100px; 
-  /* margin: auto; */
   overflow: hidden;
   position: relative;
   
@@ -76,28 +71,23 @@ export const Image = styled.img`
   left: 0;
   right: 0;
   margin: auto;
-
-  /* display: block; */
-  
-
 `;
 
 export const InfoContainer = styled.div`
-  /* margin-left: 10px; */
-  /* grid-column: 2 / -1; */
+ 
 `;
 
 export const Title = styled.h6`
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1;
-  color: #253d4e;
+  color:  ${({theme}) => theme.colors.black};
   letter-spacing: 1px;
   padding: 0.3rem;
 `;
 
 export const RatingContainer = styled(RatingContainerPrimary)`
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 `;
 
 export const StartFull = styled(StarFullPrimary)`
@@ -110,8 +100,14 @@ export const StarHalf = styled(StarHalfPrimary)`
   font-size: 1.1rem !important;
 `;
 
-export const PriceContainer = styled(PriceContainerPrimary)``;
+export const PriceContainer = styled(PriceContainerPrimary)`
+  
+`;
 
-export const Price = styled(PricePrimary)``;
+export const Price = styled(PricePrimary)`
+font-size: 1.05rem;
+`;
 
-export const DiscountPrice = styled(DiscountPricePrimary)``;
+export const DiscountPrice = styled(DiscountPricePrimary)`
+  font-size: 0.9rem;
+`;
