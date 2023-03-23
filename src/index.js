@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { GlobalContextProvider } from "./context/GlobalContext";
+import { ProductContextProvider } from "./context/ProductContext";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalContextProvider>
-      <App />
+      <ProductContextProvider>
+        <App />
+      </ProductContextProvider>
     </GlobalContextProvider>
   </React.StrictMode>
 );
