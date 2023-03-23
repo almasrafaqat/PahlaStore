@@ -1,3 +1,4 @@
+import { Link } from "../../GlobalStyle";
 import FormatPrice from "../../helpers/FormatPrice";
 import {
   BoxColumn,
@@ -31,10 +32,10 @@ const ProductWidgetCard = ({ title, products }) => {
             return (
               <ProductContainer key={product.id}>
                 <ImageContainer>
-                  <Image src={product.imageUrl} />
+                  <Link><Image src={product.imageUrl} /> </Link>
                 </ImageContainer>
                 <InfoContainer>
-                  <Title>{product.title.slice(0, 50)}</Title>
+                  <Title><Link> {product.title.slice(0, 50)} </Link></Title>
                   <RatingContainer>
                     <StartFull />
                     <StartFull />

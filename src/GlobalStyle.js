@@ -101,10 +101,7 @@ export const FlexContainer = styled.div`
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-auto-columns: minmax(15rem, auto);
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-template-rows: 25rem;
-  grid-auto-rows: minmax(20rem, auto);
   grid-gap: 0.3rem;
 `;
 
