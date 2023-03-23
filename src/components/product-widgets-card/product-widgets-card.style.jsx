@@ -10,12 +10,13 @@ import {
   StarFullPrimary,
   StarHalfPrimary,
 } from "../../GlobalStyle";
-import { Mobile1810 } from "../../responsive";
 
 export const WidgetBox = styled(BoxPrimary)`
   margin-right: 1.3rem;
   flex: 1;
   margin-bottom: 1.7rem;
+
+  
 `;
 
 export const Header = styled.div``;
@@ -48,11 +49,16 @@ export const ProductContainer = styled.div`
   display: grid;
   grid-template-columns: fit-content(150px) 1fr;
   grid-column-gap: 1rem;
+  transition: ${({ theme }) => theme.colors.cardtransition};
+
+  &:hover {
+    transform:  ${({ theme }) => theme.colors.cardhover}; 
+  }
 
 `;
 
 export const ImageContainer = styled.div`
-  background-color: ${({theme}) => theme.colors.lightgray};
+  background-color: ${({ theme }) => theme.colors.lightgray};
   border-radius: 10px;
   width: 150px;
   height: 100px; 
@@ -81,7 +87,7 @@ export const Title = styled.h6`
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
-  color:  ${({theme}) => theme.colors.black};
+  color:  ${({ theme }) => theme.colors.black};
   letter-spacing: 1px;
   padding: 0.3rem;
 `;

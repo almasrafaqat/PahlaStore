@@ -13,16 +13,15 @@ export const Card = styled.div`
   padding: 0.5rem 1rem;
   margin: 5px;
   border-radius: 10px;
-  flex: 1 calc(20% - 0.5rem);
   display: flex;
   flex-direction: column;
   border: 1px solid ${({ theme }) => theme.colors.border};
-  transition: 0.3s ease-in-out;
-  max-height: 450px;
+  transition: ${({ theme }) => theme.colors.cardtransition};
+
 
   &:hover {
-    transform: translate(0px, -8px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform:  ${({ theme }) => theme.colors.cardhover}; 
+    box-shadow:  ${({ theme }) => theme.colors.cardshadow};
   }
 `;
 
