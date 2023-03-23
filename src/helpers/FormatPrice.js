@@ -4,8 +4,8 @@ const FormatPrice = ({ price }) => {
   return Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
-    maximumFractionDigits: 2,
-  }).format(price / 100);
+    maximumFractionDigits: 0,
+  }).format(price);
 
 };
 

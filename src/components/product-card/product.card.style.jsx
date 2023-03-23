@@ -28,13 +28,17 @@ export const Card = styled.div`
 
 export const TagContainer = styled.div`
   position: absolute;
-  background-color: yellow;
-  width: 70px;
+  background-color: ${(props) => props.bg};
+  color: ${({ theme }) => theme.colors.white};
+  width: 5.5rem;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 25px;
   top: 0;
   left: 0;
   padding: 0.5rem;
+  text-transform: capitalize;
+  text-align: center;
+
 `;
 
 export const Text = styled(TextPrimary)`

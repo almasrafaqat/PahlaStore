@@ -22,8 +22,8 @@ const ProductCard = ({ product, type }) => {
 
   return (
     <Card type={type}>
-      <TagContainer>
-        <Text>Hot</Text>
+      <TagContainer bg={product.bg}>
+        <Text>{product.tag}</Text>
       </TagContainer>
       <ImageContainer>
         <Link><Image src={product.imageUrl} /></Link>
@@ -38,11 +38,11 @@ const ProductCard = ({ product, type }) => {
           <StarEmpty />
         </RatingContainer>
         <Brand>
-          By <Text type="brand">Apple</Text>
+          By <Text type="brand">{product.brand}</Text>
         </Brand>
       </InfoContainer>
       <AddToCardContainer>
-        <AddToCart price={1500} discount={1800} />
+        <AddToCart price={product.discount} discount={product.price} />
       </AddToCardContainer>
     </Card>
   );

@@ -126,7 +126,7 @@ export const StarHalfPrimary = styled(StarHalfOutlined)``;
 export const PriceContainerPrimary = styled.div``;
 
 export const PricePrimary = styled(TextPrimary)`
-  font-size: 1.3rem;
+  font-size: 1.08rem;
   font-weight: bold;
   margin-right: 0.6rem;
 `;
