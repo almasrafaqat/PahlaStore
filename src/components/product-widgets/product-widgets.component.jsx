@@ -1,7 +1,7 @@
 import React from "react";
 import { Products } from "../../data";
 import ProductWidgetCard from "../product-widgets-card/product-widgets-card.component";
-import { Container, FlexBox, Wrapper } from "./product-widgets.style";
+import { Container, FlexBox, GridBox, Wrapper } from "./product-widgets.style";
 
 const ProductWidgets = () => {
   const FeaturedProducts = Products.filter((product) => product.featured);
@@ -19,7 +19,7 @@ const ProductWidgets = () => {
   return (
     <Container>
       <Wrapper>
-        <FlexBox>
+        <GridBox>
           <ProductWidgetCard
             products={FeaturedProducts}
             title="Featured Products"
@@ -30,7 +30,7 @@ const ProductWidgets = () => {
             title="Popular Products"
           />
           <ProductWidgetCard products={newTopProduct} title="Top Products" />
-        </FlexBox>
+        </GridBox>
       </Wrapper>
     </Container>
   );

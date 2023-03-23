@@ -5,7 +5,6 @@ import {
   DiscountPricePrimary,
   PriceContainerPrimary,
   PricePrimary,
-  TextPrimary,
 } from "../../GlobalStyle";
 
 export const Container = styled.div`

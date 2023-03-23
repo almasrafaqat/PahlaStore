@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "../../GlobalStyle";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 
 import {
@@ -18,17 +19,17 @@ import {
 } from "./product.card.style";
 
 const ProductCard = ({ product, type }) => {
-  
+
   return (
     <Card type={type}>
       <TagContainer>
         <Text>Hot</Text>
       </TagContainer>
       <ImageContainer>
-        <Image src={product.imageUrl} />
+        <Link><Image src={product.imageUrl} /></Link>
       </ImageContainer>
       <InfoContainer>
-        <Title>All Natural Italian-Style Chicken Meatballs </Title>
+        <Title> <Link>{product.title.slice(0, 50)}</Link> </Title>
         <RatingContainer>
           <StartFull />
           <StartFull />

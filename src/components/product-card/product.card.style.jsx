@@ -18,7 +18,6 @@ export const Card = styled.div`
   flex-direction: column;
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: 0.3s ease-in-out;
-  cursor: pointer;
   max-height: 450px;
 
   &:hover {
@@ -81,4 +80,5 @@ export const AddToCardContainer = styled.div`
   right: 0;
   margin: 0 auto;
   padding: 0 10px;
+  cursor: pointer;
 `;

@@ -17,4 +17,6 @@ export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)``;
 
-export const ProductContainer = styled(GridContainer)``;
+export const ProductContainer = styled(GridContainer)`
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+`;
