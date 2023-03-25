@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Slider from "react-slick";
 import { useGlobalContext } from "../../context/GlobalContext";
 import { Products } from "../../data";
@@ -14,7 +13,6 @@ import {
   Container,
   Header,
   Heading,
-  Item,
   MegaBox,
   ProductBannerContainer,
   ProductBannerImage,

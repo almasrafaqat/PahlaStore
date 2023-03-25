@@ -12,11 +12,7 @@ import {
 } from "../../GlobalStyle";
 
 export const WidgetBox = styled(BoxPrimary)`
-  margin-right: 1.3rem;
-  flex: 1;
-  margin-bottom: 1.7rem;
 
-  
 `;
 
 export const Header = styled.div``;
@@ -38,10 +34,8 @@ export const Heading = styled(HeadingPrimary)`
   }
 `;
 
-export const BoxColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+export const BoxColumn = styled(BoxPrimary)`
+  gap: 1rem;
 `;
 
 export const ProductContainer = styled.div`

@@ -110,7 +110,7 @@ export const GridContainer = styled.div`
 export const BoxPrimary = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2rem;
 `;
 
 /** Stars Rating */

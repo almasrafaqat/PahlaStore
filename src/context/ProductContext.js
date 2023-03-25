@@ -12,25 +12,16 @@ export const ProductContextProvider = ({ children }) => {
     const tempPopularProducts = [...Products];
     const tempTopRatingProducts = [...Products];
 
-    // const TopRatingProducts = (a, b) => {
-    //     return b.rating - a.rating;
-    // };
-    // const PopularProducts = (a, b) => {
-    //     return b.views - a.views;
-    // };
+    const TopRatingProducts = (a, b) => {
+        return b.rating - a.rating;
+    };
+    const PopularProducts = (a, b) => {
+        return b.views - a.views;
+    };
 
-    const SortingProducts = (attr) => {
-        console.log(attr);
 
-        const sorting = (a, b) => {
-            return b.attr - a.attr;
-        }
-
-        return sorting;
-
-    }
-    const newPopularProducts = tempPopularProducts.sort(SortingProducts("views"));
-    const newTopProduct = tempTopRatingProducts.sort(SortingProducts("rating"));
+    const newPopularProducts = tempPopularProducts.sort(TopRatingProducts);
+    const newTopProduct = tempTopRatingProducts.sort(PopularProducts);
 
 
 

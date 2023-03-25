@@ -5,6 +5,7 @@ import {
   ArrowRightPrimary,
   BoxPrimary,
   ButtonPrimary,
+  FlexContainer,
   HeadingPrimary,
   MarginBottomContainer,
   PaddingContainer,
@@ -22,8 +23,8 @@ export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)``;
 
-export const MegaBox = styled.div`
-  display: flex;
+export const MegaBox = styled(FlexContainer)`
+ flex-wrap: nowrap;
 `;
 
 export const ProductBannerContainer = styled.div`

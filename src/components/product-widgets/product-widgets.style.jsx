@@ -9,6 +9,7 @@ export const Wrapper = styled(PaddingContainer)``;
 
 export const GridBox = styled(GridContainer)`
    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+   grid-gap: 50px;;
 `;
 
 
