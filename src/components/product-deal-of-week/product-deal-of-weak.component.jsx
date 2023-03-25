@@ -1,10 +1,16 @@
-import Slider from "react-slick"
-import ProductDealCard from "../product-deal-of-week-card/product-deal-of-week-card.component"
-import { Box, Container, Header, Heading, ProductContainer, Wrapper } from "./product-deal-of-weak.style"
-
+import Slider from "react-slick";
+import ProductDealCard from "../product-deal-of-week-card/product-deal-of-week-card.component";
+import {
+  Box,
+  Container,
+  Header,
+  Heading,
+  ProductContainer,
+  Wrapper,
+} from "./product-deal-of-weak.style";
 
 const ProductDealOffWeak = () => {
-   var SliderSettings = {
+  var SliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -51,14 +57,13 @@ const ProductDealOffWeak = () => {
     ],
   };
 
-  
   return (
     <Container>
       <Wrapper>
+        <Header>
+          <Heading>Deals of the week</Heading>
+        </Header>
         <Box>
-          <Header>
-            <Heading>Deals of the week</Heading>
-          </Header>
           <ProductContainer>
             <Slider {...SliderSettings}>
               <ProductDealCard />
@@ -69,12 +74,11 @@ const ProductDealOffWeak = () => {
               <ProductDealCard />
               <ProductDealCard />
             </Slider>
-
           </ProductContainer>
         </Box>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default ProductDealOffWeak
+export default ProductDealOffWeak;

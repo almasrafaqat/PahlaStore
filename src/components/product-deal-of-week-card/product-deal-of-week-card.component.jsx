@@ -20,10 +20,10 @@ const ProductDealCard = () => {
             </PriceContainer>
             <StockContainer>
                 <SoldOut>Sold 25</SoldOut>
-                <Available> Available 10</Available>
+                <Available> Available 25</Available>
             </StockContainer>
             <ProgressContainer>
-            <ProgressBar width="25">25</ProgressBar>
+            <ProgressBar width="15">35</ProgressBar>
 
             </ProgressContainer>
         </InfoContainer>
