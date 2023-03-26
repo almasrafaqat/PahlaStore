@@ -1,24 +1,25 @@
-const { default: styled } = require("styled-components");
-const { MarginBottomContainer, PaddingContainer, BoxPrimary, HeadingPrimary, GridContainer } = require("../../GlobalStyle");
+import styled from "styled-components";
 
-export const Container = styled(MarginBottomContainer)``;
+const { MarginBottomContainer, PaddingContainer, BoxPrimary, HeadingPrimary } = require("../../GlobalStyle");
 
-export const Wrapper = styled(PaddingContainer)`
-background-color: #e9fdffe0;
-padding-top: 20px;
-padding-bottom: 20px;
+export const Container = styled(MarginBottomContainer)`
+   
 `;
 
-export const Box = styled(BoxPrimary)`
+export const Wrapper = styled(PaddingContainer)`
     
 `;
 
-export const  Header = styled.div``;
+export const Box = styled(BoxPrimary)`
+    position: relative;
+
+`;
+
+export const Header = styled.div``;
 
 export const Heading = styled(HeadingPrimary)``;
 
 export const ProductContainer = styled.div`
-
 
 `;
 

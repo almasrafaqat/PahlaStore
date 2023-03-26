@@ -7,6 +7,7 @@ const ProductContext = createContext();
 
 export const ProductContextProvider = ({ children }) => {
 
+    const DealOfWeekProducts = Products.filter(product => product.deal);
     const FeaturedProducts = Products.filter((product) => product.featured);
     const NewProducts = Products.filter((product) => product.tag === "new");
     const tempPopularProducts = [...Products];
@@ -26,6 +27,7 @@ export const ProductContextProvider = ({ children }) => {
 
 
     const value = {
+        DealOfWeekProducts,
         FeaturedProducts,
         NewProducts,
         newPopularProducts,

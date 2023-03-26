@@ -8,20 +8,25 @@ import {
 
 export const Card = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  border: 1px solid teal;
+  border: 1px solid #ececec;
   border-radius: 10px;
   padding: 5px;
   margin: 0 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+  transition: ${({ theme }) => theme.colors.cardtransition};
+
+  &:hover {
+    transform:  ${({ theme }) => theme.colors.cardhover}; 
+  }
+  
  
 `;
 
 export const TagContainer = styled.div`
   position: absolute;
-//   background-color: ${(props) => props.bg};
-  background-color: orange;
+  background-color: #cc0c39;
   color: ${({ theme }) => theme.colors.white};
   width: 5.5rem;
   border-top-left-radius: 10px;
@@ -31,18 +36,29 @@ export const TagContainer = styled.div`
   padding: 0.5rem;
   text-transform: capitalize;
   text-align: center;
+  z-index: 2;
 `;
 
 export const Text = styled(TextPrimary)``;
 
 export const ImageContainer = styled.div`
-  /* width: 150px;
-    height: 150px; */
+ 
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  object-fit: contain;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 `;
 
 export const InfoContainer = styled.div`
@@ -72,6 +88,9 @@ export const SoldOut = styled.span`
 `;
 
 export const Available = styled(SoldOut)``;
+
+export const Bold = styled.b``;
+
 
 export const ProgressContainer = styled.div`
   width: 100%;
@@ -111,5 +130,10 @@ export const ProgressBar = styled.span`
   transition-property: width, background-color;
   background-color: #f3c623;
   animation: ${progress} 4s linear 1.64s, 15.22s;
+`;
+
+
+export const DealEndsContainer = styled.div`
+  margin: 10px 0;
 `;
 

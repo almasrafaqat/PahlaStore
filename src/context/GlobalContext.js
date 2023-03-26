@@ -13,8 +13,13 @@ export const GlobalContextProvider = ({ children }) => {
     megaMenu: false,
   });
 
-  /** Slider Arrow Left & Right  */
+  /** Slider Arrow Left & Right best selling proudcts  */
   const [slider, setSliderRef] = useState(null);
+
+  /** Slider Arrow Left & Right deal of the week product  */
+  const [slide, setSlideRef] = useState(null);
+
+
   /** Dropdown Height */
   const DropMenuHandler = (event) => {
     event.preventDefault();
@@ -62,7 +67,10 @@ export const GlobalContextProvider = ({ children }) => {
     SlideHandler,
     DropMenuHandler,
     slider,
-    setSliderRef
+    setSliderRef,
+    slide,
+    setSlideRef,
+
 
   };
 
