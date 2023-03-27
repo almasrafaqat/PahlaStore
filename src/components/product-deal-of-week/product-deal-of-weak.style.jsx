@@ -11,7 +11,7 @@ export const Wrapper = styled(PaddingContainer)`
 `;
 
 export const Box = styled(BoxPrimary)`
-    position: relative;
+    
 
 `;
 
@@ -20,6 +20,7 @@ export const Header = styled.div``;
 export const Heading = styled(HeadingPrimary)``;
 
 export const ProductContainer = styled.div`
+position: relative;
 
 `;
 

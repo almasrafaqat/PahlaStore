@@ -26,6 +26,7 @@ export const theme = {
     text: "rgba(29 ,29, 29, .8)",
     white: "#fff",
     star: "#ffaa0f",
+    red: "#cc0c39",
     lightred: "#fcadad",
     gray: "#adadad",
     lightgray: "#f7f7f6",

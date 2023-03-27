@@ -4,7 +4,7 @@ import Footer from "../../components/footer/footer.component";
 import HeaderMobile from "../../components/header-mobile/header-mobile.component";
 import Header from "../../components/header/header.component";
 import HomeCategories from "../../components/home-category/home-categories.component";
-import Newletter from "../../components/newletter/newletter.component";
+import NewsLetter from "../../components/newsletter/newsletter.component";
 import ProductDealOffWeak from "../../components/product-deal-of-week/product-deal-of-weak.component";
 import ProductWidgets from "../../components/product-widgets/product-widgets.component";
 import BestSelling from "../../components/products-best-selling/best.selling.component";
@@ -18,7 +18,6 @@ const HomePage = () => {
   return (
     <Container>
       <Announcement />
-
       <Wrapper className="Desktop">
         <Header />
       </Wrapper>
@@ -31,8 +30,7 @@ const HomePage = () => {
       <BestSelling />
       <ProductDealOffWeak />
       <ProductWidgets />
-      
-
+      <NewsLetter/>
       <Footer />
     </Container>
   );
