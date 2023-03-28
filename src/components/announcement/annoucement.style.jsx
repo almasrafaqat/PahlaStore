@@ -3,7 +3,7 @@ import { Mobile768 } from "../../responsive";
 
 export const Container = styled.div`
   height: 30px;
-  background-color: teal;
+  background-color: ${({theme}) => theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;

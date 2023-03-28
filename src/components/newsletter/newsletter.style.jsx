@@ -2,20 +2,24 @@ import { SendOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import {
   ButtonPrimary,
-  FlexContainer,
   MarginBottomContainer,
   PaddingContainer,
   TitlePrimary,
 } from "../../GlobalStyle";
+import { mobile, MobileMaxWidth1200 } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)``;
 
 export const Wrapper = styled(PaddingContainer)`
-  background-color: lightblue;
-  height: 400px;
+  background-color:  ${({theme}) => theme.colors.secondary};
+  height: 28rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  ${mobile({ padding: "1.9rem" })}
   
 `;
 
@@ -23,53 +27,61 @@ export const InfoContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.9rem;
 `;
 
 export const Title = styled(TitlePrimary)`
-  font-size: 32px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  ${mobile({ fontSize: "1.5rem" })}
 `;
 
 export const ShortDescription = styled.p`
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 300;
+  letter-spacing: 2px;
+  ${mobile({ fontSize: "1rem" })};
 `;
 
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   max-width: 50%;
-  border-radius: 50px;
-  padding-left: 20px;
-  height: 50px;
+  border-radius: 3rem;
+  padding-left: 1.2rem;
+  height: 3rem;
+
+  ${MobileMaxWidth1200({ maxWidth: "100%" })};
+  
 `;
 
 export const SendIcon = styled(SendOutlined)`
-  color: teal;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Input = styled.input`
-  padding: 12px;
-  border-radius: 50px 0 0 50px;
+  padding: 0.8rem;
+  border-radius: 3rem 0 0 3rem;
   width: 100%;
   outline: none;
   border: none;
 `;
 
 export const Button = styled(ButtonPrimary)`
-  border-radius: 50px;
-  font-size: 18px;
-  height: 50px;
+  border-radius: 3rem;
+  font-size: 1.1rem;
+  height: 3rem;
+
+  ${mobile({ fontSize: "1rem" })};
 `;
 
 export const ImageContainer = styled.div`
   flex: 1;
   height: 100%;
- 
-
   position: relative;
+  ${MobileMaxWidth1200({ display: 'none' })}
 `;
 
 export const Image = styled.img`

@@ -29,7 +29,7 @@ const NewsLetter = () => {
           </InputContainer>
         </InfoContainer>
         <ImageContainer>
-          <Image src="/images/banner-9.png" />
+          <Image src="/images/products/imac.png" />
         </ImageContainer>
       </Wrapper>
     </Container>
