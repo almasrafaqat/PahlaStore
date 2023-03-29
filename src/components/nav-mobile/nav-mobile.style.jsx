@@ -193,7 +193,7 @@ import {
     font-weight: 500;
   
     &:hover {
-      color: ${(props) => props.type !== "social" && "teal"};
+      color: ${(props) => props.type !== "social" && (({theme}) => theme.colors.primary)};
     }
   `;
   
