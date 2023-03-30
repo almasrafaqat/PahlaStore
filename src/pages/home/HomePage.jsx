@@ -9,6 +9,7 @@ import ProductDealOffWeak from "../../components/product-deal-of-week/product-de
 import ProductWidgets from "../../components/product-widgets/product-widgets.component";
 import BestSelling from "../../components/products-best-selling/best.selling.component";
 import FeaturedProducts from "../../components/products-featured/featured-products.component";
+import ScrollTop from "../../components/scroll-top/scroll-top.component";
 import Slider from "../../components/slider/slider.component";
 import "../../responsive.css";
 
@@ -32,6 +33,7 @@ const HomePage = () => {
       <ProductWidgets />
       <NewsLetter/>
       <Footer />
+      <ScrollTop/>
     </Container>
   );
 };
