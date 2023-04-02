@@ -5,23 +5,22 @@ import {
 import styled from "styled-components";
 import {
   Link,
-  MarginBottomContainer,
-  PaddingContainer,
 } from "../../GlobalStyle";
 
-export const Navbar = styled(MarginBottomContainer)`
+export const Navbar = styled.div`
   height: 70px;
   width: 100%;
   z-index: 2;
-  margin-bottom: 1.3rem;
 `;
 
-export const Container = styled(PaddingContainer)`
+export const Container = styled.div`
   position: relative;
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 1rem 1.9rem;
+  
 `;
 
 export const HotDealContainer = styled.div`
@@ -44,19 +43,18 @@ export const MenuLink = styled(Link)`
   transition: all 0.4s ease-in-out;
   display: flex;
   align-items: center;
-  background-color: ${(props) => props.type === "hotdeal" && "#008080"};
-  color: ${(props) => props.type === "hotdeal" && "#fff"};
+  background-color: ${(props) => props.type === "hotdeal" && "#ffa500"};
+  color: ${({ theme }) => theme.colors.white};
   &:hover {
-    background: ${({ theme }) => theme.colors.primary};
-    background: ${(props) => props.type === "hotdeal" && "#20B2AA"};
-    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.secondary};
+    
   }
 `;
 
 /** Dropdown Menu */
 
 export const DropdownItem = styled.ul`
-  background: ${({ theme }) => theme.colors.border};
+   background: ${({ theme }) => theme.colors.white};
   width: 180px;
   line-height: 45px;
   position: absolute;
@@ -79,6 +77,12 @@ export const DropdownLink = styled(MenuLink)`
   border-radius: 0;
   font-size: 1rem;
   font-weight: 400;
+  color: ${({ theme }) => theme.colors.black};
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
+    
+  }
 `;
 
 /**Mega Menu */
@@ -93,16 +97,19 @@ export const MegaBox = styled.div`
   opacity: 0;
   visibility: hidden;
   z-index: 2;
+  
  
 `;
 
 export const Content = styled.div`
-  background: ${({ theme }) => theme.colors.border};
+  background: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 1.6rem 1.3rem 0px 1.3rem;
   box-shadow: ${({ theme }) => theme.colors.shadow};
+  
+  
 `;
 
 export const Image = styled.img`
@@ -126,7 +133,7 @@ export const MegaItem = styled.ul`
 
 /** Row Border none */
 export const Row = styled.div`
-  line-height: 50px;
+  line-height: 45px;
   width: calc(25% - 30px);
 
   &:nth-child(1) ${MegaItem}, &:nth-child(2) ${MegaItem} {
@@ -160,6 +167,7 @@ export const HotLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const HotIcon = styled(HeadsetMicOutlined)``;
@@ -170,12 +178,11 @@ export const TextContainer = styled.div`
 `;
 
 export const Telephone = styled.div`
-  color: teal;
+ 
   font-size: 20px;
   font-weight: 400;
 `;
 
 export const SubText = styled.span`
-  font-size: 12px;
-  /* font-weight: 200; */
+  font-size: 0.8rem;
 `;

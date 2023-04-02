@@ -8,8 +8,6 @@ export const Container = styled(MarginBottomContainer)`
     overflow: hidden;
     position: relative;
     display: flex;
-  
-   
 `;
 
 export const ArrowContainer = styled(ArrowContainerPrimary)`

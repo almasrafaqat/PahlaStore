@@ -25,6 +25,7 @@ export const Box = styled.div`
 
 export const Col = styled.div`
   flex: 1;
+  margin-bottom: 2rem;
 `;
 
 export const Title = styled.h3`
