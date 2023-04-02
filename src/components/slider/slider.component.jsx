@@ -26,11 +26,11 @@ const Slider = () => {
         <SlideBox>
           <Slide bg="#FAF0E6">
             <ImageContainer>
-              <Image src="/images/slider1.png" />
+              <Image src="/images/slider/smartphones.png" />
             </ImageContainer>
             <InfoContainer>
               <Title>
-                Vestibulum quis aliquam enim. Cras massa tellus, bibendum 1
+              TIMEPIECES THAT MAKE A STATEMENT UP TO 40% OFF 1
               </Title>
               <Description>
                 eu gravida lacus. Vestibulum ante ipsum primis in faucibus orci
@@ -47,7 +47,7 @@ const Slider = () => {
             </ImageContainer>
             <InfoContainer>
               <Title>
-                Vestibulum quis aliquam enim. Cras massa tellus, bibendum 2
+              TIMEPIECES THAT MAKE A STATEMENT UP TO 40% OFF 2
               </Title>
               <Description>
                 eu gravida lacus. Vestibulum ante ipsum primis in faucibus orci
@@ -64,7 +64,7 @@ const Slider = () => {
             </ImageContainer>
             <InfoContainer>
               <Title>
-                Vestibulum quis aliquam enim. Cras massa tellus, bibendum 3
+              TIMEPIECES THAT MAKE A STATEMENT UP TO 40% OFF 3
               </Title>
               <Description>
                 eu gravida lacus. Vestibulum ante ipsum primis in faucibus orci

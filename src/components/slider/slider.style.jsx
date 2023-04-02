@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { ArrowContainerPrimary, ArrowLeftPrimary, ArrowRightPrimary, ButtonPrimary, MarginBottomContainer } from "../../GlobalStyle"
+import { mobile } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)`
     width: 100%;
@@ -38,6 +39,8 @@ export const Slide = styled.div`
     background-color: ${props => props.bg};
     padding: 0 50px;
     width: 100%;
+
+    ${mobile({ padding: "0 0.5rem" })}
    
 `;
 
@@ -62,15 +65,18 @@ export const InfoContainer = styled.div`
     flex: 1;
 `;
 
-export const Title = styled.h1`
-    font-size: 50px;
+export const Title = styled.h3`
+    font-size: 3rem;
     font-weight: 500;
+    ${mobile({ fontSize: "1rem" })}
 `;
 
 export const Description = styled.p`
     margin: 30px 0;
     font-size: 20px;
     letter-spacing: 1px;
+
+    ${mobile({ display: 'none' })}
 `;
 
 export const Button = styled(ButtonPrimary)``;
