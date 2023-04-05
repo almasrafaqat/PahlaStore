@@ -5,6 +5,7 @@ import {
   StarFullPrimary,
   StarHalfPrimary,
   TextPrimary,
+  TitlePrimary,
 } from "../../GlobalStyle";
 
 
@@ -63,7 +64,7 @@ export const InfoContainer = styled.div`
   margin: 2rem 0;
 `;
 
-export const Title = styled.h4``;
+export const Title = styled(TitlePrimary)``;
 
 export const RatingContainer = styled(RatingContainerPrimary)``;
 

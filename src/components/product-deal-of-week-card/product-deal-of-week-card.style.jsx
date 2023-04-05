@@ -5,6 +5,7 @@ import {
   TextPrimary,
   TitlePrimary,
 } from "../../GlobalStyle";
+import { mobile } from "../../responsive";
 
 export const Card = styled.div`
   position: relative;
@@ -64,7 +65,9 @@ export const InfoContainer = styled.div`
   padding: 0.5rem 0.8rem;
 `;
 
-export const Title = styled(TitlePrimary)``;
+export const Title = styled(TitlePrimary)`
+  
+`;
 
 export const PriceContainer = styled.div``;
 

@@ -8,17 +8,18 @@ export const Mobile768 = (props) => {
   `;
 };
 
-// export const Mobile1810 = (props) => {
-//   return css`
-//     @media only screen and (max-width: 1809.98px) {
-//       ${props}
-//     }
-//   `;
-// };
+
 
 export const MobileMaxWidth1200 = (props) => {
   return css`
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) and (min-width: 768px) {
+      ${props}
+    }
+  `
+}
+export const MobileMinWidth1200 = (props) => {
+  return css`
+  @media only screen and (min-width: 1200px) {
       ${props}
     }
   `

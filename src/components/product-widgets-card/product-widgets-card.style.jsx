@@ -9,6 +9,7 @@ import {
   StarEmptyPrimary,
   StarFullPrimary,
   StarHalfPrimary,
+  TitlePrimary,
 } from "../../GlobalStyle";
 
 export const WidgetBox = styled(BoxPrimary)`
@@ -77,8 +78,8 @@ export const InfoContainer = styled.div`
  
 `;
 
-export const Title = styled.h6`
-  font-size: 1rem;
+export const Title = styled(TitlePrimary)`
+  
   font-weight: 700;
   line-height: 1;
   color:  ${({ theme }) => theme.colors.black};

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 export const Container = styled.div`
   position: fixed;
@@ -17,4 +18,5 @@ export const Wrapper = styled.div`
   justify-content: center;
   cursor: pointer;
   color: white;
+  ${mobile({width: "2rem", height: "2rem"})}
 `;

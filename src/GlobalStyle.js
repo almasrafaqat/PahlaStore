@@ -7,7 +7,7 @@ import {
   StarOutlined,
   StarOutlineOutlined,
 } from "@mui/icons-material";
-import { mobile } from "./responsive";
+import { mobile, Mobile768 } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -70,6 +70,8 @@ export const PrimaryLogo = styled.div`
 
 export const MarginBottomContainer = styled.div`
   margin-bottom: 4.5rem;
+
+  ${Mobile768({ marginBottom: "1.7rem" })}
 `;
 
 export const ButtonPrimary = styled.button`
@@ -91,12 +93,14 @@ export const HeadingPrimary = styled.h1`
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
+  ${mobile({ fontSize: "1.5rem" })}
 `;
 
 export const TextPrimary = styled.span``;
 
 export const TitlePrimary = styled.h6`
   font-size: 1rem;
+  ${mobile({ fontSize: "0.8rem" })}
 `;
 
 export const FlexContainer = styled.div`
@@ -122,9 +126,15 @@ export const RatingContainerPrimary = styled.div`
   color: ${({ theme }) => theme.colors.star};
 `;
 
-export const StarFullPrimary = styled(StarOutlined)``;
-export const StarEmptyPrimary = styled(StarOutlineOutlined)``;
-export const StarHalfPrimary = styled(StarHalfOutlined)``;
+export const StarFullPrimary = styled(StarOutlined)`
+  ${mobile({ fontSize: "1.2rem !important" })}
+`;
+export const StarEmptyPrimary = styled(StarOutlineOutlined)`
+  ${mobile({ fontSize: "1.2rem !important" })}
+`;
+export const StarHalfPrimary = styled(StarHalfOutlined)`
+  ${mobile({ fontSize: "1.2rem !important" })}
+`;
 
 /** Price Container */
 
@@ -167,6 +177,8 @@ export const ArrowContainerPrimary = styled.div`
   &:hover {
     opacity: 1;
   }
+
+  ${mobile({ width: "2rem", height: "2rem" })}
 `;
 
 export const ArrowLeftPrimary = styled(KeyboardArrowLeft)``;

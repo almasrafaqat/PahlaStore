@@ -6,12 +6,12 @@ import {
   PaddingContainer,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { mobile, MobileMaxWidth1200 } from "../../responsive";
+import { mobile, Mobile768, MobileMaxWidth1200 } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)``;
 
 export const Wrapper = styled(PaddingContainer)`
-  background-color:  ${({theme}) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   height: 28rem;
   display: flex;
   align-items: center;
@@ -20,7 +20,6 @@ export const Wrapper = styled(PaddingContainer)`
   padding-bottom: 3rem;
 
   ${mobile({ padding: "1.9rem" })}
-  
 `;
 
 export const InfoContainer = styled.div`
@@ -52,9 +51,8 @@ export const InputContainer = styled.div`
   border-radius: 3rem;
   padding-left: 1.2rem;
   height: 3rem;
-
+  ${Mobile768({ maxWidth: "100%" })}
   ${MobileMaxWidth1200({ maxWidth: "100%" })};
-  
 `;
 
 export const SendIcon = styled(SendOutlined)`
@@ -81,7 +79,8 @@ export const ImageContainer = styled.div`
   flex: 1;
   height: 100%;
   position: relative;
-  ${MobileMaxWidth1200({ display: 'none' })}
+  ${Mobile768({ display: "none" })}
+  ${MobileMaxWidth1200({ display: "none" })}
 `;
 
 export const Image = styled.img`
@@ -91,5 +90,4 @@ export const Image = styled.img`
   object-fit: contain;
   position: absolute;
   bottom: 0;
-
 `;

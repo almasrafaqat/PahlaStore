@@ -9,7 +9,7 @@ import {
 import styled from "styled-components";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import { HeadingPrimary, PaddingContainer } from "../../GlobalStyle";
-import { mobile , Mobile768} from "../../responsive";
+import { mobile, Mobile768, MobileMaxWidth1200 } from "../../responsive";
 
 export const Container = styled.div``;
 
@@ -18,14 +18,13 @@ export const Wrapper = styled(PaddingContainer)``;
 export const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
-
-  ${mobile({flexDirection : "column"})};
-  ${Mobile768({flexDirection : "column"})};
+  ${Mobile768({ flexDirection: "column" })};
 `;
 
 export const Col = styled.div`
   flex: 1;
   margin-bottom: 2rem;
+  ${MobileMaxWidth1200({ margin: "0 1rem" })}
 `;
 
 export const Title = styled.h3`
@@ -123,8 +122,6 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   width: 50%;
   margin: 0.3rem 0;
-
- 
 `;
 
 export const CustomerCareContainer = styled.div`
@@ -149,11 +146,10 @@ export const Image = styled.img`
 `;
 
 export const HR = styled.hr`
-  background-color: ${({theme}) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   height: 1px;
   border: none;
   margin-top: 0.5rem;
-
 `;
 
 export const CopyRightContainer = styled.div`
