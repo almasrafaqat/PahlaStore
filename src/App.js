@@ -5,6 +5,7 @@ import { GlobalStyle, theme } from "./GlobalStyle";
 import About from "./components/about/about.component";
 import Cart from "./components/cart/cart.component";
 import Practice from "./components/practice/practice";
+import SinglePage from "./pages/SinglePage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <GlobalStyle />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<SinglePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/practice" element={<Practice />} />

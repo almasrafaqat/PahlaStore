@@ -32,7 +32,7 @@ export const theme = {
     lightgray: "#f7f7f6",
     black: " #253d4e",
     primary: "#008080",
-    secondary: "#b0e7dd66",
+    secondary: "#20B2AA",
     hover: "#20B2AA",
     cardhover: "translate(0px, -8px)",
     cardshadow: "0 6px 15px rgba(0, 0, 0, 0.15)",
@@ -96,12 +96,61 @@ export const HeadingPrimary = styled.h1`
   ${mobile({ fontSize: "1.5rem" })}
 `;
 
-export const TextPrimary = styled.span``;
+/** Info */
+
+export const TextPrimary = styled.span`
+  font-weight: 500;
+`;
 
 export const TitlePrimary = styled.h6`
   font-size: 1rem;
   ${mobile({ fontSize: "0.8rem" })}
 `;
+
+/**Colors */
+
+export const ColorContainerPrimary = styled.div`
+    display: inline-flex;
+    align-items: center;
+
+`;
+
+export const ColorPrimary = styled.div`
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: ${(props) => props.color};
+    border-radius: 50%;
+    margin-left: 0.7rem;
+`;
+
+/** Size */
+
+export const SizeContainerPrimary = styled.div`
+    display: flex;
+    align-items: center;
+   
+
+`;
+
+export const SizePrimary = styled.div`
+    
+    margin-left: 0.7rem;
+    padding: 0.9rem;
+    border-radius: 0.3rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+      background: ${(props) => props.active && (({theme})=> theme.colors.primary)};
+      color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
+    
+`;
+
+
+
 
 export const FlexContainer = styled.div`
   display: flex;
@@ -152,6 +201,14 @@ export const DiscountPricePrimary = styled(PricePrimary)`
   text-decoration: line-through;
 `;
 
+export const DiscountPercentagePrimary = styled.span`
+    color: ${({ theme }) => theme.colors.star};
+    font-size: 1.2rem;
+    position: absolute;
+    font-weight: 500;
+    top:25%;
+   
+`;
 /** Arrows  */
 
 export const ArrowContainerPrimary = styled.div`

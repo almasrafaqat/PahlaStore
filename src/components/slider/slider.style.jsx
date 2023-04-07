@@ -14,6 +14,7 @@ import {
 } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)`
+  margin-top: -4rem;
   width: 100%;
   height: 70vh;
   overflow: hidden;

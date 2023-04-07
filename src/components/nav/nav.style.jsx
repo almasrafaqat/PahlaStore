@@ -4,10 +4,10 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import {
-  Link,
+  Link, MarginBottomContainer,
 } from "../../GlobalStyle";
 
-export const Navbar = styled.div`
+export const Navbar = styled(MarginBottomContainer)`
   height: 70px;
   width: 100%;
   z-index: 2;
