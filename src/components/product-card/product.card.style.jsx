@@ -8,7 +8,6 @@ import {
   TitlePrimary,
 } from "../../GlobalStyle";
 
-
 export const Card = styled.div`
   position: relative;
   padding: 0.5rem 1rem;
@@ -19,10 +18,9 @@ export const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: ${({ theme }) => theme.colors.cardtransition};
 
-
   &:hover {
-    transform:  ${({ theme }) => theme.colors.cardhover}; 
-    box-shadow:  ${({ theme }) => theme.colors.cardshadow};
+    transform: ${({ theme }) => theme.colors.cardhover};
+    box-shadow: ${({ theme }) => theme.colors.cardshadow};
   }
 `;
 
@@ -38,7 +36,6 @@ export const TagContainer = styled.div`
   padding: 0.5rem;
   text-transform: capitalize;
   text-align: center;
-
 `;
 
 export const Text = styled(TextPrimary)`
@@ -77,12 +74,8 @@ export const Brand = styled.div`
 `;
 
 export const AddToCardContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  bottom: 3%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 0 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "../../GlobalStyle";
 import AddToCart from "../add-to-cart/add-to-cart.component";
+import PriceComponent from "../price/price-component";
 
 import {
   AddToCardContainer,
@@ -42,6 +43,7 @@ const ProductCard = ({ product, type }) => {
         </Brand>
       </InfoContainer>
       <AddToCardContainer>
+        <PriceComponent price={product.discount} discount={product.price} />
         <AddToCart price={product.discount} discount={product.price} />
       </AddToCardContainer>
     </Card>

@@ -2,9 +2,6 @@ import { AddShoppingCartOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import {
   ButtonPrimary,
-  DiscountPricePrimary,
-  PriceContainerPrimary,
-  PricePrimary,
 } from "../../GlobalStyle";
 
 export const Container = styled.div`
@@ -14,11 +11,7 @@ export const Container = styled.div`
   padding: 0 0.6rem;
 `;
 
-export const PriceContainer = styled(PriceContainerPrimary)``;
 
-export const Price = styled(PricePrimary)``;
-
-export const DiscountPrice = styled(DiscountPricePrimary)``;
 
 export const ButtonContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
