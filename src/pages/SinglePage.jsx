@@ -6,6 +6,8 @@ import Announcement from '../components/announcement/announcement.component';
 import BasicBreadcrumbs from '../components/breadcrumb/breadcrumb.component';
 import { PaddingContainer } from '../GlobalStyle';
 import ProductDetails from '../components/product-details/product-details.component';
+import NewsLetter from '../components/newsletter/newsletter.component';
+import Footer from '../components/footer/footer.component';
 
 const Container = styled.div`
     
@@ -33,10 +35,11 @@ const SinglePage = () => {
                 <BasicBreadcrumbs />
             </Row>
             <Row>
-            <ProductDetails/>
+                <ProductDetails />
 
             </Row>
-
+            <NewsLetter />
+            <Footer />
 
         </Container>
     )
