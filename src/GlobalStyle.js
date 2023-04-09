@@ -96,7 +96,7 @@ export const HeadingPrimary = styled.h1`
   ${mobile({ fontSize: "1.5rem" })}
 `;
 
-/** Info */
+/** Typography */
 
 export const TextPrimary = styled.span`
   font-weight: 500;
@@ -107,10 +107,19 @@ export const TitlePrimary = styled.h6`
   ${mobile({ fontSize: "0.8rem" })}
 `;
 
+export const HorizontalLinePrimary = styled.hr`
+ background-color: ${({ theme }) => theme.colors.primary};
+  height: 1px;
+  border: none;
+  margin-top: 0.5rem;
+`;
+
+
+
 /**Colors */
 
 export const ColorContainerPrimary = styled.div`
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
 `;
@@ -121,6 +130,7 @@ export const ColorPrimary = styled.div`
     background-color: ${(props) => props.color};
     border-radius: 50%;
     margin-left: 0.7rem;
+    cursor: pointer;
 `;
 
 /** Size */
@@ -144,7 +154,7 @@ export const SizePrimary = styled.div`
     justify-content: center;
     cursor: pointer;
    
-      background: ${(props) => props.active && (({theme})=> theme.colors.primary)};
+      background: ${(props) => props.active && (({ theme }) => theme.colors.primary)};
       color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
     
 `;
@@ -166,6 +176,14 @@ export const BoxPrimary = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+`;
+
+/** Add to Cart Container */
+export const AddToCardContainerPrimary = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 /** Stars Rating */
@@ -237,6 +255,8 @@ export const ArrowContainerPrimary = styled.div`
 
   ${mobile({ width: "2rem", height: "2rem" })}
 `;
+
+
 
 export const ArrowLeftPrimary = styled(KeyboardArrowLeft)``;
 export const ArrowRightPrimary = styled(KeyboardArrowRight)``;

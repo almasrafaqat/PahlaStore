@@ -8,8 +8,8 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
-import { HeadingPrimary, PaddingContainer } from "../../GlobalStyle";
-import { mobile, Mobile768, MobileMaxWidth1200 } from "../../responsive";
+import { HeadingPrimary, HorizontalLinePrimary, PaddingContainer } from "../../GlobalStyle";
+import { Mobile768, MobileMaxWidth1200 } from "../../responsive";
 
 export const Container = styled.div``;
 
@@ -145,11 +145,8 @@ export const Image = styled.img`
   }
 `;
 
-export const HR = styled.hr`
-  background-color: ${({ theme }) => theme.colors.primary};
-  height: 1px;
-  border: none;
-  margin-top: 0.5rem;
+export const HR = styled(HorizontalLinePrimary)`
+ 
 `;
 
 export const CopyRightContainer = styled.div`

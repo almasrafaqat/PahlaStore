@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  AddToCardContainerPrimary,
   RatingContainerPrimary,
   StarEmptyPrimary,
   StarFullPrimary,
@@ -73,9 +74,6 @@ export const Brand = styled.div`
   margin-bottom: 20px;
 `;
 
-export const AddToCardContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+export const AddToCardContainer = styled(AddToCardContainerPrimary)`
+  
 `;
