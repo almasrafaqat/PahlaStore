@@ -1,10 +1,46 @@
-import React from 'react'
-import { AboutProduct, AddToCartContainer, Brand, BrandContainer, CartContent, CartContentContainer, Color, ColorContainer, Container, DeliveryInfo, Description, DiscountPercentage, EmptyStar, FullStar, GridWrapper, HalfStar, Heading, HorizontalLine, Image, ImageGallery, InfoContainer, ListItem, MainImage, OrderList, Price, PriceContainer, RatingContainer, ReturnInfo, ShipsFrom, ShipsInfo, Size, Sizecontainer, StockInfo, Title, Wrapper } from './proudct-details.style'
-import FormatPrice from '../../helpers/FormatPrice'
-import { Link, TextPrimary } from '../../GlobalStyle'
-import AddToCart from '../add-to-cart/add-to-cart.component'
-import CartAmountToggle from '../cart-amount-toggle/cart-amount-toggle.component'
-
+import React from "react";
+import {
+  AboutProduct,
+  AddToCartContainer,
+  Brand,
+  BrandContainer,
+  CartContent,
+  CartContentContainer,
+  Color,
+  ColorContainer,
+  Container,
+  DeliveryInfo,
+  Description,
+  DiscountPercentage,
+  EmptyStar,
+  FullStar,
+  GridWrapper,
+  HalfStar,
+  Heading,
+  HorizontalLine,
+  Image,
+  ImageGallery,
+  InfoContainer,
+  ListItem,
+  MainImage,
+  OrderList,
+  Price,
+  PriceContainer,
+  RatingContainer,
+  ReturnInfo,
+  ShipsFrom,
+  ShipsInfo,
+  Size,
+  Sizecontainer,
+  StockInfo,
+  Title,
+  Wrapper,
+} from "./proudct-details.style";
+import FormatPrice from "../../helpers/FormatPrice";
+import { Link, TextPrimary } from "../../GlobalStyle";
+import AddToCart from "../add-to-cart/add-to-cart.component";
+import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
+import CartPromo from "../cart-promo/cart-promo.component";
 
 const ProductDetails = () => {
   return (
@@ -18,15 +54,20 @@ const ProductDetails = () => {
             <Image src="images/products/headphone.png" />
           </ImageGallery>
           <MainImage>
-            <Image width="100" height="100" src="images/products/headphone.png" />
+            <Image
+              width="100"
+              height="100"
+              src="images/products/headphone.png"
+            />
           </MainImage>
           <InfoContainer>
             <BrandContainer>
-              Brand: <Link><Brand>Samsung</Brand></Link>
+              Brand:{" "}
+              <Link>
+                <Brand>Samsung</Brand>
+              </Link>
             </BrandContainer>
-            <Title>
-              Angie’s Boomchickapop Sweet & Salty
-            </Title>
+            <Title>Angie’s Boomchickapop Sweet & Salty</Title>
             <RatingContainer>
               <FullStar />
               <FullStar />
@@ -40,7 +81,11 @@ const ProductDetails = () => {
               </Price>
               <DiscountPercentage> 50% </DiscountPercentage>
             </PriceContainer>
-            <Description>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!
+            <Description>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+              rem officia, corrupti reiciendis minima nisi modi, quasi, odio
+              minus dolore impedit fuga eum eligendi? Officia doloremque facere
+              quia. Voluptatum, accusantium!
             </Description>
             <ColorContainer>
               <TextPrimary>Color</TextPrimary>
@@ -67,9 +112,13 @@ const ProductDetails = () => {
                 <ListItem>Style: Fantine Backpack</ListItem>
                 <ListItem>Women Bags</ListItem>
                 <ListItem>100% PU</ListItem>
+                <ListItem>Care Instructions: Hand Wash Only</ListItem>
+                <ListItem>Closure: Buckle</ListItem>
+                <ListItem>Style: Fantine Backpack</ListItem>
+                <ListItem>Women Bags</ListItem>
+                <ListItem>100% PU</ListItem>
               </OrderList>
             </AboutProduct>
-
           </InfoContainer>
           <CartContentContainer>
             <CartContent>
@@ -85,30 +134,36 @@ const ProductDetails = () => {
               <ReturnInfo>
                 Free Return in <b>14 day</b>
               </ReturnInfo>
-              <StockInfo>
-                Only 4 left in stock - order soon
-              </StockInfo>
+              <StockInfo>Only 4 left in stock - order soon</StockInfo>
               <AddToCartContainer>
                 <CartAmountToggle />
-                <AddToCart icon={true} content="center" bg={({ theme }) => theme.colors.primary} width="100" radius="0.4" text="Add to cart" />
-                <AddToCart content="center" bg={({ theme }) => theme.colors.star} width="100" radius="0.4" text="Buy Now" />
+                <AddToCart
+                  icon={true}
+                  content="center"
+                  bg={({ theme }) => theme.colors.primary}
+                  width="100"
+                  radius="0.4"
+                  text="Add to cart"
+                />
+                <AddToCart
+                  content="center"
+                  bg={({ theme }) => theme.colors.star}
+                  width="100"
+                  radius="0.4"
+                  text="Buy Now"
+                />
               </AddToCartContainer>
               <ShipsFrom>
-                <ShipsInfo>
-                  Ships from
-                </ShipsInfo>
-                <ShipsInfo>
-                  Riyadh KSA
-                </ShipsInfo>
+                <ShipsInfo>Ships from</ShipsInfo>
+                <ShipsInfo>Riyadh KSA</ShipsInfo>
               </ShipsFrom>
             </CartContent>
-
+            <CartPromo/>
           </CartContentContainer>
-
         </GridWrapper>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;
