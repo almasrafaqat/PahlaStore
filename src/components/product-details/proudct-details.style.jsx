@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import {  ColorContainerPrimary, ColorPrimary, DiscountPercentagePrimary, GridContainer, HorizontalLinePrimary, PriceContainerPrimary, PricePrimary, RatingContainerPrimary, SizeContainerPrimary, SizePrimary, StarEmptyPrimary, StarFullPrimary, StarHalfPrimary, TitlePrimary } from "../../GlobalStyle";
+import { ColorContainerPrimary, ColorPrimary, DiscountPercentagePrimary, GridContainer, HorizontalLinePrimary, PriceContainerPrimary, PricePrimary, RatingContainerPrimary, SizeContainerPrimary, SizePrimary, StarEmptyPrimary, StarFullPrimary, StarHalfPrimary, TitlePrimary } from "../../GlobalStyle";
 
 
 
 export const Container = styled.div``;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    padding: 0 3rem;
+`;
 
 export const GridWrapper = styled(GridContainer)`
     grid-template-columns: 10% 35% 40% 15%;
@@ -20,13 +22,16 @@ export const ImageGallery = styled.div`
 `;
 
 export const MainImage = styled.div`
-    max-width: 80%;
+    max-width: 97%;
+    padding: 0 2rem;
     overflow: hidden;
+    background-color: #ececec6e;
+    border-radius: 0.9rem;
 `;
 
 export const Image = styled.img`
-    width: 100%;
-  
+    width: ${(props) => props.width}%;
+    height: ${(props) => props.height}%;
     object-fit: contain;
 `;
 
@@ -34,6 +39,7 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 0 1rem 0 0rem;
 `;
 
 export const BrandContainer = styled.div``;
@@ -87,6 +93,16 @@ export const Sizecontainer = styled(SizeContainerPrimary)``;
 export const Size = styled(SizePrimary)``;
 
 export const HorizontalLine = styled(HorizontalLinePrimary)``;
+
+export const AboutProduct = styled.div``;
+export const Heading = styled.h1``;
+export const OrderList = styled.ul`
+    padding: 1rem;
+`;
+export const ListItem = styled.li`
+    margin-bottom: 0.3rem;
+`;
+
 
 export const CartContentContainer = styled.div``;
 

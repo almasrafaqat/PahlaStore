@@ -30,7 +30,7 @@ const ProductCard = ({ product, type }) => {
         <Link><Image src={product.imageUrl} /></Link>
       </ImageContainer>
       <InfoContainer>
-        <Title> <Link>{product.title.slice(0, 50)}</Link> </Title>
+        <Title> <Link>{product.title?.slice(0, 50)}</Link> </Title>
         <RatingContainer>
           <StartFull />
           <StartFull />
@@ -44,7 +44,7 @@ const ProductCard = ({ product, type }) => {
       </InfoContainer>
       <AddToCardContainer>
         <PriceComponent price={product.discount} discount={product.price} />
-        <AddToCart price={product.discount} discount={product.price} />
+        <AddToCart icon={true} content="center" bg={({ theme }) => theme.colors.primary} width="100" radius="0.4" text="Add" />
       </AddToCardContainer>
     </Card>
   );

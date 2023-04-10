@@ -6,13 +6,14 @@ import About from "./components/about/about.component";
 import Cart from "./components/cart/cart.component";
 import Practice from "./components/practice/practice";
 import SinglePage from "./pages/SinglePage";
+import ScrollTop from "./components/scroll-top/scroll-top.component";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
-
+        <ScrollTop/>
         <Routes>
           <Route path="/" element={<SinglePage />} />
           <Route path="/about" element={<About />} />
