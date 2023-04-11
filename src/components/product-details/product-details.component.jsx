@@ -41,6 +41,7 @@ import { Link, TextPrimary } from "../../GlobalStyle";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
 import CartPromo from "../cart-promo/cart-promo.component";
+import DeliveryDate from "../../helpers/DeliveryDate";
 
 const ProductDetails = () => {
   return (
@@ -143,7 +144,7 @@ const ProductDetails = () => {
                 <DiscountPercentage> 50% </DiscountPercentage>
               </PriceContainer>
               <DeliveryInfo>
-                FREE delivery<b> Tuesday, April 11</b>
+                FREE delivery<b>  {DeliveryDate()}</b>
               </DeliveryInfo>
               <ReturnInfo>
                 Free Return in <b>14 day</b>

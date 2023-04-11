@@ -10,7 +10,7 @@ const ProductBought = () => {
                 <Box>
                     <Heading>Customers who bought this item also bought</Heading>
                     <Row>
-                        {Products?.slice(0, 3).map((product) => <ProductCard product={product} />)}
+                        {Products?.slice(0, 3).map((product) => <ProductCard key={product.id} product={product} />)}
 
                     </Row>
                 </Box>

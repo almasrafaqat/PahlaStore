@@ -21,7 +21,7 @@ export const ImageBanner = styled.div`
     overflow: hidden;
     position: relative;
     height: 250px;
-    width: 200px;
+    
 `;
 
 export const ImagePromo = styled.img`

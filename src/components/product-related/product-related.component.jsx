@@ -10,7 +10,7 @@ const ProductRelated = () => {
                 <Box>
                     <Heading>Related Products</Heading>
                     <Row>
-                        {Products?.slice(0, 5).map((product) => <ProductCard product={product} />)}
+                        {Products?.slice(0, 5).map((product) => <ProductCard key={product.id} product={product} />)}
 
                     </Row>
                 </Box>
