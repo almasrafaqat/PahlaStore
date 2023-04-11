@@ -16,21 +16,31 @@ import {
   TitlePrimary,
 } from "../../GlobalStyle";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+
+`;
 
 export const Wrapper = styled.div`
   padding: 0 3rem;
+ 
 `;
 
 export const GridWrapper = styled(GridContainer)`
   grid-template-columns: 10% 35% 40% 15%;
+
 `;
 
 export const ImageGallery = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 75px; ;
+  width: 75px;
+  height: 500px;
+  position: sticky;
+  top: 2rem;
+  margin-top: 2rem;
+  
+  
 `;
 
 export const MainImage = styled.div`
@@ -39,12 +49,18 @@ export const MainImage = styled.div`
   overflow: hidden;
   background-color: #ececec6e;
   border-radius: 0.9rem;
+  height: 500px;
+  position: sticky;
+  top: 1%;
+ 
+ 
 `;
 
 export const Image = styled.img`
   width: ${(props) => props.width}%;
   height: ${(props) => props.height}%;
   object-fit: contain;
+  
 `;
 
 export const InfoContainer = styled.div`
@@ -52,6 +68,8 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 0 1rem 0 0rem;
+ 
+ 
 `;
 
 export const BrandContainer = styled.div``;

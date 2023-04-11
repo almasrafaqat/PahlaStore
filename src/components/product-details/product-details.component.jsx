@@ -117,6 +117,20 @@ const ProductDetails = () => {
                 <ListItem>Style: Fantine Backpack</ListItem>
                 <ListItem>Women Bags</ListItem>
                 <ListItem>100% PU</ListItem>
+
+                <ListItem>Backpack</ListItem>
+                <ListItem>Buckle</ListItem>
+                <ListItem>Material: 100% PU</ListItem>
+                <ListItem>Care Instructions: Hand Wash Only</ListItem>
+                <ListItem>Closure: Buckle</ListItem>
+                <ListItem>Style: Fantine Backpack</ListItem>
+                <ListItem>Women Bags</ListItem>
+                <ListItem>100% PU</ListItem>
+                <ListItem>Care Instructions: Hand Wash Only</ListItem>
+                <ListItem>Closure: Buckle</ListItem>
+                <ListItem>Style: Fantine Backpack</ListItem>
+                <ListItem>Women Bags</ListItem>
+                <ListItem>100% PU</ListItem>
               </OrderList>
             </AboutProduct>
           </InfoContainer>
