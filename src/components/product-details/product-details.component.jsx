@@ -20,6 +20,7 @@ import {
   HorizontalLine,
   Image,
   ImageGallery,
+  ImagesContainer,
   InfoContainer,
   ListItem,
   MainImage,
@@ -48,19 +49,21 @@ const ProductDetails = () => {
     <Container>
       <Wrapper>
         <GridWrapper>
-          <ImageGallery>
-            <Image src="images/products/headphone.png" />
-            <Image src="images/products/headphone.png" />
-            <Image src="images/products/headphone.png" />
-            <Image src="images/products/headphone.png" />
-          </ImageGallery>
-          <MainImage>
-            <Image
-              width="100"
-              height="100"
-              src="images/products/headphone.png"
-            />
-          </MainImage>
+          <ImagesContainer>
+            <ImageGallery>
+              <Image src="images/products/headphone.png" />
+              <Image src="images/products/headphone.png" />
+              <Image src="images/products/headphone.png" />
+              <Image src="images/products/headphone.png" />
+            </ImageGallery>
+            <MainImage>
+              <Image
+                width="100"
+                height="100"
+                src="images/products/headphone.png"
+              />
+            </MainImage>
+          </ImagesContainer>
           <InfoContainer>
             <BrandContainer>
               Brand:{" "}
@@ -144,7 +147,7 @@ const ProductDetails = () => {
                 <DiscountPercentage> 50% </DiscountPercentage>
               </PriceContainer>
               <DeliveryInfo>
-                FREE delivery<b>  {DeliveryDate(5)}</b>
+                FREE delivery<b> {DeliveryDate(5)}</b>
               </DeliveryInfo>
               <ReturnInfo>
                 Free Return in <b>14 day</b>
@@ -153,17 +156,16 @@ const ProductDetails = () => {
               <AddToCartContainer>
                 <CartAmountToggle />
                 <AddToCart
-                icon={true}
+                  icon={true}
                   content="center"
-                  bgColor={({theme}) => theme.colors.primary} 
+                  bgColor={({ theme }) => theme.colors.primary}
                   width="100"
                   radius="0.4"
                   text="Add to cart"
                 />
                 <AddToCart
-                  
                   content="center"
-                  bgColor={({theme}) => theme.colors.star}
+                  bgColor={({ theme }) => theme.colors.star}
                   width="100"
                   radius="0.4"
                   text="Buy Now"

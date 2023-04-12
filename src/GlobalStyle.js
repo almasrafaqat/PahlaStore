@@ -108,59 +108,56 @@ export const TitlePrimary = styled.h6`
 `;
 
 export const HorizontalLinePrimary = styled.hr`
- background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   height: 1px;
   border: none;
   margin-top: 0.5rem;
 `;
 
-
-
 /**Colors */
 
 export const ColorContainerPrimary = styled.div`
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 `;
 
 export const ColorPrimary = styled.div`
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: ${(props) => props.color};
-    border-radius: 50%;
-    margin-left: 0.7rem;
-    cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: ${(props) => props.color};
+  border-radius: 50%;
+  margin-left: 0.7rem;
+  cursor: pointer;
+
+  ${Mobile768({ width: "0.9rem", height: "0.9rem", marginLeft: "0.4rem" })}
 `;
 
 /** Size */
 
 export const SizeContainerPrimary = styled.div`
-    display: flex;
-    align-items: center;
-   
-
+  display: flex;
+  align-items: center;
 `;
 
 export const SizePrimary = styled.div`
-    
-    margin-left: 0.7rem;
-    padding: 0.9rem;
-    border-radius: 0.3rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-   
-      background: ${(props) => props.active && (({ theme }) => theme.colors.primary)};
-      color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
-    
+  margin-left: 0.7rem;
+  padding: 0.9rem;
+  border-radius: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  background: ${(props) =>
+    props.active && (({ theme }) => theme.colors.primary)};
+  color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
+
+  ${Mobile768({ width: "0.9rem", height: "0.9rem", padding: "0.6rem", fontSize: "0.7rem", marginLeft: "0.4rem" })}
 `;
 
-
-
+/** Flex  */
 
 export const FlexContainer = styled.div`
   display: flex;
@@ -195,12 +192,15 @@ export const RatingContainerPrimary = styled.div`
 
 export const StarFullPrimary = styled(StarOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
+  ${Mobile768({ fontSize: "1.2rem !important" })}
 `;
 export const StarEmptyPrimary = styled(StarOutlineOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
+  ${Mobile768({ fontSize: "1.2rem !important" })}
 `;
 export const StarHalfPrimary = styled(StarHalfOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
+  ${Mobile768({ fontSize: "1.2rem !important" })}
 `;
 
 /** Price Container */
@@ -220,12 +220,13 @@ export const DiscountPricePrimary = styled(PricePrimary)`
 `;
 
 export const DiscountPercentagePrimary = styled.span`
-    color: ${({ theme }) => theme.colors.star};
-    font-size: 1.2rem;
-    position: absolute;
-    font-weight: 500;
-    top:25%;
-   
+  color: ${({ theme }) => theme.colors.star};
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: 500;
+  top: 25%;
+
+  ${Mobile768({ fontSize: "0.8rem", top: "20%" })}
 `;
 /** Arrows  */
 
@@ -255,8 +256,6 @@ export const ArrowContainerPrimary = styled.div`
 
   ${mobile({ width: "2rem", height: "2rem" })}
 `;
-
-
 
 export const ArrowLeftPrimary = styled(KeyboardArrowLeft)``;
 export const ArrowRightPrimary = styled(KeyboardArrowRight)``;

@@ -20,7 +20,7 @@ export const ImageBanner = styled.div`
   
     overflow: hidden;
     position: relative;
-    height: 250px;
+    height: 40dvh;
     
 `;
 
