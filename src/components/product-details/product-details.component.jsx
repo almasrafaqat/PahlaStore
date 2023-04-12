@@ -144,7 +144,7 @@ const ProductDetails = () => {
                 <DiscountPercentage> 50% </DiscountPercentage>
               </PriceContainer>
               <DeliveryInfo>
-                FREE delivery<b>  {DeliveryDate()}</b>
+                FREE delivery<b>  {DeliveryDate(5)}</b>
               </DeliveryInfo>
               <ReturnInfo>
                 Free Return in <b>14 day</b>
@@ -153,16 +153,17 @@ const ProductDetails = () => {
               <AddToCartContainer>
                 <CartAmountToggle />
                 <AddToCart
-                  icon={true}
+                icon={true}
                   content="center"
-                  bg={({ theme }) => theme.colors.primary}
+                  bgColor={({theme}) => theme.colors.primary} 
                   width="100"
                   radius="0.4"
                   text="Add to cart"
                 />
                 <AddToCart
+                  
                   content="center"
-                  bg={({ theme }) => theme.colors.star}
+                  bgColor={({theme}) => theme.colors.star}
                   width="100"
                   radius="0.4"
                   text="Buy Now"
@@ -173,7 +174,7 @@ const ProductDetails = () => {
                 <ShipsInfo>Riyadh KSA</ShipsInfo>
               </ShipsFrom>
             </CartContent>
-            <CartPromo/>
+            <CartPromo />
           </CartContentContainer>
         </GridWrapper>
       </Wrapper>

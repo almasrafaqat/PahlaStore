@@ -44,7 +44,7 @@ const ProductCard = ({ product, type }) => {
       </InfoContainer>
       <AddToCardContainer>
         <PriceComponent price={product.discount} discount={product.price} />
-        <AddToCart icon={true} content="center" bg={({ theme }) => theme.colors.primary} width="100" radius="0.4" text="Add" />
+        <AddToCart icon={true} content="center" bgColor={({ theme }) => theme.colors.primary} width="100" radius="0.4" text="Add" />
       </AddToCardContainer>
     </Card>
   );

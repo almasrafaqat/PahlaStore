@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 
 export const ButtonContainer = styled.div`
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => props.bgColor};
   padding: 0.3rem 0.6rem;
   border-radius: 0.2rem;
   display: flex;

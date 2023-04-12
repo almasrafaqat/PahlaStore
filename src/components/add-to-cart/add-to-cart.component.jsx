@@ -1,4 +1,3 @@
-import FormatPrice from "../../helpers/FormatPrice";
 import {
   Button,
   ButtonContainer,
@@ -6,11 +5,12 @@ import {
   Container,
 } from "./add-to-cart.style";
 
-const AddToCart = ({content, width, radius, text, bg, icon }) => {
+const AddToCart = ({content, width, radius, text, bgColor, icon }) => {
+ 
   return (
     <Container>
-      <ButtonContainer color={bg} content={content} width={width} radius={radius}>
-       {icon &&  <CartIcon />}
+      <ButtonContainer bgColor={bgColor} content={content} width={width} radius={radius}>
+       {icon ?  <CartIcon/> : ""}
         <Button>{text}</Button>
       </ButtonContainer>
     </Container>
