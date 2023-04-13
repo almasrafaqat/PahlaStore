@@ -1,7 +1,7 @@
 import { AddShoppingCartOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import { ButtonPrimary } from "../../GlobalStyle";
-import { Mobile768 } from "../../responsive";
+import { IpadTablets, mobile } from "../../responsive";
 
 export const Container = styled.div`
   display: flex;
@@ -24,14 +24,15 @@ export const ButtonContainer = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};
 
-    ${Mobile768({ padding: "0.1rem 0.3rem" })}
+    ${IpadTablets({ padding: "0.1rem 0.3rem" })}
   }
 `;
 
 export const CartIcon = styled(AddShoppingCartOutlined)`
   color: ${({ theme }) => theme.colors.white};
 
-  ${Mobile768({ display: "none !important" })}
+  ${IpadTablets({ visibility: "hidden !important" })}
+  ${mobile({visibility: "visible !important" })};
 `;
 export const Button = styled(ButtonPrimary)`
   padding: 0.3rem;
@@ -39,5 +40,5 @@ export const Button = styled(ButtonPrimary)`
   color: ${({ theme }) => theme.colors.white};
   font-size: 1rem;
 
-  ${Mobile768({ fontSize: "0.7rem", padding: "0.2rem" })}
+  ${IpadTablets({ fontSize: "0.7rem", padding: "0.2rem" })}
 `;

@@ -11,7 +11,7 @@ import {
   PaddingContainer,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { Mobile768 } from "../../responsive";
+import { IpadTablets } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)``;
 
@@ -35,7 +35,7 @@ export const ProductBannerContainer = styled.div`
   padding: 0 10px;
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.colors.shadow};
-  ${Mobile768({ width: "0", display: "none" })};
+  ${IpadTablets({ width: "0", display: "none" })};
 `;
 
 export const ProductBannerImage = styled.img`
@@ -49,7 +49,7 @@ export const ProductContainer = styled.div`
   position: relative;
   width: calc(78% - 5px);
   z-index: 1;
-  ${Mobile768({ width: "100%" })}
+  ${IpadTablets({ width: "100%" })}
 `;
 
 export const Title = styled(TitlePrimary)`

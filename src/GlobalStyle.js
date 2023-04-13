@@ -7,7 +7,7 @@ import {
   StarOutlined,
   StarOutlineOutlined,
 } from "@mui/icons-material";
-import { mobile, Mobile768 } from "./responsive";
+import { mobile, IpadTablets } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -71,7 +71,7 @@ export const PrimaryLogo = styled.div`
 export const MarginBottomContainer = styled.div`
   margin-bottom: 4.5rem;
 
-  ${Mobile768({ marginBottom: "1.7rem" })}
+  ${IpadTablets({ marginBottom: "1.7rem" })}
 `;
 
 export const ButtonPrimary = styled.button`
@@ -129,7 +129,7 @@ export const ColorPrimary = styled.div`
   margin-left: 0.7rem;
   cursor: pointer;
 
-  ${Mobile768({ width: "0.9rem", height: "0.9rem", marginLeft: "0.4rem" })}
+  ${IpadTablets({ width: "0.9rem", height: "0.9rem", marginLeft: "0.4rem" })}
 `;
 
 /** Size */
@@ -154,7 +154,7 @@ export const SizePrimary = styled.div`
     props.active && (({ theme }) => theme.colors.primary)};
   color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
 
-  ${Mobile768({ width: "0.9rem", height: "0.9rem", padding: "0.6rem", fontSize: "0.7rem", marginLeft: "0.4rem" })}
+  ${IpadTablets({ width: "0.9rem", height: "0.9rem", padding: "0.6rem", fontSize: "0.7rem", marginLeft: "0.4rem" })}
 `;
 
 /** Flex  */
@@ -192,15 +192,15 @@ export const RatingContainerPrimary = styled.div`
 
 export const StarFullPrimary = styled(StarOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
-  ${Mobile768({ fontSize: "1.2rem !important" })}
+  ${IpadTablets({ fontSize: "1.2rem !important" })}
 `;
 export const StarEmptyPrimary = styled(StarOutlineOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
-  ${Mobile768({ fontSize: "1.2rem !important" })}
+  ${IpadTablets({ fontSize: "1.2rem !important" })}
 `;
 export const StarHalfPrimary = styled(StarHalfOutlined)`
   ${mobile({ fontSize: "1.2rem !important" })}
-  ${Mobile768({ fontSize: "1.2rem !important" })}
+  ${IpadTablets({ fontSize: "1.2rem !important" })}
 `;
 
 /** Price Container */
@@ -226,7 +226,7 @@ export const DiscountPercentagePrimary = styled.span`
   font-weight: 500;
   top: 25%;
 
-  ${Mobile768({ fontSize: "0.8rem", top: "20%" })}
+  ${IpadTablets({ fontSize: "0.8rem", top: "20%" })}
 `;
 /** Arrows  */
 

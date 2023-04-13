@@ -21,6 +21,7 @@ import {
   Image,
   ImageGallery,
   ImagesContainer,
+  ImagesGalleryContainer,
   InfoContainer,
   ListItem,
   MainImage,
@@ -50,12 +51,12 @@ const ProductDetails = () => {
       <Wrapper>
         <GridWrapper>
           <ImagesContainer>
-            <ImageGallery>
-              <Image src="images/products/headphone.png" />
-              <Image src="images/products/headphone.png" />
-              <Image src="images/products/headphone.png" />
-              <Image src="images/products/headphone.png" />
-            </ImageGallery>
+            <ImagesGalleryContainer>
+              <ImageGallery src="images/products/headphone.png" />
+              <ImageGallery src="images/products/headphone.png" />
+              <ImageGallery src="images/products/headphone.png" />
+              <ImageGallery src="images/products/headphone.png" />
+            </ImagesGalleryContainer>
             <MainImage>
               <Image
                 width="100"

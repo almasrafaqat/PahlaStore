@@ -9,7 +9,7 @@ import {
 import styled from "styled-components";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import { HeadingPrimary, HorizontalLinePrimary, PaddingContainer } from "../../GlobalStyle";
-import { Mobile768, MobileMaxWidth1200 } from "../../responsive";
+import { DesktopsLargeScreens, IpadTablets } from "../../responsive";
 
 export const Container = styled.div``;
 
@@ -18,13 +18,13 @@ export const Wrapper = styled(PaddingContainer)``;
 export const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
-  ${Mobile768({ flexDirection: "column" })};
+  ${IpadTablets({ flexDirection: "column" })};
 `;
 
 export const Col = styled.div`
   flex: 1;
   margin-bottom: 2rem;
-  ${MobileMaxWidth1200({ margin: "0 1rem" })}
+  ${DesktopsLargeScreens({ margin: "0 1rem" })}
 `;
 
 export const Title = styled.h3`
