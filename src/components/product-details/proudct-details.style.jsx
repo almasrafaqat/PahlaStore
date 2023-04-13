@@ -17,93 +17,82 @@ import {
   StarHalfPrimary,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { IpadTablets, mobile } from "../../responsive";
+import { IpadTablets, mobile, LaptopsSmallScreen } from "../../responsive";
 
-export const Container = styled.div`
-  
-`;
+export const Container = styled.div``;
 
 export const Wrapper = styled.div`
   padding: 0 2rem;
- 
+
   ${IpadTablets({ padding: "0 1rem" })}
 `;
 
 export const GridWrapper = styled(GridContainer)`
-  /* grid-template-columns: 2fr 2fr 1fr; */
-  
-  /* overflow: hidden; */
   grid-template-columns: repeat(2, 2fr) 1fr;
   grid-gap: 1rem;
-  
 
   /* Media Query */
-    ${mobile({ gridTemplateColumns: "1fr" })}
-    ${IpadTablets({ gridTemplateColumns: "35% 30% 28%", overflow: "hidden" })};
-   
+  ${mobile({ gridTemplateColumns: "1fr" })}
+  ${IpadTablets({ gridTemplateColumns: "35% 30% 28%" })};
 `;
 
 export const ImagesContainer = styled.div`
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 600px;
-    position: sticky;
-    top: 1%;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  position: sticky;
+  top: 1%;
 
-    /* Media Query */
-    ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })}
-    
-    
+  /* Media Query */
+  ${mobile({
+    position: "unset",
+    top: "0",
+    height: "300px",
+    flexDirection: "column-reverse",
+  })}
+  ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })}
+  ${LaptopsSmallScreen({height: "50dvh"})}
 `;
 
 export const ImagesGalleryContainer = styled.div`
-    
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-   /* Media Query */
-   ${IpadTablets({ flexDirection: "row", justifyContent: "space-around"})}
-  
+  /* Media Query */
+  ${mobile({ flexDirection: "row" })}
+  ${IpadTablets({ flexDirection: "row", justifyContent: "space-around" })}
 `;
 
 export const ImageGalleryWrapper = styled(ImageWrapperPrimary)`
- 
   margin: 0.2rem;
   cursor: pointer;
   height: 50px;
   width: 50px;
-  
 `;
 
-export const ImageGallery = styled(ImagePrimary)`
-  
-`;
-
-
+export const ImageGallery = styled(ImagePrimary)``;
 
 export const MainImage = styled(ImageWrapperPrimary)`
   width: 95%;
   height: 600px;
   margin: 0.2rem;
   cursor: pointer;
+
+  /* Media Query*/
+  ${mobile({ height: "300px" })}
+  ${LaptopsSmallScreen({height: "50dvh"})}
  
 `;
 
-export const Image = styled(ImagePrimary)`
-  width: ${(props) => props.width}%;
-  height: ${(props) => props.height}%;
-  object-fit: contain;
-`;
-
-
+export const Image = styled(ImagePrimary)``;
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0.8rem;
-  
+
   ${IpadTablets({ gap: "0.5rem" })}
 `;
 

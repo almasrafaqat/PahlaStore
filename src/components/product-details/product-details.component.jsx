@@ -54,7 +54,7 @@ const ProductDetails = () => {
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
-              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery  src="images/products/headphone.png" /></ImageGalleryWrapper>
               <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
               <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
               <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
@@ -62,8 +62,7 @@ const ProductDetails = () => {
             </ImagesGalleryContainer>
             <MainImage>
               <Image
-                width="100"
-                height="100"
+                
                 src="images/products/headphone.png"
               />
             </MainImage>

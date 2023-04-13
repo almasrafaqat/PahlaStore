@@ -110,14 +110,16 @@ export const TitlePrimary = styled.h6`
 /**Image */
 export const ImageWrapperPrimary = styled.div`
   position: relative;
-  background-color: ${({theme}) => theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.border};
   border-radius: 0.7rem;
   overflow: hidden;
 `;
 
 export const ImagePrimary = styled.img`
-  max-width: 70%;
-  max-height:70%;
+  // max-width: 70%;
+  // max-height:70%;
+  width: ${(props) => (props.width ? props.width : "70")}%;
+  height: ${(props) => (props.height ? props.height : "70")}%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -125,11 +127,6 @@ export const ImagePrimary = styled.img`
   right: 0;
   margin: auto;
   object-fit: contain;
-
- 
-
-  
-   
 `;
 
 export const HorizontalLinePrimary = styled.hr`
@@ -179,7 +176,13 @@ export const SizePrimary = styled.div`
     props.active && (({ theme }) => theme.colors.primary)};
   color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
 
-  ${IpadTablets({ width: "0.9rem", height: "0.9rem", padding: "0.6rem", fontSize: "0.7rem", marginLeft: "0.4rem" })}
+  ${IpadTablets({
+    width: "0.9rem",
+    height: "0.9rem",
+    padding: "0.6rem",
+    fontSize: "0.7rem",
+    marginLeft: "0.4rem",
+  })}
 `;
 
 /** Flex  */
