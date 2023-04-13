@@ -34,6 +34,7 @@ export const GridWrapper = styled(GridContainer)`
   /* Media Query */
   ${mobile({ gridTemplateColumns: "1fr" })}
   ${IpadTablets({ gridTemplateColumns: "35% 30% 28%" })};
+  ${LaptopsSmallScreen({ gridTemplateColumns: "34% 35% 29%" })};
 `;
 
 export const ImagesContainer = styled.div`
@@ -52,7 +53,7 @@ export const ImagesContainer = styled.div`
     flexDirection: "column-reverse",
   })}
   ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })}
-  ${LaptopsSmallScreen({height: "50dvh"})}
+  ${LaptopsSmallScreen({ height: "400px" })}
 `;
 
 export const ImagesGalleryContainer = styled.div`
@@ -81,8 +82,7 @@ export const MainImage = styled(ImageWrapperPrimary)`
 
   /* Media Query*/
   ${mobile({ height: "300px" })}
-  ${LaptopsSmallScreen({height: "50dvh"})}
- 
+  ${LaptopsSmallScreen({ height: "400px" })}
 `;
 
 export const Image = styled(ImagePrimary)``;
@@ -109,7 +109,11 @@ export const PriceDiscountedContainer = styled.div``;
 
 export const Title = styled(TitlePrimary)`
   font-size: 2.5rem;
+
+  /**Media Query **/
   ${IpadTablets({ fontSize: "1rem" })}
+  ${LaptopsSmallScreen({ fontSize: "1.5rem" })}
+  ${mobile({ fontSize: "1.5rem" })}
 `;
 
 export const RatingContainer = styled(RatingContainerPrimary)``;
