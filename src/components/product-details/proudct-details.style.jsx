@@ -52,7 +52,7 @@ export const ImagesContainer = styled.div`
     top: 1%;
 
     /* Media Query */
-    ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })};
+    ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })}
     
     
 `;
@@ -201,8 +201,6 @@ export const AddToCartContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  re
 `;
 
 export const ShipsFrom = styled.div`
