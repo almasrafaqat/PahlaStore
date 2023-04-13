@@ -23,7 +23,6 @@ export const ButtonContainer = styled.div`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};
-
     ${IpadTablets({ padding: "0.1rem 0.3rem" })}
   }
 `;
@@ -31,8 +30,8 @@ export const ButtonContainer = styled.div`
 export const CartIcon = styled(AddShoppingCartOutlined)`
   color: ${({ theme }) => theme.colors.white};
 
-  ${IpadTablets({ visibility: "hidden !important" })}
-  ${mobile({visibility: "visible !important" })};
+  ${IpadTablets({ visibility: "hidden !important", display: "none !important" })}
+  ${mobile({ visibility: "visible !important" })};
 `;
 export const Button = styled(ButtonPrimary)`
   padding: 0.3rem;

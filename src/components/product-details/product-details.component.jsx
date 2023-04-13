@@ -20,6 +20,8 @@ import {
   HorizontalLine,
   Image,
   ImageGallery,
+  ImageGalleryWrapper,
+  ImageWrapper,
   ImagesContainer,
   ImagesGalleryContainer,
   InfoContainer,
@@ -52,10 +54,11 @@ const ProductDetails = () => {
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
-              <ImageGallery src="images/products/headphone.png" />
-              <ImageGallery src="images/products/headphone.png" />
-              <ImageGallery src="images/products/headphone.png" />
-              <ImageGallery src="images/products/headphone.png" />
+              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+
             </ImagesGalleryContainer>
             <MainImage>
               <Image
@@ -64,6 +67,7 @@ const ProductDetails = () => {
                 src="images/products/headphone.png"
               />
             </MainImage>
+
           </ImagesContainer>
           <InfoContainer>
             <BrandContainer>

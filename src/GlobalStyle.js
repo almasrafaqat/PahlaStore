@@ -107,6 +107,31 @@ export const TitlePrimary = styled.h6`
   ${mobile({ fontSize: "0.8rem" })}
 `;
 
+/**Image */
+export const ImageWrapperPrimary = styled.div`
+  position: relative;
+  background-color: ${({theme}) => theme.colors.border};
+  border-radius: 0.7rem;
+  overflow: hidden;
+`;
+
+export const ImagePrimary = styled.img`
+  max-width: 70%;
+  max-height:70%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  object-fit: contain;
+
+ 
+
+  
+   
+`;
+
 export const HorizontalLinePrimary = styled.hr`
   background-color: ${({ theme }) => theme.colors.primary};
   height: 1px;

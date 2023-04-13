@@ -5,6 +5,8 @@ import {
   DiscountPercentagePrimary,
   GridContainer,
   HorizontalLinePrimary,
+  ImagePrimary,
+  ImageWrapperPrimary,
   PriceContainerPrimary,
   PricePrimary,
   RatingContainerPrimary,
@@ -17,61 +19,78 @@ import {
 } from "../../GlobalStyle";
 import { IpadTablets, mobile } from "../../responsive";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  
+`;
 
 export const Wrapper = styled.div`
   padding: 0 2rem;
+ 
   ${IpadTablets({ padding: "0 1rem" })}
 `;
 
 export const GridWrapper = styled(GridContainer)`
-  grid-template-columns: 2fr 2fr 1fr;
+  /* grid-template-columns: 2fr 2fr 1fr; */
+  
+  /* overflow: hidden; */
+  grid-template-columns: repeat(2, 2fr) 1fr;
   grid-gap: 1rem;
-  // grid-template-columns: 100px repeat(auto-fill, minmax(25rem,1fr));
+  
 
-  ${IpadTablets({ gridTemplateColumns: "1fr 1fr 1fr" })};
-  ${mobile({gridTemplateColumns: "1fr"})}
+  /* Media Query */
+    ${mobile({ gridTemplateColumns: "1fr" })}
+    ${IpadTablets({ gridTemplateColumns: "35% 30% 28%", overflow: "hidden" })};
+   
 `;
 
 export const ImagesContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    position: sticky;
+    top: 1%;
+
+    /* Media Query */
+    ${IpadTablets({ flexDirection: "column-reverse", height: "300px" })};
     
-    height: fit-content;
-    ${IpadTablets({ flexDirection: "column-reverse", })}
     
 `;
 
 export const ImagesGalleryContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 0 0.3rem;
-  margin-top: 2rem;
+    
+    display: flex;
+    flex-direction: column;
 
-  ${IpadTablets({ flexDirection: "row", })}
+   /* Media Query */
+   ${IpadTablets({ flexDirection: "row", justifyContent: "space-around"})}
   
 `;
 
-export const ImageGallery = styled.img`
-  width: 50px;
-  height: 50px;
-  
-`;
-
-
-
-export const MainImage = styled.div`
-  
-  padding: 0 2rem;
-  overflow: hidden;
-  background-color: #ececec6e;
-  border-radius: 0.9rem;
+export const ImageGalleryWrapper = styled(ImageWrapperPrimary)`
  
-
+  margin: 0.2rem;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  
 `;
 
-export const Image = styled.img`
+export const ImageGallery = styled(ImagePrimary)`
+  
+`;
+
+
+
+export const MainImage = styled(ImageWrapperPrimary)`
+  width: 95%;
+  height: 600px;
+  margin: 0.2rem;
+  cursor: pointer;
+ 
+`;
+
+export const Image = styled(ImagePrimary)`
   width: ${(props) => props.width}%;
   height: ${(props) => props.height}%;
   object-fit: contain;
