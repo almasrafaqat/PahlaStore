@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { BoxPrimary, GridContainer, HeadingPrimary, MarginBottomContainer, PaddingContainer } from "../../GlobalStyle";
 
 
+
 export const Container = styled(MarginBottomContainer)`
     margin-top: 5rem;
 `;
@@ -16,6 +17,8 @@ export const Heading = styled(HeadingPrimary)`
 export const Box = styled(BoxPrimary)``
 
 export const Row = styled(GridContainer)`
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 0.3rem;
+
+   
 `;

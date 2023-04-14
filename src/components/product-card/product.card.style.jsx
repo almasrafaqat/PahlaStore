@@ -59,7 +59,7 @@ export const Image = styled.img`
 `;
 
 export const InfoContainer = styled.div`
-  margin: 2rem 0;
+  margin: 1rem 0;
 `;
 
 export const Title = styled(TitlePrimary)``;
@@ -71,9 +71,10 @@ export const StarEmpty = styled(StarEmptyPrimary)``;
 export const StarHalf = styled(StarHalfPrimary)``;
 
 export const Brand = styled.div`
-  margin-bottom: 20px;
+ 
 `;
 
 export const AddToCardContainer = styled(AddToCardContainerPrimary)`
+
   
 `;

@@ -1,20 +1,18 @@
 import { AddShoppingCartOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import { ButtonPrimary } from "../../GlobalStyle";
-import { IpadTablets, mobile } from "../../responsive";
+import { IpadTablets } from "../../responsive";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.6rem;
   cursor: pointer;
 `;
 
 export const ButtonContainer = styled.div`
   background-color: ${(props) => props.bgColor};
   padding: 0.3rem 0.6rem;
-  border-radius: 0.2rem;
   display: flex;
   align-items: center;
   width: ${(props) => props.width}%;
@@ -30,8 +28,7 @@ export const ButtonContainer = styled.div`
 export const CartIcon = styled(AddShoppingCartOutlined)`
   color: ${({ theme }) => theme.colors.white};
 
-  ${IpadTablets({ visibility: "hidden !important", display: "none !important" })}
-  ${mobile({ visibility: "visible !important" })};
+  ${IpadTablets({fontSize: "1rem !important" })}
 `;
 export const Button = styled(ButtonPrimary)`
   padding: 0.3rem;

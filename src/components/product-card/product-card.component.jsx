@@ -42,9 +42,10 @@ const ProductCard = ({ product, type }) => {
           By <Text type="brand">{product.brand}</Text>
         </Brand>
       </InfoContainer>
+
       <AddToCardContainer>
         <PriceComponent price={product.discount} discount={product.price} />
-        <AddToCart icon={true} content="center" bgColor={({ theme }) => theme.colors.primary} width="100" radius="0.4" text="Add" />
+        <AddToCart icon={true} width="100" content="center" bgColor={({ theme }) => theme.colors.primary} radius="0.4" text="Add" />
       </AddToCardContainer>
     </Card>
   );

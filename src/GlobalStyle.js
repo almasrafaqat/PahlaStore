@@ -177,12 +177,12 @@ export const SizePrimary = styled.div`
   color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
 
   ${IpadTablets({
-    width: "0.9rem",
-    height: "0.9rem",
-    padding: "0.6rem",
-    fontSize: "0.7rem",
-    marginLeft: "0.4rem",
-  })}
+      width: "0.9rem",
+      height: "0.9rem",
+      padding: "0.6rem",
+      fontSize: "0.7rem",
+      marginLeft: "0.4rem",
+    })}
 `;
 
 /** Flex  */
@@ -207,8 +207,11 @@ export const BoxPrimary = styled.div`
 export const AddToCardContainerPrimary = styled.div`
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  
+ 
 `;
 
 /** Stars Rating */

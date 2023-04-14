@@ -6,16 +6,17 @@ import {
   Sponsored,
   Wrapper,
 } from "./cart-promo.style";
+import { Link } from "../../GlobalStyle";
 
 const CartPromo = () => {
   return (
     <Container>
       <Wrapper>
         <Sponsored>
-            Sponsored
+          Sponsored
         </Sponsored>
         <ImageBanner>
-          <ImagePromo src="/images/promo/ramadan.png" />
+          <Link><ImagePromo width="100" height="100" src="/images/promo/brush.jpg" /></Link>
         </ImageBanner>
       </Wrapper>
     </Container>

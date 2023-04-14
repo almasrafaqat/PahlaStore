@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ImagePrimary, ImageWrapperPrimary } from "../../GlobalStyle";
+import { DesktopsLargeScreens, ExtraLargeScreenTV, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
 
 export const Container = styled.div`
     margin-top: 1rem;
@@ -16,20 +18,26 @@ export const Sponsored = styled.h6`
     
 `;
 
-export const ImageBanner = styled.div`
-  
-    overflow: hidden;
-    position: relative;
-    height: 40dvh;
+export const ImageBanner = styled(ImageWrapperPrimary)`
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+
+    /**Media Query */
+
+    ${mobile({ height: "150px" })}
+    ${IpadTablets({ height: "100px" })}
+    ${ExtraLargeScreenTV({ height: "200px" })}
+    
+    
     
 `;
 
-export const ImagePromo = styled.img`
-    border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    object-fit: cover;
-    position: absolute;
+export const ImagePromo = styled(ImagePrimary)`
+  
+  object-fit: unset;
+
+
+   
 `;
 

@@ -21,7 +21,6 @@ import {
   Image,
   ImageGallery,
   ImageGalleryWrapper,
-  ImageWrapper,
   ImagesContainer,
   ImagesGalleryContainer,
   InfoContainer,
@@ -165,7 +164,7 @@ const ProductDetails = () => {
                   bgColor={({ theme }) => theme.colors.primary}
                   width="100"
                   radius="0.4"
-                  text="Add to cart"
+                  text="Add"
                 />
                 <AddToCart
                   content="center"
