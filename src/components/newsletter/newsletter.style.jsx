@@ -6,7 +6,7 @@ import {
   PaddingContainer,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { mobile, IpadTablets, DesktopsLargeScreens } from "../../responsive";
+import { mobile, IpadTablets, DesktopsLargeScreens, LaptopsSmallScreen } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)``;
 
@@ -51,7 +51,10 @@ export const InputContainer = styled.div`
   border-radius: 3rem;
   padding-left: 1.2rem;
   height: 3rem;
+  
+  ${mobile({ maxWidth: "100%" })}
   ${IpadTablets({ maxWidth: "100%" })}
+  ${LaptopsSmallScreen({ maxWidth: "100%" })}
   ${DesktopsLargeScreens({ maxWidth: "100%" })};
 `;
 
@@ -79,8 +82,9 @@ export const ImageContainer = styled.div`
   flex: 1;
   height: 100%;
   position: relative;
+  ${mobile({ display: "none" })}
   ${IpadTablets({ display: "none" })}
-  ${DesktopsLargeScreens({ display: "none" })}
+  
 `;
 
 export const Image = styled.img`

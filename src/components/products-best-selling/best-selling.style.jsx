@@ -11,7 +11,7 @@ import {
   PaddingContainer,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { IpadTablets } from "../../responsive";
+import { IpadTablets, mobile } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)``;
 
@@ -35,7 +35,10 @@ export const ProductBannerContainer = styled.div`
   padding: 0 10px;
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.colors.shadow};
-  ${IpadTablets({ width: "0", display: "none" })};
+
+  /**Media Query */
+  ${mobile({ width: "0", display: "none" })}
+  ${IpadTablets({ width: "0", display: "none" })}
 `;
 
 export const ProductBannerImage = styled.img`
@@ -49,6 +52,9 @@ export const ProductContainer = styled.div`
   position: relative;
   width: calc(78% - 5px);
   z-index: 1;
+
+  /**Media Query */
+  ${mobile({ width: "100%" })}
   ${IpadTablets({ width: "100%" })}
 `;
 
@@ -68,7 +74,7 @@ export const Button = styled(ButtonPrimary)`
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 0.4rem;
-  background-color: #c10124; /*${({ theme }) => theme.colors.lightred};*/
+  background-color:  ${({ theme }) => theme.colors.lightred};
 `;
 
 export const ArrowContainer = styled(ArrowContainerPrimary)``;

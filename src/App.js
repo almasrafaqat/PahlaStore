@@ -15,7 +15,7 @@ function App() {
         <GlobalStyle />
         <ScrollTop/>
         <Routes>
-          <Route path="/" element={<SinglePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/practice" element={<Practice />} />
