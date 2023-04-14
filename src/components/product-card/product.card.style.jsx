@@ -71,7 +71,7 @@ export const StarEmpty = styled(StarEmptyPrimary)``;
 export const StarHalf = styled(StarHalfPrimary)``;
 
 export const Brand = styled.div`
- 
+ margin-bottom: 4rem;
 `;
 
 export const AddToCardContainer = styled(AddToCardContainerPrimary)`

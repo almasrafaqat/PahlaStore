@@ -210,7 +210,11 @@ export const AddToCardContainerPrimary = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   margin: 0.5rem 0;
-  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
  
 `;
 
