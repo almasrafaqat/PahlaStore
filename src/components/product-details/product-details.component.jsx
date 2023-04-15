@@ -26,6 +26,7 @@ import {
   InfoContainer,
   ListItem,
   MainImage,
+  MainImageZoom,
   OrderList,
   Price,
   PriceContainer,
@@ -38,6 +39,7 @@ import {
   StockInfo,
   Title,
   Wrapper,
+  ZoomImage,
 } from "./proudct-details.style";
 import FormatPrice from "../../helpers/FormatPrice";
 import { Link, TextPrimary } from "../../GlobalStyle";
@@ -50,31 +52,23 @@ import { useParams } from "react-router-dom";
 import { Products } from "../../data";
 import { useState } from "react";
 
-import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
-import InnerImageZoom from 'react-inner-image-zoom';
 
 const ProductDetails = () => {
+  const { id } = useParams();
+  const Product = Products.find((product) => product.id == id);
 
-  const [imagePreview, setImagePreview] = useState(0);
+  const [imagePreview, setImagePreview] = useState(Product.imageUrl);
+  const  [zoomImage, setZoomImage] = useState(false);
 
   const ImageOnClick = (event) => {
     let imageSrc = event.target.getAttribute("src");
     setImagePreview(imageSrc);
-  }
-
-  const { id } = useParams();
-
-  const Product = Products.find((product) => product.id == id);
-
-
-
+  };
 
   useEffect(() => {
     window.scroll(0, 0);
-
-  });
-
-
+    setImagePreview(Product.imageUrl);
+  }, [id]);
 
   return (
     <Container>
@@ -82,18 +76,42 @@ const ProductDetails = () => {
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
-              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src={Product.imageUrl} /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
-
+              <ImageGalleryWrapper>
+                <ImageGallery onClick={ImageOnClick} src={Product.imageUrl} />
+              </ImageGalleryWrapper>
+              <ImageGalleryWrapper>
+                <ImageGallery
+                  onClick={ImageOnClick}
+                  src="/images/products/headphone.png"
+                />
+              </ImageGalleryWrapper>
+              <ImageGalleryWrapper>
+                <ImageGallery
+                  onClick={ImageOnClick}
+                  src="/images/products/headphone.png"
+                />
+              </ImageGalleryWrapper>
+              <ImageGalleryWrapper>
+                <ImageGallery
+                  onClick={ImageOnClick}
+                  src="/images/products/headphone.png"
+                />
+              </ImageGalleryWrapper>
             </ImagesGalleryContainer>
-            <MainImage>
-              
-              <InnerImageZoom src={imagePreview} zoomSrc={imagePreview} zoomScale={1} zoomType={"hover"} />
+            <MainImage >
+              {/* <Image src={imagePreview} width="90" height="90"  /> */}
+              <MainImageZoom>
+                  <ZoomImage
+                  src={imagePreview}
+                  zoomSrc={imagePreview}
+                  zoomScale={1.5}
+                  zoomType={"hover"}
+                  
+                />
+              </MainImageZoom>
             </MainImage>
-
           </ImagesContainer>
+
           <InfoContainer>
             <BrandContainer>
               Brand:

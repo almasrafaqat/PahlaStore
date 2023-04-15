@@ -18,6 +18,8 @@ import {
   TitlePrimary,
 } from "../../GlobalStyle";
 import { IpadTablets, mobile, LaptopsSmallScreen } from "../../responsive";
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 
 export const Container = styled.div``;
 
@@ -85,7 +87,23 @@ export const MainImage = styled(ImageWrapperPrimary)`
   ${LaptopsSmallScreen({ height: "400px" })}
 `;
 
+
 export const Image = styled(ImagePrimary)``;
+
+export const MainImageZoom = styled(MainImage)``;
+
+export const ZoomImage = styled(InnerImageZoom)`
+  height: 100% !important;
+  width: 90% !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  object-fit: contain !important;
+`;
+
 
 export const InfoContainer = styled.div`
   display: flex;
