@@ -42,10 +42,10 @@ const Nav = () => {
             <MenuLink> About </MenuLink>
           </MenuList>
           <MenuList>
-            <MenuLink> Dropdown </MenuLink>
+            <MenuLink> Pages </MenuLink>
             <DropdownItem>
               <DropdownList>
-                <DropdownLink> Laravel </DropdownLink>
+                <DropdownLink to ="/productdetails/id/title"> Single Page </DropdownLink>
               </DropdownList>
               <DropdownList>
                 <DropdownLink> React JS </DropdownLink>

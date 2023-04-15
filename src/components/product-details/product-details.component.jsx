@@ -45,24 +45,33 @@ import AddToCart from "../add-to-cart/add-to-cart.component";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
 import CartPromo from "../cart-promo/cart-promo.component";
 import DeliveryDate from "../../helpers/DeliveryDate";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0);
+   
+  });
+
+
+
   return (
     <Container>
       <Wrapper>
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
-              <ImageGalleryWrapper><ImageGallery  src="images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery  src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
 
             </ImagesGalleryContainer>
             <MainImage>
               <Image
                 
-                src="images/products/headphone.png"
+                src="/images/products/headphone.png"
               />
             </MainImage>
 

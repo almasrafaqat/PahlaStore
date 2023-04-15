@@ -10,6 +10,7 @@ import NewsLetter from "../components/newsletter/newsletter.component";
 import Footer from "../components/footer/footer.component";
 import ProductBought from "../components/product-bought/product-bought.component";
 import ProductRelated from "../components/product-related/product-related.component";
+import { useEffect } from "react";
 
 const Container = styled.div``;
 const Wrapper = styled.div``;
@@ -19,6 +20,9 @@ const Row = styled(PaddingContainer)`
 `;
 
 const SinglePage = () => {
+
+ 
+
   return (
     <Container>
       <Announcement />

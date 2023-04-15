@@ -16,6 +16,7 @@ function App() {
         <ScrollTop/>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/productdetails/:id/:title" element={<SinglePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/practice" element={<Practice />} />

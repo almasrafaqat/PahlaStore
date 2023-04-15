@@ -27,7 +27,7 @@ const ProductCard = ({ product, type }) => {
         <Text>{product.tag}</Text>
       </TagContainer>
       <ImageContainer>
-        <Link><Image src={product.imageUrl} /></Link>
+        <Link to={`/productdetails/${product.id}/${product.title}`}><Image src={product.imageUrl} /></Link>
       </ImageContainer>
       <InfoContainer>
         <Title> <Link>{product.title?.slice(0, 50)}</Link> </Title>

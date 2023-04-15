@@ -63,7 +63,7 @@ export const Products = [
   {
     id: 1,
     title: "Himalaya Softness & Shine Daily Care 2-In-1 Shampoo Conditions Hair, Making It Smooth & Shiny -400 ml",
-    imageUrl: "images/products/beautycare.png",
+    imageUrl: "/images/products/beautycare.png",
     category: "beauty",
     rating: 4,
     price: 12,
@@ -79,14 +79,14 @@ export const Products = [
   },
   {
     id: 2,
-    title: "Handheld Barcode Scanner 1D/2D/QR Code Scanner 2.4G Wireless & USB Wired Bar Code Compatible with Windows Mac Linux for Supermarket Retail Library Logistics Warehous",
-    imageUrl: "images/products/scanner.png",
+    title: "Handheld Barcode Scanner 1D 2D QR Code Scanner 2.4G Wireless & USB Wired Bar Code Compatible with Windows Mac Linux for Supermarket Retail Library Logistics Warehous",
+    imageUrl: "/images/products/scanner.png",
     category: "accessories",
     rating: 4,
     price: 120,
     discount: 110,
     stock: 20,
-    deal: true,
+    deal: false,
     dealends: 6,
     tag: "new",
     bg: "#3bb77e",
@@ -97,7 +97,7 @@ export const Products = [
   {
     id: 3,
     title: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
-    imageUrl: "images/products/catshoes.png",
+    imageUrl: "/images/products/catshoes.png",
     category: "smartphone",
     rating: 4,
     price: 15,
@@ -114,7 +114,7 @@ export const Products = [
   {
     id: 4,
     title: "Apple MacBook Pro 16 M1 Retina XDR Laptop",
-    imageUrl: "images/products/imac.png",
+    imageUrl: "/images/products/imac.png",
     category: "computer",
     rating: 3.5,
     price: 16900,
@@ -131,7 +131,7 @@ export const Products = [
   {
     id: 5,
     title: "50 Inch 4K UHD Smart LED TV, HDR Crystal Processor 4K With Tizen OS, 60 Hz Refresh rates and Built-In Receiver Model (2021). UA50AU7000UXUM Black",
-    imageUrl: "images/products/led.png",
+    imageUrl: "/images/products/led.png",
     category: "led",
     rating: 4,
     price: 3500,
@@ -148,7 +148,7 @@ export const Products = [
   {
     id: 6,
     title: "Huawei Watch Gt 2 Pro Smartwatch, 1.39 Amoled Hd Touchscreen, 2-Week Battery Life, Gps And Glonass,100 Plus Workout Modes, Bluetooth Calling, Heartrate Monitoring, Gray Brown Nebula, Gray GT 46mm",
-    imageUrl: "images/products/bluewatch.png",
+    imageUrl: "/images/products/bluewatch.png",
     category: "smartwatch",
     rating: 5,
     price: 739,
@@ -165,7 +165,7 @@ export const Products = [
   {
     id: 7,
     title: "SoundPEATS Watch 2 Smartwatch SpO2 with 12 Sports Modes Fitness Tracker Heart Rate Sleep Quality Monitor IP68 Waterproof Smart Watches Compatible with iPhone Android Phones, Smart watch for Men Women",
-    imageUrl: "images/products/graywathch.png",
+    imageUrl: "/images/products/graywathch.png",
     category: "smartwatch",
     rating: 4,
     price: 149,
@@ -182,7 +182,7 @@ export const Products = [
   {
     id: 8,
     title: "Lenovo HD200 Bluetooth Headphone with Microphone - Black",
-    imageUrl: "images/products/headphone.png",
+    imageUrl: "/images/products/headphone.png",
     category: "headphone",
     rating: 5,
     price: 85,
@@ -200,7 +200,7 @@ export const Products = [
   {
     id: 9,
     title: "SAMSUNG Galaxy A73 5G Android Smartphone, 256 GB, 8 GB RAM, Dual Sim Mobile Phone, Awesome Mint (UAE Version)",
-    imageUrl: "images/products/androidphone.png",
+    imageUrl: "/images/products/androidphone.png",
     category: "smartphone",
     rating: 4,
     price: 1768,
@@ -219,7 +219,7 @@ export const Products = [
   {
     id: 10,
     title: "New Apple iPhone 14 Pro (512 GB) - Gold",
-    imageUrl: "images/products/iphone.png",
+    imageUrl: "/images/products/iphone.png",
     category: "smartphone",
     rating: 4,
     price: 6000,
