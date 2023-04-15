@@ -46,12 +46,32 @@ import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component
 import CartPromo from "../cart-promo/cart-promo.component";
 import DeliveryDate from "../../helpers/DeliveryDate";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Products } from "../../data";
+import { useState } from "react";
+
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 const ProductDetails = () => {
 
+  const [imagePreview, setImagePreview] = useState(0);
+
+  const ImageOnClick = (event) => {
+    let imageSrc = event.target.getAttribute("src");
+    setImagePreview(imageSrc);
+  }
+
+  const { id } = useParams();
+
+  const Product = Products.find((product) => product.id == id);
+
+
+
+
   useEffect(() => {
     window.scroll(0, 0);
-   
+
   });
 
 
@@ -62,28 +82,26 @@ const ProductDetails = () => {
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
-              <ImageGalleryWrapper><ImageGallery  src="/images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
-              <ImageGalleryWrapper><ImageGallery src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src={Product.imageUrl} /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
+              <ImageGalleryWrapper><ImageGallery onClick={ImageOnClick} src="/images/products/headphone.png" /></ImageGalleryWrapper>
 
             </ImagesGalleryContainer>
             <MainImage>
-              <Image
-                
-                src="/images/products/headphone.png"
-              />
+              
+              <InnerImageZoom src={imagePreview} zoomSrc={imagePreview} zoomScale={1} zoomType={"hover"} />
             </MainImage>
 
           </ImagesContainer>
           <InfoContainer>
             <BrandContainer>
-              Brand:{" "}
+              Brand:
               <Link>
-                <Brand>Samsung</Brand>
+                <Brand> {Product.brand}</Brand>
               </Link>
             </BrandContainer>
-            <Title>Angie’s Boomchickapop Sweet & Salty</Title>
+            <Title>{Product.title}</Title>
             <RatingContainer>
               <FullStar />
               <FullStar />
@@ -93,7 +111,7 @@ const ProductDetails = () => {
             </RatingContainer>
             <PriceContainer>
               <Price>
-                <FormatPrice price="10" />
+                <FormatPrice price={Product.price} />
               </Price>
               <DiscountPercentage> 50% </DiscountPercentage>
             </PriceContainer>
