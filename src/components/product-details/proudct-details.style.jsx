@@ -76,34 +76,32 @@ export const ImageGalleryWrapper = styled(ImageWrapperPrimary)`
 
 export const ImageGallery = styled(ImagePrimary)``;
 
-export const MainImage = styled(ImageWrapperPrimary)`
+export const MainImageZoom = styled.div``;
+
+export const ZoomImage = styled(InnerImageZoom)`
   width: 95%;
-  height: 600px;
   margin: 0.2rem;
-  cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.border};
+  border-radius: 0.7rem;
+  height: 600px;
+  display: flex;
+  align-items: center;
 
   /* Media Query*/
   ${mobile({ height: "300px" })}
   ${LaptopsSmallScreen({ height: "400px" })}
+
+  &:nth-child(1) {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+
+    // ${mobile({ height: "300px", border: "10px solid red" })}
+    // ${LaptopsSmallScreen({ height: "400px", border: "10px solid green" })}
+  }
 `;
-
-
-export const Image = styled(ImagePrimary)``;
-
-export const MainImageZoom = styled(MainImage)``;
-
-export const ZoomImage = styled(InnerImageZoom)`
-  height: 100% !important;
-  width: 90% !important;
-  position: absolute !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin: auto !important;
-  object-fit: contain !important;
-`;
-
 
 export const InfoContainer = styled.div`
   display: flex;

@@ -52,13 +52,14 @@ import { useParams } from "react-router-dom";
 import { Products } from "../../data";
 import { useState } from "react";
 
+import "../../style.css";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const Product = Products.find((product) => product.id == id);
 
   const [imagePreview, setImagePreview] = useState(Product.imageUrl);
-  const  [zoomImage, setZoomImage] = useState(false);
+  const [zoomImage, setZoomImage] = useState(false);
 
   const ImageOnClick = (event) => {
     let imageSrc = event.target.getAttribute("src");
@@ -98,18 +99,18 @@ const ProductDetails = () => {
                 />
               </ImageGalleryWrapper>
             </ImagesGalleryContainer>
-            <MainImage >
-              {/* <Image src={imagePreview} width="90" height="90"  /> */}
-              <MainImageZoom>
-                  <ZoomImage
-                  src={imagePreview}
-                  zoomSrc={imagePreview}
-                  zoomScale={1.5}
-                  zoomType={"hover"}
-                  
-                />
-              </MainImageZoom>
-            </MainImage>
+            {/** <MainImage>
+              <Image src={imagePreview} width="90" height="90"  /> 
+            </MainImage> */}
+
+          
+              <ZoomImage
+                src={imagePreview}
+                zoomSrc={imagePreview}
+                zoomScale={1.5}
+                zoomType={"hover"}
+              />
+           
           </ImagesContainer>
 
           <InfoContainer>
