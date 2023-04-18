@@ -99,15 +99,12 @@ const ProductDetails = () => {
                 />
               </ImageGalleryWrapper>
             </ImagesGalleryContainer>
-            {/** <MainImage>
-              <Image src={imagePreview} width="90" height="90"  /> 
-            </MainImage> */}
 
           
               <ZoomImage
                 src={imagePreview}
                 zoomSrc={imagePreview}
-                zoomScale={1.5}
+                zoomScale={1.8}
                 zoomType={"hover"}
               />
            

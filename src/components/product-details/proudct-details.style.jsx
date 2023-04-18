@@ -79,7 +79,6 @@ export const ImageGallery = styled(ImagePrimary)``;
 export const MainImageZoom = styled.div``;
 
 export const ZoomImage = styled(InnerImageZoom)`
-  width: 95%;
   margin: 0.2rem;
   background-color: ${({ theme }) => theme.colors.border};
   border-radius: 0.7rem;
@@ -92,9 +91,9 @@ export const ZoomImage = styled(InnerImageZoom)`
   ${LaptopsSmallScreen({ height: "400px" })}
 
   &:nth-child(2) {
-    width: 85%;
+    width: 100%;
     height: 100%;
-    padding: 1.5rem;
+    padding: 2rem;
   }
 `;
 
