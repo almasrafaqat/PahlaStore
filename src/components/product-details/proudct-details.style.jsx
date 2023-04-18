@@ -91,15 +91,10 @@ export const ZoomImage = styled(InnerImageZoom)`
   ${mobile({ height: "300px" })}
   ${LaptopsSmallScreen({ height: "400px" })}
 
-  &:nth-child(1) {
-    width: 90%;
+  &:nth-child(2) {
+    width: 85%;
     height: 100%;
-    display: flex;
-    align-items: center;
     padding: 1.5rem;
-
-    // ${mobile({ height: "300px", border: "10px solid red" })}
-    // ${LaptopsSmallScreen({ height: "400px", border: "10px solid green" })}
   }
 `;
 
