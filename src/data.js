@@ -76,6 +76,9 @@ export const Products = [
     brand: "himalaya",
     featured: true,
     views: 20,
+    images: [
+       "/images/products/digitalcamera.png",
+    ]
   },
   {
     id: 2,
@@ -127,6 +130,11 @@ export const Products = [
     brand: "apple",
     featured: false,
     views: 23,
+    images: [
+      "/images/products/imac1.png",
+      "/images/products/imac2.png",
+      
+   ],
   },
   {
     id: 5,
@@ -144,6 +152,11 @@ export const Products = [
     brand: "samsung",
     featured: false,
     views: 24,
+    images: [
+      "/images/products/led1.png",
+      
+      
+   ],
   },
   {
     id: 6,
@@ -178,6 +191,10 @@ export const Products = [
     brand: "SoundPEATS",
     featured: true,
     views: 25,
+    images: [
+      "/images/products/graywathch1.png",
+      "/images/products/graywathch2.png", 
+   ],
   },
   {
     id: 8,
@@ -195,6 +212,13 @@ export const Products = [
     brand: "lenovo",
     featured: false,
     views: 26,
+    images: [
+      "/images/products/headphone1.png",
+      "/images/products/headphone2.png",
+      "/images/products/headphone3.png",
+      
+      
+   ],
 
   },
   {
@@ -213,6 +237,10 @@ export const Products = [
     brand: "samsung",
     featured: false,
     views: 27,
+    images: [
+      "/images/products/androidphone1.png",
+      "/images/products/androidphone2.png",
+   ]
 
 
   },
@@ -232,5 +260,11 @@ export const Products = [
     brand: "apple",
     featured: false,
     views: 28,
+    images: [
+      "/images/products/iphone1.png",
+      "/images/products/iphone2.png",
+      "/images/products/iphone3.png",
+      "/images/products/iphone4.png",
+   ]
   },
 ]

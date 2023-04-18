@@ -51,7 +51,8 @@ import { UseProductContext } from "../../context/ProductContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { SingleProduct, imagePreview, setImagePreview, ImageOnClick } = UseProductContext();
+  const { SingleProduct, imagePreview, setImagePreview, ImageOnClick } =
+    UseProductContext();
 
   const Product = SingleProduct(id);
 
@@ -69,33 +70,19 @@ const ProductDetails = () => {
               <ImageGalleryWrapper>
                 <ImageGallery onClick={ImageOnClick} src={Product.imageUrl} />
               </ImageGalleryWrapper>
-              <ImageGalleryWrapper>
-                <ImageGallery
-                  onClick={ImageOnClick}
-                  src="/images/products/headphone.png"
-                />
-              </ImageGalleryWrapper>
-              <ImageGalleryWrapper>
-                <ImageGallery
-                  onClick={ImageOnClick}
-                  src="/images/products/headphone.png"
-                />
-              </ImageGalleryWrapper>
-              <ImageGalleryWrapper>
-                <ImageGallery
-                  onClick={ImageOnClick}
-                  src="/images/products/headphone.png"
-                />
-              </ImageGalleryWrapper>
+              {Product.images?.map((image, index) => (
+                <ImageGalleryWrapper key={index}>
+                  <ImageGallery onClick={ImageOnClick} src={image} />
+                </ImageGalleryWrapper>
+              ))}
             </ImagesGalleryContainer>
-          
-              <ZoomImage
-                src={imagePreview}
-                zoomSrc={imagePreview}
-                zoomScale={1.8}
-                zoomType={"hover"}
-              />
-            
+
+            <ZoomImage
+              src={imagePreview}
+              zoomSrc={imagePreview}
+              zoomScale={1.8}
+              zoomType={"hover"}
+            />
           </ImagesContainer>
 
           <InfoContainer>
@@ -176,7 +163,7 @@ const ProductDetails = () => {
             <CartContent>
               <PriceContainer>
                 <Price>
-                  <FormatPrice price={SingleProduct.price} />
+                  <FormatPrice price={Product.price} />
                 </Price>
                 <DiscountPercentage> 50% </DiscountPercentage>
               </PriceContainer>
