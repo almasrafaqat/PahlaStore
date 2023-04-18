@@ -18,15 +18,12 @@ import {
   HalfStar,
   Heading,
   HorizontalLine,
-  Image,
   ImageGallery,
   ImageGalleryWrapper,
   ImagesContainer,
   ImagesGalleryContainer,
   InfoContainer,
   ListItem,
-  MainImage,
-  MainImageZoom,
   OrderList,
   Price,
   PriceContainer,
@@ -49,22 +46,14 @@ import CartPromo from "../cart-promo/cart-promo.component";
 import DeliveryDate from "../../helpers/DeliveryDate";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Products } from "../../data";
-import { useState } from "react";
 
-import "../../style.css";
+import { UseProductContext } from "../../context/ProductContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const Product = Products.find((product) => product.id == id);
+  const { SingleProduct, imagePreview, setImagePreview, ImageOnClick } = UseProductContext();
 
-  const [imagePreview, setImagePreview] = useState(Product.imageUrl);
-  const [zoomImage, setZoomImage] = useState(false);
-
-  const ImageOnClick = (event) => {
-    let imageSrc = event.target.getAttribute("src");
-    setImagePreview(imageSrc);
-  };
+  const Product = SingleProduct(id);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -99,7 +88,6 @@ const ProductDetails = () => {
                 />
               </ImageGalleryWrapper>
             </ImagesGalleryContainer>
-
           
               <ZoomImage
                 src={imagePreview}
@@ -107,7 +95,7 @@ const ProductDetails = () => {
                 zoomScale={1.8}
                 zoomType={"hover"}
               />
-           
+            
           </ImagesContainer>
 
           <InfoContainer>
@@ -188,7 +176,7 @@ const ProductDetails = () => {
             <CartContent>
               <PriceContainer>
                 <Price>
-                  <FormatPrice price="10" />
+                  <FormatPrice price={SingleProduct.price} />
                 </Price>
                 <DiscountPercentage> 50% </DiscountPercentage>
               </PriceContainer>

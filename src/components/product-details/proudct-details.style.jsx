@@ -76,7 +76,7 @@ export const ImageGalleryWrapper = styled(ImageWrapperPrimary)`
 
 export const ImageGallery = styled(ImagePrimary)``;
 
-export const MainImageZoom = styled.div``;
+
 
 export const ZoomImage = styled(InnerImageZoom)`
   margin: 0.2rem;
@@ -85,10 +85,10 @@ export const ZoomImage = styled(InnerImageZoom)`
   height: 600px;
   display: flex;
   align-items: center;
-
   /* Media Query*/
   ${mobile({ height: "300px" })}
   ${LaptopsSmallScreen({ height: "400px" })}
+ 
 
   &:nth-child(2) {
     width: 100%;
@@ -118,7 +118,7 @@ export const Brand = styled.span`
 export const PriceDiscountedContainer = styled.div``;
 
 export const Title = styled(TitlePrimary)`
-  font-size: 2.5rem;
+  font-size: 2rem;
 
   /**Media Query **/
   ${IpadTablets({ fontSize: "1rem" })}
@@ -139,12 +139,14 @@ export const PriceContainer = styled(PriceContainerPrimary)`
 `;
 
 export const Price = styled(PricePrimary)`
-  font-size: 3rem;
+  font-size: 1.6rem;
   color: ${({ theme }) => theme.colors.primary};
-  ${IpadTablets({ fontSize: "1.5rem" })}
+  ${IpadTablets({ fontSize: "1rem" })}
 `;
 
-export const DiscountPercentage = styled(DiscountPercentagePrimary)``;
+export const DiscountPercentage = styled(DiscountPercentagePrimary)`
+  top: -5%;
+`;
 
 export const Description = styled.p`
   ${IpadTablets({ fontSize: "0.6rem" })}
