@@ -177,12 +177,12 @@ export const SizePrimary = styled.div`
   color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
 
   ${IpadTablets({
-      width: "0.9rem",
-      height: "0.9rem",
-      padding: "0.6rem",
-      fontSize: "0.7rem",
-      marginLeft: "0.4rem",
-    })}
+    width: "0.9rem",
+    height: "0.9rem",
+    padding: "0.6rem",
+    fontSize: "0.7rem",
+    marginLeft: "0.4rem",
+  })}
 `;
 
 /** Flex  */
@@ -215,7 +215,6 @@ export const AddToCardContainerPrimary = styled.div`
   left: 0;
   width: 100%;
   padding: 0.5rem;
- 
 `;
 
 /** Stars Rating */
@@ -290,6 +289,13 @@ export const ArrowContainerPrimary = styled.div`
   }
 
   ${mobile({ width: "2rem", height: "2rem" })}
+`;
+
+/** Breadcrumbs */
+
+export const BreadCrumbsContainer = styled.div`
+  margin-bottom: 2rem;
+  text-transform: capitalize;
 `;
 
 export const ArrowLeftPrimary = styled(KeyboardArrowLeft)``;

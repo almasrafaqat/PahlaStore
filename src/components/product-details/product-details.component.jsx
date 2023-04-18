@@ -39,7 +39,7 @@ import {
   ZoomImage,
 } from "./proudct-details.style";
 import FormatPrice from "../../helpers/FormatPrice";
-import { Link, TextPrimary } from "../../GlobalStyle";
+import { BreadCrumbsContainer, Link, TextPrimary } from "../../GlobalStyle";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
 import CartPromo from "../cart-promo/cart-promo.component";
@@ -48,6 +48,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { UseProductContext } from "../../context/ProductContext";
+import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -64,6 +65,10 @@ const ProductDetails = () => {
   return (
     <Container>
       <Wrapper>
+        <BreadCrumbsContainer>
+          <BasicBreadcrumbs category={Product.category} title={Product.title} />
+        </BreadCrumbsContainer>
+
         <GridWrapper>
           <ImagesContainer>
             <ImagesGalleryContainer>
