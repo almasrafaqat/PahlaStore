@@ -29,6 +29,8 @@ export const Wrapper = styled.div`
   ${IpadTablets({ padding: "0 1rem" })}
 `;
 
+
+
 export const GridWrapper = styled(GridContainer)`
   grid-template-columns: repeat(2, 2fr) 1fr;
   grid-gap: 1rem;
