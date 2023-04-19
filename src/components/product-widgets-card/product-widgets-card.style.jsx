@@ -37,6 +37,7 @@ export const Heading = styled(HeadingPrimary)`
 
 export const BoxColumn = styled(BoxPrimary)`
   gap: 1rem;
+ 
 `;
 
 export const ProductContainer = styled.div`

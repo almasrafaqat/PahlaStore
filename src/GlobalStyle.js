@@ -87,6 +87,7 @@ export const ButtonPrimary = styled.button`
 export const PaddingContainer = styled.div`
   padding: 0 1.9rem;
   ${mobile({ padding: "0.6rem" })}
+  ${IpadTablets({ padding: "0 1rem" })}
 `;
 
 export const HeadingPrimary = styled.h1`
