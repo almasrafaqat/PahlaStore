@@ -1,11 +1,14 @@
-import { Add, Minimize, Remove } from "@mui/icons-material";
+import { Add,  Remove } from "@mui/icons-material";
 import styled from "styled-components";
+import { IpadTablets } from "../../responsive";
 
 
 export const Container = styled.div`
     display: flex;
     align-items: center;
     font-weight: 700;
+
+    
    
 `;
 
@@ -13,6 +16,8 @@ export const Container = styled.div`
 
 export const MinusIcon = styled(Remove)`
     cursor: pointer;
+
+    ${IpadTablets({ fontSize: "1rem !important" })}
 `;
 
 export const Amount = styled.span`
@@ -24,9 +29,13 @@ export const Amount = styled.span`
     justify-content: center;
     border: 1px solid teal;
     margin: 0px 5px;
+
+    ${IpadTablets({ width: "1.8rem" , height: "1.8rem", fontSize: "0.7rem" })}
 `;
 
 
 export const PlusIcon = styled(Add)`
     cursor: pointer;
+
+    ${IpadTablets({ fontSize: "1rem !important" })}
 `;

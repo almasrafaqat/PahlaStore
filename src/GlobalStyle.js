@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
 import {
+  ClearSharp,
   KeyboardArrowLeft,
   KeyboardArrowRight,
   StarHalfOutlined,
@@ -22,8 +23,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export const theme = {
   colors: {
-    heading: "rgb(24 24 29)",
-    text: "rgba(29 ,29, 29, .8)",
     white: "#fff",
     star: "#ffaa0f",
     red: "#cc0c39",
@@ -31,6 +30,7 @@ export const theme = {
     gray: "#adadad",
     lightgray: "#f7f7f6",
     black: " #253d4e",
+    lightblack: "#00000094",
     primary: "#008080",
     secondary: "#20B2AA",
     hover: "#20B2AA",
@@ -41,18 +41,7 @@ export const theme = {
     bg: "#F6F8FA",
     footer_bg: "#0a1435",
     btn: "rgb(98 84 243)",
-    hr: "#ffffff",
     shadow: "0 6px 15px rgba(0, 0, 0, 0.15)",
-
-    gradient:
-      "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
-    shad: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
-    shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
-  },
-
-  media: {
-    mobile: "768px",
-    tab: "998px",
   },
 };
 
@@ -106,6 +95,19 @@ export const TextPrimary = styled.span`
 export const TitlePrimary = styled.h6`
   font-size: 1rem;
   ${mobile({ fontSize: "0.8rem" })}
+`;
+
+/**Coupon Container */
+
+export const CouponContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const CloseIcon = styled(ClearSharp)`
+  font-size: 1.1rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
 `;
 
 /**Image */
@@ -178,12 +180,12 @@ export const SizePrimary = styled.div`
   color: ${(props) => props.active && (({ theme }) => theme.colors.white)};
 
   ${IpadTablets({
-    width: "0.9rem",
-    height: "0.9rem",
-    padding: "0.6rem",
-    fontSize: "0.7rem",
-    marginLeft: "0.4rem",
-  })}
+      width: "0.9rem",
+      height: "0.9rem",
+      padding: "0.6rem",
+      fontSize: "0.7rem",
+      marginLeft: "0.4rem",
+    })}
 `;
 
 /** Flex  */
@@ -216,6 +218,15 @@ export const AddToCardContainerPrimary = styled.div`
   left: 0;
   width: 100%;
   padding: 0.5rem;
+`;
+
+/**Cart Container */
+
+export const CartContainerPrimary = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 0.8rem;
+  padding: 1.3rem;
+
 `;
 
 /** Stars Rating */
@@ -295,8 +306,11 @@ export const ArrowContainerPrimary = styled.div`
 /** Breadcrumbs */
 
 export const BreadCrumbsContainer = styled.div`
-  margin-bottom: 2rem;
+
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
   text-transform: capitalize;
+ 
 `;
 
 export const ArrowLeftPrimary = styled(KeyboardArrowLeft)``;

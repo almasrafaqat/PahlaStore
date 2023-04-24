@@ -52,10 +52,11 @@ import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  let ProductId = id > 1 ? id : 1;
   const { SingleProduct, imagePreview, setImagePreview, ImageOnClick } =
     UseProductContext();
 
-  const Product = SingleProduct(id);
+  const Product = SingleProduct(ProductId);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -181,21 +182,25 @@ const ProductDetails = () => {
               <StockInfo>Only 4 left in stock - order soon</StockInfo>
               <AddToCartContainer>
                 <CartAmountToggle />
-                <AddToCart
-                  icon={true}
-                  content="center"
-                  bgColor={({ theme }) => theme.colors.primary}
-                  width="100"
-                  radius="0.4"
-                  text="Add"
-                />
-                <AddToCart
-                  content="center"
-                  bgColor={({ theme }) => theme.colors.star}
-                  width="100"
-                  radius="0.4"
-                  text="Buy Now"
-                />
+                <Link to="/cart">
+                  <AddToCart
+                    icon={true}
+                    content="center"
+                    bgColor={({ theme }) => theme.colors.primary}
+                    width="100"
+                    radius="0.4"
+                    text="Add"
+                  />
+                </Link>
+                <Link to="/checkout">
+                  <AddToCart
+                    content="center"
+                    bgColor={({ theme }) => theme.colors.star}
+                    width="100"
+                    radius="0.4"
+                    text="Buy Now"
+                  />
+                </Link>
               </AddToCartContainer>
               <ShipsFrom>
                 <ShipsInfo>Ships from</ShipsInfo>

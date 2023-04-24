@@ -7,6 +7,7 @@ import Practice from "./components/practice/practice";
 import SinglePage from "./pages/SinglePage";
 import ScrollTop from "./components/scroll-top/scroll-top.component";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/productdetails/:id/:title" element={<SinglePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/practice" element={<Practice />} />
         </Routes>
       </Router>

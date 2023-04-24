@@ -190,7 +190,7 @@ export const CartContentContainer = styled.div`
 `;
 
 export const CartContent = styled.div`
-  border: 1px solid teal;
+  border: 1px solid ${({theme}) => theme.colors.primary};
   padding: 0.9rem;
   border-radius: 0.8rem;
   display: flex;

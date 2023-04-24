@@ -1,4 +1,4 @@
-import { AddShoppingCartOutlined } from "@mui/icons-material";
+import { AddShoppingCartOutlined, LogoutOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import { ButtonPrimary } from "../../GlobalStyle";
 import { IpadTablets } from "../../responsive";
@@ -28,8 +28,16 @@ export const ButtonContainer = styled.div`
 export const CartIcon = styled(AddShoppingCartOutlined)`
   color: ${({ theme }) => theme.colors.white};
 
-  ${IpadTablets({fontSize: "1rem !important" })}
+  ${IpadTablets({ fontSize: "1rem !important" })}
 `;
+
+export const OrderPlaceIcon = styled(LogoutOutlined)`
+  color: ${({ theme }) => theme.colors.white};
+
+  ${IpadTablets({ fontSize: "1rem !important" })}
+`;
+
+
 export const Button = styled(ButtonPrimary)`
   padding: 0.3rem;
   background-color: transparent;

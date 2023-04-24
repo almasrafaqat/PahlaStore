@@ -1,10 +1,12 @@
 import React from "react";
 import {
+  Bold,
   Box,
   Button,
   CheckoutSummary,
   Color,
   ColorContainer,
+  ColorSizeContainer,
   Container,
   DiscountPercentage,
   EmptyStar,
@@ -21,7 +23,10 @@ import {
   PriceContainer,
   PriceWrapper,
   ProductRow,
+  ProductWrapper,
   RatingContainer,
+  RemoveItem,
+  RemoveItemContainer,
   Size,
   Sizecontainer,
   Summary,
@@ -33,10 +38,13 @@ import {
   Title,
   Wrapper,
 } from "./cart.style";
-import { BreadCrumbsContainer, TextPrimary } from "../../GlobalStyle";
+import { BreadCrumbsContainer, CloseIcon, CouponContainer, Link, TextPrimary } from "../../GlobalStyle";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import FormatPrice from "../../helpers/FormatPrice";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
+import Coupon from "../coupon-checkout/coupon-checkout.component";
+import { ClearSharp } from "@mui/icons-material";
+import AddToCart from "../add-to-cart/add-to-cart.component";
 
 const Cart = () => {
   return (
@@ -49,74 +57,209 @@ const Cart = () => {
           <Header>
             <Heading>Shopping Cart</Heading>
             <Text>
-              There are <b style={{ color: "teal" }}>3</b> products in your cart
+              There are <Bold>3</Bold> products in your cart
             </Text>
           </Header>
           <GridWrapper>
-            <ProductRow>
-              <ImageContainer>
-                <Image src="/images/headphone.png" />
-              </ImageContainer>
-              <InfoContainer>
-                <Title>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptate possimus neque dolor maxime officiis eveniet .
-                </Title>
-                <RatingContainer>
-                  <FullStar />
-                  <FullStar />
-                  <FullStar />
-                  <HalfStar />
-                  <EmptyStar />
-                </RatingContainer>
-                <ColorContainer>
-                  <TextPrimary>Color</TextPrimary>
-                  <Color color="orange"></Color>
-                  <Color color="red"></Color>
-                  <Color color="teal"></Color>
-                </ColorContainer>
-                <Sizecontainer>
-                  <TextPrimary>Size </TextPrimary>
-                  <Size active={true}>S</Size>
-                  <Size>M</Size>
-                  <Size>L</Size>
-                  <Size>XL</Size>
-                </Sizecontainer>
-                <HorizontalLine />
-              </InfoContainer>
-              <PriceWrapper>
-                <PriceContainer>
-                  <Price>
-                    <FormatPrice price="1400" />
-                  </Price>
-                  <DiscountPercentage> 50% </DiscountPercentage>
-                </PriceContainer>
-                <CartAmountToggle />
-              </PriceWrapper>
-            </ProductRow>
+            <ProductWrapper>
+              <ProductRow>
+                <ImageContainer>
+                  <Link><Image src="/images/products/iphone.png" /></Link>
+                </ImageContainer>
+                <InfoContainer>
+                  <Link>
+                    <Title>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate possimus neque dolor maxime officiis eveniet .
+                    </Title>
+                  </Link>
+                  <RatingContainer>
+                    <FullStar />
+                    <FullStar />
+                    <FullStar />
+                    <HalfStar />
+                    <EmptyStar />
+                  </RatingContainer>
+                  <PriceContainer >
+                    <Price qty={true}>
+                      <FormatPrice price="1400" />
+                    </Price>
+                    <DiscountPercentage> 50% </DiscountPercentage>
+                  </PriceContainer>
+                  <ColorSizeContainer>
+                    <ColorContainer>
+                      <TextPrimary>Color</TextPrimary>
+                      <Color color="orange"></Color>
+
+                    </ColorContainer>
+                    <Sizecontainer>
+                      <TextPrimary>Size </TextPrimary>
+                      <Size active={true}>L</Size>
+
+                    </Sizecontainer>
+                  </ColorSizeContainer>
+
+
+                </InfoContainer>
+                <PriceWrapper>
+                  <PriceContainer>
+                    <Price>
+                      <FormatPrice price="1400" />
+                    </Price>
+
+                  </PriceContainer>
+                  <CartAmountToggle />
+                </PriceWrapper>
+
+                <RemoveItemContainer>
+                  <RemoveItem />
+                </RemoveItemContainer>
+
+              </ProductRow>
+              <HorizontalLine />
+
+              <ProductRow>
+                <ImageContainer>
+                  <Link><Image src="/images/products/iphone1.png" /></Link>
+                </ImageContainer>
+                <InfoContainer>
+                  <Link>
+                    <Title>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate possimus neque dolor maxime officiis eveniet .
+                    </Title>
+                  </Link>
+
+                  <RatingContainer>
+                    <FullStar />
+                    <FullStar />
+                    <FullStar />
+                    <HalfStar />
+                    <EmptyStar />
+                  </RatingContainer>
+                  <PriceContainer >
+                    <Price qty={true}>
+                      <FormatPrice price="1400" />
+                    </Price>
+                    <DiscountPercentage> 50% </DiscountPercentage>
+                  </PriceContainer>
+                  <ColorSizeContainer>
+                    <ColorContainer>
+                      <TextPrimary>Color</TextPrimary>
+                      <Color color="lightblue"></Color>
+
+                    </ColorContainer>
+                    <Sizecontainer>
+                      <TextPrimary>Size </TextPrimary>
+                      <Size active={true}>M</Size>
+
+                    </Sizecontainer>
+                  </ColorSizeContainer>
+
+
+                </InfoContainer>
+                <PriceWrapper>
+                  <PriceContainer>
+                    <Price>
+                      <FormatPrice price="1400" />
+                    </Price>
+
+                  </PriceContainer>
+                  <CartAmountToggle />
+                </PriceWrapper>
+                <RemoveItemContainer>
+                  <RemoveItem />
+                </RemoveItemContainer>
+
+              </ProductRow>
+              <HorizontalLine />
+              <ProductRow>
+                <ImageContainer>
+                  <Link><Image src="/images/products/iphone2.png" /></Link>
+                </ImageContainer>
+                <InfoContainer>
+                  <Link>
+                    <Title>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate possimus neque dolor maxime officiis eveniet .
+                    </Title>
+                  </Link>
+
+                  <RatingContainer>
+                    <FullStar />
+                    <FullStar />
+                    <FullStar />
+                    <HalfStar />
+                    <EmptyStar />
+                  </RatingContainer>
+                  <PriceContainer >
+                    <Price qty={true}>
+                      <FormatPrice price="1400" />
+                    </Price>
+                    <DiscountPercentage> 50% </DiscountPercentage>
+                  </PriceContainer>
+                  <ColorSizeContainer>
+                    <ColorContainer>
+                      <TextPrimary>Color</TextPrimary>
+                      <Color color="black"></Color>
+                    </ColorContainer>
+                    <Sizecontainer>
+                      <TextPrimary>Size </TextPrimary>
+                      <Size active={true}>XL</Size>
+                    </Sizecontainer>
+                  </ColorSizeContainer>
+                </InfoContainer>
+                <PriceWrapper>
+                  <PriceContainer>
+                    <Price>
+                      <FormatPrice price="1400" />
+                    </Price>
+
+                  </PriceContainer>
+                  <CartAmountToggle />
+                </PriceWrapper>
+                <RemoveItemContainer>
+                  <RemoveItem />
+                </RemoveItemContainer>
+              </ProductRow>
+            </ProductWrapper>
             <CheckoutSummary>
               <Summary>
-                <SummaryTitle>ORDER SUMMARY </SummaryTitle>
+                <SummaryTitle style={{ marginBottom: "1rem" }}>ORDER SUMMARY </SummaryTitle>
+                <Coupon text="Coupon" border={true} />
                 <SummaryItem>
-                  <SummaryItemText>Subtotal</SummaryItemText>
+                  <SummaryItemText>Items</SummaryItemText>
                   <SummaryItemPrice>
-                    {" "}
                     <FormatPrice price="1500" />
                   </SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                   <SummaryItemText>Estimated Shipping</SummaryItemText>
                   <SummaryItemPrice>
-                    <FormatPrice price="1200" />
+                    <FormatPrice price="500" />
+                  </SummaryItemPrice>
+                </SummaryItem>
+                <SummaryItem>
+                  <SummaryItemText> <CouponContainer> <CloseIcon /> Coupon (Eid23) </CouponContainer>  </SummaryItemText>
+                  <SummaryItemPrice>
+                    <FormatPrice price="200" />
                   </SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem type="total">
                   <SummaryItemText>Total</SummaryItemText>
                   <SummaryItemPrice>
-                    <FormatPrice price="1500" />
+                    <FormatPrice price="1800" />
                   </SummaryItemPrice>
                 </SummaryItem>
-                <Button>CHECKOUT NOW</Button>
+                <Link to="/checkout">
+                  <AddToCart
+                    content="center"
+                    bgColor={({ theme }) => theme.colors.primary}
+                    width="100"
+                    radius="0.4"
+                    text="Checkout"
+                  />
+                </Link>
               </Summary>
             </CheckoutSummary>
           </GridWrapper>

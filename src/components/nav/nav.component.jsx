@@ -45,13 +45,13 @@ const Nav = () => {
             <MenuLink> Pages </MenuLink>
             <DropdownItem>
               <DropdownList>
-                <DropdownLink to ="/productdetails/id/title"> Single Page </DropdownLink>
+                <DropdownLink to="/productdetails/id/title"> Single Page </DropdownLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink> React JS </DropdownLink>
+                <DropdownLink to="/cart"> Cart </DropdownLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink> Django </DropdownLink>
+                <DropdownLink to="/checkout"> Checkout </DropdownLink>
               </DropdownList>
               <DropdownList>
                 <DropdownLink> Angular JS </DropdownLink>
@@ -121,7 +121,7 @@ const Nav = () => {
           </MenuList>
         </MenuItem>
         <HotLineContainer>
-          <HotIcon style={{fontSize: "48px"}}/>
+          <HotIcon style={{ fontSize: "48px" }} />
           <TextContainer>
             <Telephone>(+01) - 8888 475</Telephone>
             <SubText>24/7 Support Center</SubText>
