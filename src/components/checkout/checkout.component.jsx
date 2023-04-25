@@ -127,7 +127,7 @@ const Checkout = () => {
             </BillingContainer>
             <CheckoutContainer>
               <CheckoutTableContainer>
-                <CheckoutTable sx={{ minWidth: 450 }}>
+                <CheckoutTable>
                   <CheckoutTableHead>
                     <CheckoutTableRow>
                       <CheckoutTableCell>Products</CheckoutTableCell>

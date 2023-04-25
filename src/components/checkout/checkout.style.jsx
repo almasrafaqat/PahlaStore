@@ -79,8 +79,9 @@ export const FlexContainer = styled.div`
 
 export const AlreadySignInContainer = styled.div`
   flex:1;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: start;
   height: 3.5rem;
   border-radius: 5px;
   box-shadow: ${({ theme }) => theme.colors.shadow};
@@ -89,28 +90,31 @@ export const AlreadySignInContainer = styled.div`
   margin-right: 1rem;
 
   /* Media Query */
-  ${LaptopsSmallScreen({ fontSize: "0.7rem", height: "2.5rem" })}
-  ${DesktopsLargeScreens({ fontSize: "0.8rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.6rem", height: "2.5rem" })} //max 1024
+  ${DesktopsLargeScreens({ fontSize: "0.8rem" })} ///min 1024 max 1200
 `;
 
 export const UserIcon = styled(PersonOutlineOutlined)`
-  flex-basis: content;
+  width: 10px;
 `;
 
 export const Text = styled(TextPrimary)`
-  flex-basis: content;
+
+  
+
+  ${DesktopsLargeScreens({ width: "47%" })} ///min 1024 max 1200
 `;
 
 export const RedirectTo = styled(Link)`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1.1rem;
-  margin-left: 0.3rem;
-  flex-basis: content;
+  /* margin-left: 0.3rem; */
+
 
    /* Media Query */
  
    ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
-   ${DesktopsLargeScreens({ fontSize: "0.7rem" })}
+   ${DesktopsLargeScreens({ fontSize: "0.8rem" })}
 `;
 
 export const FormContainer = styled.div`
