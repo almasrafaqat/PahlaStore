@@ -31,7 +31,7 @@ export const theme = {
     lightgray: "#f7f7f6",
     black: " #253d4e",
     lightblack: "#00000094",
-    primary: "#008080",
+    primary: "#009688",
     secondary: "#20B2AA",
     hover: "#20B2AA",
     cardhover: "translate(0px, -8px)",

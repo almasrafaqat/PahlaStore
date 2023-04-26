@@ -37,7 +37,7 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border: 2px solid #1976d2;
+    border: 2px solid ${({ theme }) => theme.colors.primary};
   }
 
   &:focus ~ ${FormInputLabel} {

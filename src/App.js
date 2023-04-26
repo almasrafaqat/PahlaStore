@@ -1,4 +1,5 @@
 import  { ThemeProvider } from "styled-components";
+import { ThemeProvider as MuiThemeProvider, createTheme, colors } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle, theme } from "./GlobalStyle";
@@ -9,9 +10,19 @@ import ScrollTop from "./components/scroll-top/scroll-top.component";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 
+const MuiTheme = createTheme({
+  palette: {
+    primary: {
+      main: colors.teal[500],
+    }
+  }
+})
+
 function App() {
   return (
+
     <ThemeProvider theme={theme}>
+      <MuiThemeProvider theme={MuiTheme}>
       <Router>
         <GlobalStyle />
         <ScrollTop/>
@@ -24,6 +35,7 @@ function App() {
           <Route path="/practice" element={<Practice />} />
         </Routes>
       </Router>
+      </MuiThemeProvider>
     </ThemeProvider>
   );
 }

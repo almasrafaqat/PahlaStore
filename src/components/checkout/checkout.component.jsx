@@ -25,6 +25,7 @@ import {
   CreditCardNote,
   FlexContainer,
   FormContainer,
+  GridContainer,
   GridWrapper,
   Header,
   Heading,
@@ -37,6 +38,7 @@ import {
   Qty,
   QtyIcon,
   RedirectTo,
+  SingInCouponContainer,
   Text,
   TextContainer,
   Title,
@@ -63,7 +65,7 @@ const Checkout = () => {
           </Header>
           <GridWrapper>
             <BillingContainer>
-              <FlexContainer>
+              <SingInCouponContainer>
                 <AlreadySignInContainer>
                   <UserIcon />
                   <Text>Already have an account ?</Text>
@@ -73,7 +75,7 @@ const Checkout = () => {
                   text="Apply Coupon"
                   shadow={true}
                 />
-              </FlexContainer>
+              </SingInCouponContainer>
 
               <Heading billing>Billing Details</Heading>
               <FormContainer>

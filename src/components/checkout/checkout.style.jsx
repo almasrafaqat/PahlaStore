@@ -21,7 +21,7 @@ import {
 } from "@mui/material";
 
 import { ClearSharp, PersonOutlineOutlined } from "@mui/icons-material";
-import { DesktopsLargeScreens, LaptopsSmallScreen, mobile } from "../../responsive";
+import { DesktopsLargeScreens, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)`
   
@@ -60,7 +60,8 @@ export const Heading = styled(HeadingPrimary)`
 `;
 
 export const GridWrapper = styled(GridContainer)`
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns:  2fr 35%;
+  box-sizing: border-box;
   gap: 4rem;
 
    /* Media Query */
@@ -72,17 +73,18 @@ export const BillingContainer = styled.div`
   
 `;
 
-export const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
+export const SingInCouponContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  ${mobile({gridTemplateColumns: "1fr"})}
 `;
 
 export const AlreadySignInContainer = styled.div`
-  flex:1;
-  display: inline-flex;
+ 
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: start;
-  height: 3.5rem;
   border-radius: 5px;
   box-shadow: ${({ theme }) => theme.colors.shadow};
   padding: 1rem;
@@ -90,31 +92,31 @@ export const AlreadySignInContainer = styled.div`
   margin-right: 1rem;
 
   /* Media Query */
-  ${LaptopsSmallScreen({ fontSize: "0.6rem", height: "2.5rem" })} //max 1024
-  ${DesktopsLargeScreens({ fontSize: "0.8rem" })} ///min 1024 max 1200
+ 
+  ${LaptopsSmallScreen({  fontSize: "0.7rem"  })} //max 1024
+  ${DesktopsLargeScreens({ fontSize: "0.7rem" })} ///min 1024 max 1200
 `;
 
 export const UserIcon = styled(PersonOutlineOutlined)`
-  width: 10px;
+  
 `;
 
 export const Text = styled(TextPrimary)`
 
-  
-
-  ${DesktopsLargeScreens({ width: "47%" })} ///min 1024 max 1200
+ 
+/**Media Query*/
+ 
 `;
 
 export const RedirectTo = styled(Link)`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 1.1rem;
-  /* margin-left: 0.3rem; */
+  font-size: 0.9rem;
 
 
    /* Media Query */
  
    ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
-   ${DesktopsLargeScreens({ fontSize: "0.8rem" })}
+   ${DesktopsLargeScreens({ fontSize: "0.6rem" })}
 `;
 
 export const FormContainer = styled.div`
@@ -127,9 +129,6 @@ export const FormContainer = styled.div`
 export const TextContainer = styled.div`
   flex-basis: ${(props) => props.textarea ? "calc(100% - 1rem)" : "calc(50% - 1rem)"};
   margin-left: 1rem;
-
-
- 
 `;
 
 export const CountryContainer = styled(TextContainer)`

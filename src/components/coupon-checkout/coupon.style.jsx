@@ -11,7 +11,7 @@ const BorderCss = css`
 `;
 
 export const CouponContainer = styled.div`
-  flex:1;
+
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
