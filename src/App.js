@@ -9,6 +9,7 @@ import SinglePage from "./pages/SinglePage";
 import ScrollTop from "./components/scroll-top/scroll-top.component";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import StepperPage from "./pages/StepperPage";
 
 const MuiTheme = createTheme({
   palette: {
@@ -32,7 +33,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/practice" element={<Practice />} />
+          <Route path="/ordersuccess" element={<StepperPage />} />
         </Routes>
       </Router>
       </MuiThemeProvider>

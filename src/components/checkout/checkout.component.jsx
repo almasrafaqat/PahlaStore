@@ -254,7 +254,7 @@ const Checkout = () => {
                 </WrapperFlex>
               </PaymentOptionsContainer>
 
-              <Link to="/checkout" style={{ marginTop: "1rem" }}>
+              <Link to="/ordersuccess" style={{ marginTop: "1rem" }}>
                 <AddToCart
                   content="center"
                   bgColor={({ theme }) => theme.colors.primary}
