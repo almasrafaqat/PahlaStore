@@ -12,14 +12,14 @@ export default function CountrySelect() {
   return (
     <Container>
       <Autocomplete
-
+      
         options={countries}
         autoHighlight
         getOptionLabel={(option) => option.label
         }
         renderOption={(props, option) => (
 
-          <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+          <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 }  }} {...props}>
             <img
               loading="lazy"
               width="20"
@@ -34,6 +34,7 @@ export default function CountrySelect() {
         renderInput={(params) => (
           <TextField
             {...params}
+            sx={{height: "10%"}}
             label="Choose a country"
             inputProps={{
               ...params.inputProps,

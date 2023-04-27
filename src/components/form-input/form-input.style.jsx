@@ -4,9 +4,9 @@ import { mobile } from "../../responsive";
 const ShrinkLabelStyle = css`
   font-size: 12px;
   top: -1rem;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondary};
 
-  ${mobile({ fontSize: "7px" })}
+  ${mobile({ fontSize: "0.6rem" })}
 `;
 
 export const Group = styled.div`
@@ -26,7 +26,8 @@ export const FormInputLabel = styled.label`
   ${({ shrink }) => shrink && ShrinkLabelStyle};
 
   /**Media */
-  ${mobile({ fontSize: "0.6rem", left: "5px", top: "9px" })}
+  ${mobile({ fontSize: "0.8rem" })}
+  
 `;
 
 export const Input = styled.input`
@@ -38,7 +39,7 @@ export const Input = styled.input`
   width: 100%;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
-  height: 3.75rem;
+  height: 3.5rem;
 
   &:focus {
     outline: none;
@@ -51,7 +52,7 @@ export const Input = styled.input`
   }
 
   /**Media */
-  ${mobile({ height: "1.8rem" })}
+  
 
 `;
 

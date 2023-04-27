@@ -18,5 +18,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   cursor: pointer;
   color: white;
+
+  &:hover {
+    background: ${({theme}) => theme.colors.secondary}
+  }
   ${mobile({width: "2rem", height: "2rem"})}
 `;

@@ -61,6 +61,10 @@ export const Button = styled(ButtonPrimary)`
   border-bottom-right-radius: 0.3rem;
   height: 100%;
 
+  &:hover {
+    background: ${({theme}) => theme.colors.secondary}
+  }
+
 
   /**Media Query */
   ${mobile({ fontSize: "0.6rem" })}
