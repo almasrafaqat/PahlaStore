@@ -1,9 +1,12 @@
 import styled, { css } from "styled-components";
+import { mobile } from "../../responsive";
 
 const ShrinkLabelStyle = css`
   font-size: 12px;
   top: -1rem;
   color: ${({ theme }) => theme.colors.primary};
+
+  ${mobile({ fontSize: "7px" })}
 `;
 
 export const Group = styled.div`
@@ -19,9 +22,11 @@ export const FormInputLabel = styled.label`
   font-weight: normal;
   left: 10px;
   top: 20px;
-
   transition: 300ms ease all;
   ${({ shrink }) => shrink && ShrinkLabelStyle};
+
+  /**Media */
+  ${mobile({ fontSize: "0.6rem", left: "5px", top: "9px" })}
 `;
 
 export const Input = styled.input`
@@ -33,16 +38,21 @@ export const Input = styled.input`
   width: 100%;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
-  height: 60px;
+  height: 3.75rem;
 
   &:focus {
     outline: none;
     border: 2px solid ${({ theme }) => theme.colors.primary};
+    
   }
 
   &:focus ~ ${FormInputLabel} {
     ${ShrinkLabelStyle}
   }
+
+  /**Media */
+  ${mobile({ height: "1.8rem" })}
+
 `;
 
 export const TextArea = styled.textarea`
@@ -54,9 +64,13 @@ export const TextArea = styled.textarea`
   border: 1px solid ${({ theme }) => theme.colors.gray};
   &:focus {
     outline: none;
+    border: 2px solid ${({ theme }) => theme.colors.primary};
   }
 
   &:focus ~ ${FormInputLabel} {
     ${ShrinkLabelStyle}
   }
+
+  /**Media */
+  ${mobile({ fontSize: "0.5rem" })}
 `;

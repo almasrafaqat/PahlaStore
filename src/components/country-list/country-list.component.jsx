@@ -5,17 +5,14 @@ import Autocomplete from '@mui/material/Autocomplete';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  &:active {
-    outline: none;
-    border: none;
-  }
+
 `;
 
 export default function CountrySelect() {
   return (
     <Container>
       <Autocomplete
-        label="success"
+
         options={countries}
         autoHighlight
         getOptionLabel={(option) => option.label

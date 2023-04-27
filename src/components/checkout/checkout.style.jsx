@@ -144,10 +144,19 @@ export const FormContainer = styled.div`
 export const TextContainer = styled.div`
   flex-basis: ${(props) => props.textarea ? "calc(100% - 1rem)" : "calc(50% - 1rem)"};
   margin-left: 1rem;
+
+  
+
 `;
 
 export const CountryContainer = styled(TextContainer)`
   margin-top: 20px;
+
+
+
+  /**Media */
+
+  ${mobile({ height: "1rem" })}
  
 `;
 
