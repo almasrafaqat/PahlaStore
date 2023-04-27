@@ -21,7 +21,7 @@ import {
 } from "@mui/material";
 
 import { ClearSharp, PersonOutlineOutlined } from "@mui/icons-material";
-import { DesktopsLargeScreens, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
+import { DesktopsLargeScreens, ExtraLargeScreenTV, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)`
   
@@ -76,8 +76,14 @@ export const BillingContainer = styled.div`
 export const SingInCouponContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3.25rem;
+  grid-auto-rows: 2.5rem;
+  grid-gap: 0.5rem;
+  margin-bottom: 4rem;
+ 
 
-  ${mobile({gridTemplateColumns: "1fr"})}
+/**Media  */
+  ${mobile({ gridTemplateColumns: "1fr", gridGap: "1.5rem", marginBottom: "2.2rem", gridTemplateRows: "2.5rem" })}
 `;
 
 export const AlreadySignInContainer = styled.div`
@@ -87,23 +93,30 @@ export const AlreadySignInContainer = styled.div`
   align-items: center;
   border-radius: 5px;
   box-shadow: ${({ theme }) => theme.colors.shadow};
-  padding: 1rem;
-  margin-bottom: 3rem;
-  margin-right: 1rem;
+  padding: 0 1rem;
+ 
+
 
   /* Media Query */
- 
-  ${LaptopsSmallScreen({  fontSize: "0.7rem"  })} //max 1024
+  ${mobile({ fontSize: "0.7rem" })}
+  ${IpadTablets({ fontSize: "0.4rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.7rem" })} //max 1024
   ${DesktopsLargeScreens({ fontSize: "0.7rem" })} ///min 1024 max 1200
+  
 `;
 
 export const UserIcon = styled(PersonOutlineOutlined)`
-  
+
+  /**Media Query */
+  ${mobile({ fontSize: "1.1rem !important" })}
+  ${IpadTablets({ fontSize: "0.8rem !important" })}
+  ${LaptopsSmallScreen({ fontSize: "0.9rem !important" })} //max 1024
 `;
 
 export const Text = styled(TextPrimary)`
 
- 
+ margin: 0 0.1rem;
+
 /**Media Query*/
  
 `;
@@ -114,9 +127,11 @@ export const RedirectTo = styled(Link)`
 
 
    /* Media Query */
- 
+   ${mobile({ fontSize: "0.7rem" })}
+   ${IpadTablets({ fontSize: "0.5rem" })}
    ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
    ${DesktopsLargeScreens({ fontSize: "0.6rem" })}
+  
 `;
 
 export const FormContainer = styled.div`

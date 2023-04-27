@@ -1,7 +1,7 @@
 import { DiscountOutlined } from "@mui/icons-material";
 import styled, { css } from "styled-components";
 import { ButtonPrimary } from "../../GlobalStyle";
-import { DesktopsLargeScreens, LaptopsSmallScreen, mobile } from "../../responsive";
+import { DesktopsLargeScreens, ExtraLargeScreenTV, LaptopsSmallScreen, mobile } from "../../responsive";
 
 const BoxShadowCss = css`
   box-shadow: ${({ theme }) => theme.colors.shadow};
@@ -19,43 +19,53 @@ export const CouponContainer = styled.div`
   ${(props) => props.border && BorderCss};
   border-radius: 0.3rem;
   padding-left: 0.5rem;
-  height: 3.5rem;
-  margin-bottom: 3rem;
+  overflow: hidden;
 
  
    /**Media Query */
-  ${LaptopsSmallScreen({ fontSize: "0.6rem", height: "2.5rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
  
 `;
 
 export const CouponIcon = styled(DiscountOutlined)`
-  flex-basis: content;
+  width: 10px;
   font-size: 1.05rem !important;
   color: ${({ theme }) => theme.colors.primary};
+
+   /* Media Query */
+   ${mobile({ fontSize: "0.7rem !important" })}
+   ${LaptopsSmallScreen({ fontSize: "0.8rem !important" })}
+   ${ExtraLargeScreenTV({ fontSize: "1rem !important" })}
 `;
 
 export const CouponInput = styled.input`
+  flex: 2;
+  font-size: 0.8rem;
   padding-left: 0.8rem;
   outline: none;
   border: none;
-  flex-basis: 70%;
+
+
+
    /* Media Query */
- 
-   ${LaptopsSmallScreen({ fontSize: "0.7rem" })}
+   ${mobile({ fontSize: "0.6rem" })}
+   ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
+   
 `;
 
 export const Button = styled(ButtonPrimary)`
-  flex-basis: 30%;
+  flex: 1;
   font-size: 1rem;
   font-weight: 500;
-  height: 3.5rem;
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
+  height: 100%;
 
 
   /**Media Query */
-  ${mobile({ fontSize: "1rem" })}
-  ${LaptopsSmallScreen({ fontSize: "0.6rem", height: "2.5rem", flexBasis: "40%" })}
-  ${DesktopsLargeScreens({ fontSize: "0.7rem", flexBasis: "40%" })}
+  ${mobile({ fontSize: "0.6rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
+  ${DesktopsLargeScreens({ fontSize: "0.6rem" })}
+  ${ExtraLargeScreenTV({ fontSize: "0.8rem" })}
   
 `;
