@@ -78,7 +78,7 @@ export const SingInCouponContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3.25rem;
   grid-auto-rows: 2.5rem;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   margin-bottom: 4rem;
  
 

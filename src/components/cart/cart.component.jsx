@@ -43,7 +43,6 @@ import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import FormatPrice from "../../helpers/FormatPrice";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
 import Coupon from "../coupon-checkout/coupon-checkout.component";
-import { ClearSharp } from "@mui/icons-material";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 
 const Cart = () => {
@@ -226,7 +225,7 @@ const Cart = () => {
             <CheckoutSummary>
               <Summary>
                 <SummaryTitle style={{ marginBottom: "1rem" }}>ORDER SUMMARY </SummaryTitle>
-                <Coupon text="Coupon" border={true} />
+                <Coupon text="Coupon" height="2rem" width="100%" />
                 <SummaryItem>
                   <SummaryItemText>Items</SummaryItemText>
                   <SummaryItemPrice>

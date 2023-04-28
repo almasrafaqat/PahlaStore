@@ -23,9 +23,7 @@ import {
   CountryContainer,
   CreditCard,
   CreditCardNote,
-  FlexContainer,
   FormContainer,
-  GridContainer,
   GridWrapper,
   Header,
   Heading,
@@ -73,7 +71,7 @@ const Checkout = () => {
                 </AlreadySignInContainer>
                 <Coupon
                   text="Apply Coupon"
-                  shadow={true}
+
                 />
               </SingInCouponContainer>
 
