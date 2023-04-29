@@ -255,7 +255,7 @@ const Cart = () => {
                     content="center"
                     bgColor={({ theme }) => theme.colors.primary}
                     width="100"
-                    radius="0.4"
+                    radius="0.2"
                     text="Checkout"
                   />
                 </Link>

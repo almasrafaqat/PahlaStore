@@ -8,7 +8,7 @@ import {
   StarOutlined,
   StarOutlineOutlined,
 } from "@mui/icons-material";
-import { mobile, IpadTablets } from "./responsive";
+import { mobile, IpadTablets, LaptopsSmallScreen } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -102,6 +102,8 @@ export const TitlePrimary = styled.h6`
 export const CouponContainer = styled.div`
   display: flex;
   align-items: center;
+
+  ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
 `;
 
 export const CloseIcon = styled(ClearSharp)`

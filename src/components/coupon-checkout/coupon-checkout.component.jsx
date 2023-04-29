@@ -5,8 +5,9 @@ import { Button, CouponContainer, CouponIcon, CouponInput, CouponInputContainer 
 const Coupon = ({ text, ...otherProps }) => {
 
   return (
-    <CouponContainer width={otherProps.width} height={otherProps.height}>
+    <CouponContainer focus={true} width={otherProps.width} height={otherProps.height}>
       <CouponInputContainer border={otherProps.border} shadow={otherProps.shadow}>
+
         <CouponIcon />
         <CouponInput placeholder='Enter Coupon Code..' />
       </CouponInputContainer>

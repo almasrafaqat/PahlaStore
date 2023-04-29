@@ -181,7 +181,7 @@ export const CheckoutTable = styled(Table)``;
 export const CheckoutTableBody = styled(TableBody)``;
 
 export const CheckoutTableCell = styled(TableCell)`
- 
+  ${mobile({ fontSize: "0.6rem !important" })}
 `;
 
 export const CheckoutTableRow = styled(TableRow)``;
@@ -196,21 +196,29 @@ export const ProductContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  flex-basis: 15%;
+  width: 24%;
+  height: 15dvh;
   display: flex;
   align-items: center;
+  overflow: hidden;
   margin-right: 0.4rem;
 
  /* Media Query */
+
+ ${LaptopsSmallScreen({ height: "2.5rem" })}
  
 `;
 
 export const Image = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 export const InfoContainer = styled.div`
-  flex-basis: 80%;
+ width: 75%;
+ 
+
   
 `;
 
@@ -218,12 +226,18 @@ export const Title = styled(TitlePrimary)`
   
   
   /* Media Query */
+  ${mobile({ fontSize: "0.6rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
   ${DesktopsLargeScreens({ fontSize: "0.7rem" })}
 `;
 
-export const QtyIcon = styled(ClearSharp)``;
+export const QtyIcon = styled(ClearSharp)`
+  ${mobile({ fontSize: "0.6rem !important" })}
+`;
 
-export const Qty = styled.span``;
+export const Qty = styled.span`
+  ${mobile({ fontSize: "0.7rem" })}
+`;
 
 
 

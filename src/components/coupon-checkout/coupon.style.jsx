@@ -10,36 +10,61 @@ const BorderCss = css`
   border: 1px solid ${({ theme }) => theme.colors.gray};
 `;
 
+const FocusBorder = css`
+ 
+  border : 2px solid ${({ theme }) => theme.colors.secondary};
 
+`;
 
 export const CouponContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding-left: 0.5rem;
-  
+  border: 1px solid;
   height: ${(props) => props.height ? props.height : "100%"};
   width: ${(props) => props.width ? props.width : "100%"};
-  background-color: aquamarine;
+  ${(props) => props.shadow ? BoxShadowCss : BorderCss};
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
+
+  &:focus-within {
+    ${FocusBorder}
+}
 
    /**Media Query */
   ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
   ${IpadTablets({ fontSize: "0.2rem" })}
 
- 
 `;
+
+export const CouponInput = styled.input`
+  
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  outline: none;
+  border: none;
+
+
+
+   /* Media Query */
+   ${mobile({ fontSize: "0.6rem" })}
+   ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
+
+
+
+   
+`;
+
+
 
 export const CouponInputContainer = styled.div`
   flex-basis: 66%;
   height: 100%;
-  border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  ${(props) => props.shadow ? BoxShadowCss : BorderCss};
-  border-right: 0;
-  padding-left: 0.8rem;
+  
 `;
 
 
@@ -56,20 +81,7 @@ export const CouponIcon = styled(DiscountOutlined)`
 
 
 
-export const CouponInput = styled.input`
-  
-  font-size: 0.8rem;
-  padding-left: 0.5rem;
-  outline: none;
-  border: none;
- 
 
-
-   /* Media Query */
-   ${mobile({ fontSize: "0.6rem" })}
-   ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
-   
-`;
 
 export const Button = styled(ButtonPrimary)`
   flex-basis: 34%;
