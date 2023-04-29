@@ -106,6 +106,15 @@ export const CouponContainer = styled.div`
   ${LaptopsSmallScreen({ fontSize: "0.6rem" })}
 `;
 
+export const CouponCode = styled.b`
+ background: #20b2aa; 
+ color: white; 
+ padding: 0.4rem; 
+ margin-left: 0.4rem; 
+ border-radius: 0.3rem;
+
+`;
+
 export const CloseIcon = styled(ClearSharp)`
   font-size: 1.1rem;
   margin: 0 0.3rem;

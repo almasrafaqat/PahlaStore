@@ -1,6 +1,7 @@
 import {
   BreadCrumbsContainer,
   CloseIcon,
+  CouponCode,
   CouponContainer,
   Link,
 } from "../../GlobalStyle";
@@ -203,7 +204,7 @@ const Checkout = () => {
                         {" "}
                         <CouponContainer>
                           {" "}
-                          <CloseIcon /> Coupon Applied (EidOffer)
+                          <CloseIcon /> Coupon Applied <CouponCode>EidOffer</CouponCode>
                         </CouponContainer>{" "}
                       </CheckoutTableCell>
                       <CheckoutTableCell>
