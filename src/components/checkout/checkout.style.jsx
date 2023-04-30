@@ -21,7 +21,7 @@ import {
 } from "@mui/material";
 
 import { ClearSharp, PersonOutlineOutlined } from "@mui/icons-material";
-import { DesktopsLargeScreens, ExtraLargeScreenTV, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
+import { DesktopsLargeScreens, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
 
 export const Container = styled(MarginBottomContainer)`
   
@@ -48,6 +48,8 @@ export const Header = styled.div`
     left: 0;
     background-color: ${({ theme }) => theme.colors.primary};
   }
+
+  ${mobile({ width: "99%" })}
 `;
 
 const billingHeadingCss = css`
@@ -65,7 +67,7 @@ export const GridWrapper = styled(GridContainer)`
   gap: 4rem;
 
    /* Media Query */
-   ${mobile({ gridTemplateColumns: "1fr" })}
+   ${mobile({ gridTemplateColumns: "1fr", gap: "1.5rem" })}
   
 `;
 
@@ -91,8 +93,8 @@ export const AlreadySignInContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border-radius: 5px;
-  box-shadow: ${({ theme }) => theme.colors.shadow};
+  border-radius: 0.3rem;
+  border: 1px solid ${({ theme }) => theme.colors.gray};
   padding: 0 1rem;
  
 
@@ -170,7 +172,7 @@ export const InputLable = styled(InputLabel)``;
 export const CheckoutContainer = styled.div``;
 
 export const CheckoutTableContainer = styled(TableContainer)`
-  background-color: #ececec47;
+  background-color: ${({ theme }) => theme.colors.lightlowgray};
   border-radius: 0.5rem;
 `;
 

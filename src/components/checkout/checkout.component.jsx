@@ -48,7 +48,7 @@ import {
 import FormatPrice from "../../helpers/FormatPrice";
 import FormInput from "../form-input/form-input.component";
 import CountrySelect from "../country-list/country-list.component";
-import Coupon from "../coupon-checkout/coupon-checkout.component";
+import Coupon from "../coupon/coupon.component";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 
 const Checkout = () => {

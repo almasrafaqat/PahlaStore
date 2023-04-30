@@ -2,7 +2,6 @@ import * as React from 'react';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import Check from '@mui/icons-material/Check';
 import { Button, Container, OrderNoteContainer, OrderNotes } from './stepper.style';
 import { Box } from '@mui/material';
 import ScrollComponent from '../scroll-component/scroll-component';
@@ -15,7 +14,7 @@ const steps = [
   'Order Placed',
 ];
 
-const OrderSuccess = () => {
+const BasicStepper = () => {
   ScrollComponent();
   return (
     <Container>
@@ -39,4 +38,4 @@ const OrderSuccess = () => {
   );
 };
 
-export default OrderSuccess;
+export default BasicStepper;

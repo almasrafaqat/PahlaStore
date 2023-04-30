@@ -5,7 +5,7 @@ import HeaderMobile from "../components/header-mobile/header-mobile.component";
 import Announcement from "../components/announcement/announcement.component";
 import NewsLetter from "../components/newsletter/newsletter.component";
 import Footer from "../components/footer/footer.component";
-import OrderSuccess from "../components/stepper/stepper";
+import BasicStepper from "../components/stepper/stepper";
 
 
 const Container = styled.div``;
@@ -21,7 +21,7 @@ const StepperPage = () => {
       <Wrapper className="Mobile">
         <HeaderMobile />
       </Wrapper>
-        <OrderSuccess/>
+      <BasicStepper />
       <NewsLetter />
       <Footer />
     </Container>

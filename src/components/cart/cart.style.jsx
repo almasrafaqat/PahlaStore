@@ -261,7 +261,7 @@ export const HorizontalLine = styled(HorizontalLinePrimary)`
 
 export const CheckoutSummary = styled.div`
   
- height: 360px;
+ height: 380px;
  position: sticky;
  top: 1%;
 
