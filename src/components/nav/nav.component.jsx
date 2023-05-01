@@ -54,7 +54,7 @@ const Nav = () => {
                 <DropdownLink to="/checkout"> Checkout </DropdownLink>
               </DropdownList>
               <DropdownList>
-                <DropdownLink> Angular JS </DropdownLink>
+                <DropdownLink to="/ordersuccess"> Order Confirm </DropdownLink>
               </DropdownList>
             </DropdownItem>
           </MenuList>

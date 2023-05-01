@@ -1,46 +1,37 @@
 import styled, { css } from "styled-components";
 import { mobile } from "../../responsive";
 
-
-
-export const Container = styled.div`
-
-`;
+export const Container = styled.div``;
 
 export const Wrapper = styled.div`
-  
-  /* padding: 2rem;
-  margin: 2rem auto; */
- 
+  padding: 2rem;
+  margin: 2rem auto;
 `;
 
 export const OrderNoteButtonContainer = styled.div`
- 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  max-width: 1000px;
-  margin:0 auto;
-  border: 1px solid;
+  justify-content: center;
+  width: 70vw;
+  margin: 0 auto;
 
-  ${mobile({ flexDirection: "column", maxWidth: "100%" })}
+  ${mobile({ flexDirection: "column", gap: "2rem", width: "100%" })}
 `;
 
-
-
+export const OrderTableContainer = styled.div`
+  /**Media Query */
+  ${mobile({ width: "100%" })}
+`;
 
 export const OrderNoteTable = styled.div`
-
   border: 2px dashed ${({ theme }) => theme.colors.primary};
   padding: 1rem;
   border-radius: 0.3rem;
-  margin-bottom: 1rem;
-  /* width: 40%; */
+  width: 350px;
 
   /**Media Query */
-  ${mobile({ Width: "100%", backgroundColor: "red" })}
+  ${mobile({ width: "100%" })}
 `;
-
 
 export const OrderNote = styled.p`
   font-size: 0.9rem;
@@ -64,32 +55,25 @@ export const FlexContainer = styled.div`
   &:last-child {
     border-bottom: 0;
   }
-  
 `;
 
 const FlexItemHeadingCss = css`
   font-weight: 600;
   font-size: 1.08rem;
-
 `;
 
 export const FlexItems = styled.div`
   margin: 1rem 0;
-  
+
   ${(props) => props.heading && FlexItemHeadingCss}
-
 `;
-
 
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* width: 30%; */
+  margin: 0 1rem;
 
   /**Media Query */
-  ${mobile({ Width: "100%", backgroundColor: "green", })}
+  ${mobile({ width: "100%" })}
 `;
-
-
-
