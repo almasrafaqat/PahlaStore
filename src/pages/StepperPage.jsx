@@ -21,7 +21,7 @@ const StepperPage = () => {
       <Wrapper className="Mobile">
         <HeaderMobile />
       </Wrapper>
-      <BasicStepper />
+      <BasicStepper stepOne="cart" stepTwo="checkout" stepThree="order placed" stepCompleted="3" />
       <NewsLetter />
       <Footer />
     </Container>
