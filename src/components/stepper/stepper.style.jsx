@@ -1,133 +1,76 @@
 import styled, { css } from "styled-components";
 import { mobile } from "../../responsive";
-import { Check } from "@mui/icons-material";
+import { Check, LocalShipping } from "@mui/icons-material";
 
 export const Container = styled.div`
   margin-bottom: 4rem;
 `;
 
 export const Row = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  
+
+    width: 100%;
+    margin:0 auto;
+    display: flex;
+
+
 `;
 
-export const StepperContainer = styled.div`
-  
-  margin: 0 auto;
-  border: 1px solid #ececec;
-  &:nth-child(1) {
-  }
-`;
-
-export const StepperRow = styled.div`
-  width: 40vw;
-  margin: 0 auto;
-  padding: 1rem;
-  
-`;
-
-export const Wrapper = styled.div`
-  padding: 2rem;
-  border: 1px solid #ececec;
+export const Column = styled.div`
+  flex:1;
  
+  background-color: ${(props) => props.details && "lightgray"};
+  
   
 `;
 
-export const OrderNoteButtonContainer = styled.div`
+export const ColumnRow = styled.div`
+  width: 350px;
+  /* border: 1px solid black; */
+  
+`
+
+export const OrderDetail = styled.div``;
+
+export const Header = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70vw;
-  margin: 0 auto;
-
-
-  ${mobile({ flexDirection: "column", gap: "2rem", width: "100%" })}
+  justify-content: space-between;
 `;
 
-export const DelieveryAddressDate = styled.div`
-  display: flex;
-  align-item: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.7rem;
+export const Heading = styled.h4`
+  background-color: antiquewhite;
 `;
 
-export const DelieveryDay = styled.p`
+export const ShippingIconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.4rem;
 `;
 
-export const DeliveryAddress = styled.p``;
+export const ShippingIcon = styled(LocalShipping)``;
 
-export const OrderTableContainer = styled.div`
+export const ShippingText = styled.span``;
 
-  border-right: 2px solid teal;
-  background: #fafafc;
-  /**Media Query */
-  ${mobile({ width: "100%" })}
-`;
+export const Bold = styled.strong``;
 
-export const OrderNoteTable = styled.div`
-  // border: 2px dashed ${({ theme }) => theme.colors.primary};
-  padding: 1rem;
-  // border-radius: 0.3rem;
-  width: 450px;
+export const LineBreaker = styled.br``;
 
-  /**Media Query */
-  ${mobile({ width: "100%" })}
-`;
+export const DeliveryAddress = styled.div``;
 
-export const OrderNote = styled.p`
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 5px;
-  margin: 1rem 0;
 
-  padding: 1rem 0.5rem;
-  text-align: center;
-`;
 
-export const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px dashed ${({ theme }) => theme.colors.gray};
 
-  &:nth-last-child(2) {
-    border-bottom: 0;
-  }
-`;
 
-const FlexItemHeadingCss = css`
-  font-weight: 600;
-  font-size: 1.08rem;
-`;
 
-export const FlexItems = styled.div`
-  margin: 1rem 0;
 
-  ${(props) => props.heading && FlexItemHeadingCss}
-`;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 350px;
-  height: 480px;
-  text-align: center;
-  padding: 50px;
-  background-color: white;
-  
 
-  /**Media Query */
-  ${mobile({ width: "100%" })}
-`;
 
-export const CheckIconContainer = styled.p`
+
+
+
+
+export const CheckIconContainer = styled.div`
+
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -136,9 +79,13 @@ export const CheckIconContainer = styled.p`
   align-items: center;
   justify-content: center;
   color: white;
-  margin:0 auto;
+  
 `;
 
 export const CheckIcon = styled(Check)``;
 
 export const OrderConfirmMessage = styled.p``;
+
+
+
+
