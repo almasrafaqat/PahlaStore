@@ -57,7 +57,27 @@ export const LineBreaker = styled.br``;
 export const DeliveryAddress = styled.div``;
 
 
+export const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed ${({ theme }) => theme.colors.gray};
 
+  &:nth-last-child(2) {
+    border-bottom: 0;
+  }
+`;
+
+const FlexItemHeadingCss = css`
+  font-weight: 600;
+  font-size: 1.08rem;
+`;
+
+export const FlexItems = styled.div`
+  margin: 1rem 0;
+
+  ${(props) => props.heading && FlexItemHeadingCss}
+`;
 
 
 
