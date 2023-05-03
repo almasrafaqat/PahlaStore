@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { mobile } from "../../responsive";
 import { Check, LocalShipping } from "@mui/icons-material";
 
+// https://bbbootstrap.com/snippets/bootstrap-ecommerce-order-confirmation-details-template-63222313
 export const Container = styled.div`
   margin-bottom: 4rem;
 `;
