@@ -59,7 +59,7 @@ const BasicStepper = ({ stepOne, stepTwo, stepThree, stepCompleted }) => {
                 <Heading> Order #12345678</Heading>
                 <ShippingIconContainer>
                   <ShippingIcon />{" "}
-                  <ShippingText>Deliver within 3 days</ShippingText>
+                  <ShippingText>3 days to Deliver  </ShippingText>
                 </ShippingIconContainer>
               </Header>
               <DeliveryAddress>
@@ -73,9 +73,10 @@ const BasicStepper = ({ stepOne, stepTwo, stepThree, stepCompleted }) => {
                 <FlexItems>01 May 2023</FlexItems>
               </FlexContainer>
               <FlexContainer>
-                <FlexItems heading>Order Id</FlexItems>
-                <FlexItems>123456789</FlexItems>
+                <FlexItems heading>Items</FlexItems>
+                <FlexItems>2</FlexItems>
               </FlexContainer>
+
               <FlexContainer>
                 <FlexItems heading>Payment</FlexItems>
                 <FlexItems>Cash on Delivery</FlexItems>
@@ -95,15 +96,17 @@ const BasicStepper = ({ stepOne, stepTwo, stepThree, stepCompleted }) => {
             </OrderDetail>
           </ColumnRow>
         </Column>
-        <Column>
-          <ColumnRow>
+        <Column button>
+          <ColumnRow buttons>
             <CheckIconContainer>
               <CheckIcon />
             </CheckIconContainer>
             <OrderConfirmMessage>
-              {" "}
               Your order will go to you soon
             </OrderConfirmMessage>
+            <AddToCart text="Ordr Details" bgColor={({ theme }) => theme.colors.star} width="100" />
+            <AddToCart text="Track Order" width="100" />
+            <AddToCart text="Contact Us" bgColor={({ theme }) => theme.colors.gray} width="100" />
           </ColumnRow>
         </Column>
       </Row>
