@@ -10,15 +10,7 @@ import {
   TextPrimary,
   TitlePrimary,
 } from "../../GlobalStyle";
-import {
-  InputLabel,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
+
 
 import { ClearSharp, PersonOutlineOutlined } from "@mui/icons-material";
 import { DesktopsLargeScreens, IpadTablets, LaptopsSmallScreen, mobile } from "../../responsive";
@@ -28,7 +20,8 @@ export const Container = styled(MarginBottomContainer)`
 `;
 
 export const Wrapper = styled(PaddingContainer)`
-  
+  width: 95%;
+  margin:0 auto;
 `;
 
 export const Box = styled(BoxPrimary)``;
@@ -167,43 +160,64 @@ export const AdditionalText = styled.h4`
   margin-bottom: 1.5rem;
 `;
 
-export const InputLable = styled(InputLabel)``;
 
-export const CheckoutContainer = styled.div``;
 
-export const CheckoutTableContainer = styled(TableContainer)`
-  background-color: ${({ theme }) => theme.colors.lightlowgray};
-  border-radius: 0.5rem;
+export const CheckoutContainer = styled.div`
+   
 `;
 
-export const CheckoutTable = styled(Table)``;
+export const CheckoutTableContainer = styled.div`
+  
+`;
+
+export const CheckoutTable = styled.div``;
 
 
 
-export const CheckoutTableBody = styled(TableBody)``;
+export const CheckoutTableBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 
-export const CheckoutTableCell = styled(TableCell)`
+export const CheckoutTableCell = styled.div`
+
+  /**Media Query */
   ${mobile({ fontSize: "0.6rem !important" })}
 `;
 
-export const CheckoutTableRow = styled(TableRow)``;
+export const CheckoutTableRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 0.4rem;
 
-export const CheckoutTableHead = styled(TableHead)``;
+  &:nth-last-child(1) {
+    border-bottom: 0;
+  }
+`;
+
+export const CheckoutTableHead = styled.div`
+  font-weight: 600;
+`;
 
 export const ProductContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ 
+ display: grid;
+ grid-template-columns: fit-content(150px) 1fr;
+ grid-gap: 1rem;
+
   
 `;
 
 export const ImageContainer = styled.div`
-  width: 24%;
-  height: 15dvh;
-  display: flex;
-  align-items: center;
+ background-color: ${({ theme }) => theme.colors.lightgray};
+  border-radius: 10px;
+  width: 75px;
+  height: 75px; 
   overflow: hidden;
-  margin-right: 0.4rem;
+  position: relative;
 
  /* Media Query */
 
@@ -212,13 +226,19 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+object-fit: contain;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 `;
 
 export const InfoContainer = styled.div`
- width: 75%;
+
  
 
   
@@ -226,6 +246,12 @@ export const InfoContainer = styled.div`
 
 export const Title = styled(TitlePrimary)`
   
+  
+  font-weight: 700;
+  line-height: 1;
+  color:  ${({ theme }) => theme.colors.black};
+  letter-spacing: 1px;
+  padding: 0.3rem;
   
   /* Media Query */
   ${mobile({ fontSize: "0.6rem" })}
