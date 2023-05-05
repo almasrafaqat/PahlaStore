@@ -5,13 +5,13 @@ import HeaderMobile from "../components/header-mobile/header-mobile.component";
 import Announcement from "../components/announcement/announcement.component";
 import NewsLetter from "../components/newsletter/newsletter.component";
 import Footer from "../components/footer/footer.component";
-import BasicStepper from "../components/stepper/stepper";
+import OrderSuccess from "../components/order-success/order-success.component";
 
 
 const Container = styled.div``;
 const Wrapper = styled.div``;
 
-const StepperPage = () => {
+const OrderSuccessPage = () => {
   return (
     <Container>
       <Announcement />
@@ -21,11 +21,11 @@ const StepperPage = () => {
       <Wrapper className="Mobile">
         <HeaderMobile />
       </Wrapper>
-      <BasicStepper stepOne="cart" stepTwo="checkout" stepThree="order placed" stepCompleted="3" />
+      <OrderSuccess />
       <NewsLetter />
       <Footer />
     </Container>
   )
 }
 
-export default StepperPage
+export default OrderSuccessPage
