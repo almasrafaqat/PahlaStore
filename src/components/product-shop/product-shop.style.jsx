@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { MarginBottomContainer, PaddingContainer } from "../../GlobalStyle";
-import { KeyboardArrowRight } from "@mui/icons-material";
+import { CheckOutlined, KeyboardArrowRight, Search } from "@mui/icons-material";
 
 export const Container = styled(MarginBottomContainer)``;
 
@@ -10,33 +10,23 @@ export const Row = styled.div`
   width: 95%;
   margin: 0 auto;
   display: flex;
-
 `;
 
 export const Column = styled.div`
-  
-  width: ${(props) => props.width ? props.width : "100%"};
+  width: ${(props) => (props.width ? props.width : "100%")};
 `;
 
-export const ShopPageContainer = styled.div`
- 
-`;
+export const ShopPageContainer = styled.div``;
 
 export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-right: 1px solid lightgray;
-  padding-right:  1rem;
+  padding-right: 1rem;
 `;
 
-
-export const FilterItem = styled.ul`
-  
-`;
-
-
-
+export const FilterItem = styled.ul``;
 
 export const FilterList = styled.li`
   display: flex;
@@ -44,7 +34,6 @@ export const FilterList = styled.li`
   gap: 0.1rem;
   cursor: pointer;
 `;
-
 
 export const ArrowRightIcon = styled(KeyboardArrowRight)`
   color: gray;
@@ -57,25 +46,66 @@ export const SubFilterItem = styled.ul`
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   display: ${(props) => props.color && "flex"};
+`;
 
+const FilterSearchStyle = css`
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+  border-radius: 5px;
+`;
+
+const ActiveClassStyle = css`
+  background-color: teal;
+  border-radius: 0.9rem;
+  padding: 0.2rem;
+  color: white;
+  width: 100px;
+  text-align: center;
+  font-size: 0.7rem;
+`;
+
+const FilterColorStyle = css`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.color};
+  opacity: 0.6;
+`;
+const FilterColorStyleActive = css`
+  opacity: 1;
+`;
+export const CheckIcon = styled(CheckOutlined)`
+  color: white;
 `;
 
 export const SubFilterList = styled.li`
   margin: 0.9rem 0.3rem;
   list-style: none;
-  
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  ${(props) => props.search && FilterSearchStyle}
+  ${(props) => props.active && ActiveClassStyle}
+  ${(props) => props.color && FilterColorStyle}
+  ${(props) => props.activeColor && FilterColorStyleActive}
 `;
 
-export const FilterSearch = styled.div`
- 
-  
-`;
+export const FilterSearch = styled.div``;
 
+export const SearchIcon = styled(Search)`
+  color: #ccc;
+`;
 
 export const SearchInput = styled.input`
-  padding: 0.7rem;
   font-size: 0.7rem;
   width: 100%;
+  border: none;
+  outline: none;
 `;
 
 export const FilterCategory = styled.div``;
@@ -84,8 +114,4 @@ export const FilterBrand = styled.div``;
 
 export const FilterColor = styled.div``;
 
-
-
-export const ProductsContainer = styled.div`
-  
-`;
+export const ProductsContainer = styled.div``;
