@@ -56,6 +56,9 @@ const Nav = () => {
               <DropdownList>
                 <DropdownLink to="/ordersuccess"> Order Confirm </DropdownLink>
               </DropdownList>
+              <DropdownList>
+                <DropdownLink to="/shop"> shop  </DropdownLink>
+              </DropdownList>
             </DropdownItem>
           </MenuList>
           <MenuList>

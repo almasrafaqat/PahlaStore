@@ -1,22 +1,36 @@
-import { ArrowRightIcon, Column, Container, FilterBrand, FilterCategory, FilterItem, FilterList, FilterSearch, ProductsContainer, Row, SearchInput, ShopPageContainer, SidebarContainer, SubFilterItem, SubFilterList, Wrapper } from './product-shop.style';
-import BasicBreadcrumbs from '../breadcrumb/breadcrumb.component';
-import { BreadCrumbsContainer } from '../../GlobalStyle';
-import { ArrowBack, ArrowRight, KeyboardArrowRight } from '@mui/icons-material';
-
-
+import {
+  ArrowRightIcon,
+  CheckIcon,
+  Column,
+  Container,
+  FilterBrand,
+  FilterCategory,
+  FilterItem,
+  FilterList,
+  FilterSearch,
+  ProductsContainer,
+  Row,
+  SearchIcon,
+  SearchInput,
+  ShopPageContainer,
+  SidebarContainer,
+  SubFilterItem,
+  SubFilterList,
+  Wrapper,
+} from "./product-shop.style";
+import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
+import { BreadCrumbsContainer } from "../../GlobalStyle";
+import { ArrowBack, ArrowRight, KeyboardArrowRight } from "@mui/icons-material";
 
 const ShopProduct = () => {
-
   const HeightHanlder = (event) => {
-
     let SubItems = event.target.nextSibling;
     if (SubItems.style.maxHeight) {
       SubItems.style.maxHeight = null;
-    }
-    else {
+    } else {
       SubItems.style.maxHeight = SubItems.scrollHeight + "px";
     }
-  }
+  };
 
   return (
     <Container>
@@ -25,7 +39,6 @@ const ShopProduct = () => {
           <BreadCrumbsContainer>
             <BasicBreadcrumbs category="mens" link="/shop" />
           </BreadCrumbsContainer>
-
         </Row>
 
         <Row>
@@ -38,8 +51,9 @@ const ShopProduct = () => {
                     <ArrowRightIcon /> Search
                   </FilterList>
                   <SubFilterItem search>
-                    <SubFilterList>
-                      <SearchInput placeholder='Search the Product' />
+                    <SubFilterList search>
+                      <SearchIcon />
+                      <SearchInput placeholder="Search the Product" />
                     </SubFilterList>
                   </SubFilterItem>
                 </FilterItem>
@@ -47,19 +61,13 @@ const ShopProduct = () => {
               <FilterCategory>
                 <FilterItem onClick={HeightHanlder}>
                   <FilterList>
-                    <ArrowRightIcon />Category
+                    <ArrowRightIcon />
+                    Category
                   </FilterList>
                   <SubFilterItem category>
-                    <SubFilterList>
-                      category 1
-                    </SubFilterList>
-                    <SubFilterList>
-                      category 2
-                    </SubFilterList>
-                    <SubFilterList>
-                      category 3
-                    </SubFilterList>
-
+                    <SubFilterList>All</SubFilterList>
+                    <SubFilterList active>Smartphone</SubFilterList>
+                    <SubFilterList>Electronics</SubFilterList>
                   </SubFilterItem>
                 </FilterItem>
               </FilterCategory>
@@ -70,16 +78,9 @@ const ShopProduct = () => {
                     <ArrowRightIcon /> Brand
                   </FilterList>
                   <SubFilterItem brand>
-                    <SubFilterList>
-                      Brand 1
-                    </SubFilterList>
-                    <SubFilterList>
-                      Brand 2
-                    </SubFilterList>
-                    <SubFilterList>
-                      Brand 3
-                    </SubFilterList>
-
+                    <SubFilterList>Dell</SubFilterList>
+                    <SubFilterList>HP</SubFilterList>
+                    <SubFilterList active>Leonova</SubFilterList>
                   </SubFilterItem>
                 </FilterItem>
               </FilterBrand>
@@ -90,27 +91,22 @@ const ShopProduct = () => {
                     <ArrowRightIcon /> Color
                   </FilterList>
                   <SubFilterItem color>
-                    <SubFilterList>
-                      Color 1
+                  <SubFilterList>
+                      All
                     </SubFilterList>
-                    <SubFilterList>
-                      Color 2
+                    <SubFilterList activeColor color="black">
+                      <CheckIcon />
                     </SubFilterList>
-                    <SubFilterList>
-                      Color 3
-                    </SubFilterList>
-
+                    <SubFilterList color="red"></SubFilterList>
+                    <SubFilterList color="red"></SubFilterList>
+                    <SubFilterList color="yellow"></SubFilterList>
                   </SubFilterItem>
                 </FilterItem>
               </FilterBrand>
-
             </SidebarContainer>
-
           </Column>
           <Column>
             <ShopPageContainer>
-
-
               <ProductsContainer>
                 <h2>Products:</h2>
                 {/* Iterate over products here */}
@@ -118,11 +114,9 @@ const ShopProduct = () => {
             </ShopPageContainer>
           </Column>
         </Row>
-
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
 export default ShopProduct;
-
