@@ -22,6 +22,8 @@ export const Container = styled(MarginBottomContainer)`
 export const Wrapper = styled(PaddingContainer)`
   width: 95%;
   margin:0 auto;
+
+  ${LaptopsSmallScreen({ width: "100%" })}
 `;
 
 export const Box = styled(BoxPrimary)``;
@@ -61,6 +63,7 @@ export const GridWrapper = styled(GridContainer)`
 
    /* Media Query */
    ${mobile({ gridTemplateColumns: "1fr", gap: "1.5rem" })}
+   ${IpadTablets({ gridTemplateColumns: "1fr 1fr" })}
   
 `;
 
@@ -182,8 +185,10 @@ export const CheckoutTableBody = styled.div`
 
 export const CheckoutTableCell = styled.div`
 
-  /**Media Query */
-  ${mobile({ fontSize: "0.6rem !important" })}
+  /* Media Query */
+  ${mobile({ fontSize: "0.6rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
+  ${DesktopsLargeScreens({ fontSize: "0.7rem" })}
 `;
 
 export const CheckoutTableRow = styled.div`
@@ -260,11 +265,17 @@ export const Title = styled(TitlePrimary)`
 `;
 
 export const QtyIcon = styled(ClearSharp)`
+  /* Media Query */
   ${mobile({ fontSize: "0.6rem !important" })}
+  ${LaptopsSmallScreen({ fontSize: "0.5rem !important" })}
+  ${DesktopsLargeScreens({ fontSize: "0.7rem !important" })}
 `;
 
 export const Qty = styled.span`
-  ${mobile({ fontSize: "0.7rem" })}
+  /* Media Query */
+  ${mobile({ fontSize: "0.6rem" })}
+  ${LaptopsSmallScreen({ fontSize: "0.5rem" })}
+  ${DesktopsLargeScreens({ fontSize: "0.7rem" })}
 `;
 
 

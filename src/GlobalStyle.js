@@ -8,7 +8,7 @@ import {
   StarOutlined,
   StarOutlineOutlined,
 } from "@mui/icons-material";
-import { mobile, IpadTablets, LaptopsSmallScreen } from "./responsive";
+import { mobile, IpadTablets, LaptopsSmallScreen, DesktopsLargeScreens } from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -120,6 +120,11 @@ export const CloseIcon = styled(ClearSharp)`
   font-size: 1.1rem;
   margin: 0 0.3rem;
   cursor: pointer;
+
+  /* Media Query */
+  ${mobile({ fontSize: "0.9rem !important" })}
+  ${LaptopsSmallScreen({ fontSize: "0.8rem !important" })}
+  ${DesktopsLargeScreens({ fontSize: "0.8rem !important" })}
 `;
 
 /**Image */
