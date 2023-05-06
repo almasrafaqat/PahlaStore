@@ -10,6 +10,7 @@ import ScrollTop from "./components/scroll-top/scroll-top.component";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import OrderSuccessPage from "./pages/orderSuccessPage";
+import ShopPage from "./pages/ShopPage";
 
 
 const MuiTheme = createTheme({
@@ -35,6 +36,7 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/ordersuccess" element={<OrderSuccessPage />} />
+            <Route path="/shop" element={<ShopPage />} />
           </Routes>
         </Router>
       </MuiThemeProvider>
