@@ -5,8 +5,12 @@ import {
   Container,
   FilterBrand,
   FilterCategory,
+  FilterColor,
+  FilterInputPrice,
   FilterItem,
   FilterList,
+  FilterPrice,
+  FilterPriceInput,
   FilterSearch,
   ProductsContainer,
   Row,
@@ -85,13 +89,13 @@ const ShopProduct = () => {
                 </FilterItem>
               </FilterBrand>
 
-              <FilterBrand>
+              <FilterColor>
                 <FilterItem onClick={HeightHanlder}>
                   <FilterList>
                     <ArrowRightIcon /> Color
                   </FilterList>
                   <SubFilterItem color>
-                  <SubFilterList>
+                    <SubFilterList>
                       All
                     </SubFilterList>
                     <SubFilterList activeColor color="black">
@@ -102,7 +106,21 @@ const ShopProduct = () => {
                     <SubFilterList color="yellow"></SubFilterList>
                   </SubFilterItem>
                 </FilterItem>
-              </FilterBrand>
+              </FilterColor>
+              <FilterPrice>
+                <FilterItem onClick={HeightHanlder}>
+                  <FilterList>
+                    <ArrowRightIcon /> Price
+                  </FilterList>
+                  <SubFilterItem price>
+                    <SubFilterList>
+                      <FilterPriceInput className="pricerange" type="range" min="0" max="1500" />
+                    </SubFilterList>
+                  </SubFilterItem>
+
+                </FilterItem>
+
+              </FilterPrice>
             </SidebarContainer>
           </Column>
           <Column>

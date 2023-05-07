@@ -22,8 +22,10 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-right: 1px solid lightgray;
-  padding-right: 1rem;
+  /* border-right: 1px solid lightgray; */
+  /* padding-right: 1rem; */
+  padding: 36px 32px;
+  box-shadow: 0 1px 4px rgba(18,22, 33, .12);
 `;
 
 export const FilterItem = styled.ul``;
@@ -113,5 +115,25 @@ export const FilterCategory = styled.div``;
 export const FilterBrand = styled.div``;
 
 export const FilterColor = styled.div``;
+
+export const FilterPrice = styled.div``;
+
+export const FilterPriceInput = styled.input`
+
+overflow: hidden;
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  margin: 0;
+  height: 30px;
+  cursor: pointer;
+  background-color: teal !important;
+  &:focus {
+    outline: none;
+  }
+
+
+`;
+
 
 export const ProductsContainer = styled.div``;
