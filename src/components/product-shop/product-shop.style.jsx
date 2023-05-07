@@ -22,9 +22,7 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* border-right: 1px solid lightgray; */
-  /* padding-right: 1rem; */
-  padding: 36px 32px;
+  padding: 16px 8px;
   box-shadow: 0 1px 4px rgba(18,22, 33, .12);
 `;
 
