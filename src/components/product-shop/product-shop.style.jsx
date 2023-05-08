@@ -22,7 +22,7 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 16px 8px;
+  padding: 16px 16px;
   box-shadow: 0 1px 4px rgba(18,22, 33, .12);
 `;
 
@@ -43,6 +43,7 @@ export const SubFilterItem = styled.ul`
   margin-top: 0.5rem;
   padding-left: 30px;
   max-height: 0;
+  height: 100%;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   display: ${(props) => props.color && "flex"};
@@ -116,20 +117,41 @@ export const FilterColor = styled.div``;
 
 export const FilterPrice = styled.div``;
 
+export const FilterPriceValue = styled.small`
+  font-weight: 500;
+  font-size: medium;
+  color: teal;
+`
+
 export const FilterPriceInput = styled.input`
 
-overflow: hidden;
-  display: block;
-  max-width: 700px;
+  -webkit-appearance: none;
   width: 100%;
-  margin: 0;
-  height: 30px;
+  height: 10px;
+  margin-top: 1rem;
   cursor: pointer;
-  background-color: teal !important;
-  &:focus {
-    outline: none;
-  }
+  outline: none;
+  border-radius: 8px;
+  background-color: #d0d0d0;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  &:hover {
+  opacity: 1;
+}
 
+
+   ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: teal;
+    border: none;
+   }
+  
 
 `;
 

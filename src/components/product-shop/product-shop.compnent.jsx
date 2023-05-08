@@ -11,6 +11,7 @@ import {
   FilterList,
   FilterPrice,
   FilterPriceInput,
+  FilterPriceValue,
   FilterSearch,
   ProductsContainer,
   Row,
@@ -114,6 +115,7 @@ const ShopProduct = () => {
                   </FilterList>
                   <SubFilterItem price>
                     <SubFilterList>
+                      <FilterPriceValue> Rs 100 - Rs 500</FilterPriceValue>
                       <FilterPriceInput className="pricerange" type="range" min="0" max="1500" />
                     </SubFilterList>
                   </SubFilterItem>
