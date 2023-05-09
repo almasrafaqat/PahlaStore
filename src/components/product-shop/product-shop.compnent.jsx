@@ -26,8 +26,11 @@ import {
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
 import { ArrowBack, ArrowRight, KeyboardArrowRight } from "@mui/icons-material";
+import RangeSlider from "../range-slider/range-slider.component";
 
 const ShopProduct = () => {
+  let min = 1;
+  let max = 1500;
   const HeightHanlder = (event) => {
     let SubItems = event.target.nextSibling;
     if (SubItems.style.maxHeight) {
@@ -115,8 +118,8 @@ const ShopProduct = () => {
                   </FilterList>
                   <SubFilterItem price>
                     <SubFilterList>
-                      <FilterPriceValue> Rs 100 - Rs 500</FilterPriceValue>
-                      <FilterPriceInput className="pricerange" type="range" min="0" max="1500" />
+                      <FilterPriceValue> Rs {min} - Rs {max}</FilterPriceValue>
+                      <RangeSlider min={min} max={max} />
                     </SubFilterList>
                   </SubFilterItem>
 
