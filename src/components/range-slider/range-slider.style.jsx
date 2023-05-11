@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 // excess height to improve interactive area / accessibility
 const height = "36px";
-const thumbHeight = 28;
+const thumbHeight = 25;
 const trackHeight = "4px";
 
 // colours
-const upperColor = "#edf5f9";
+const upperColor = "#ccc";
 const lowerColor = "teal";
 const thumbColor = "teal";
 const thumbHoverColor = "teal";
@@ -15,7 +15,7 @@ const lowerBackground = `linear-gradient(to bottom, ${lowerColor}, ${lowerColor}
 
 // Webkit cannot style progress so we fake it with a long shadow on the thumb element
 const makeLongShadow = (color, size) => {
-  let i = 18;
+  let i = 10;
   let shadow = `${i}px 0 0 ${size} ${color}`;
 
   for (; i < 706; i++) {
