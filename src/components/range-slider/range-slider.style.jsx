@@ -34,7 +34,6 @@ overflow: hidden;
   margin: 0;
   height: ${height};
   cursor: pointer;
-  
 
   &:focus {
     outline: none;
@@ -66,6 +65,7 @@ overflow: hidden;
     width: 100%;
     height: ${height};
     background: ${upperBackground};
+    
   }
 
   &::-moz-range-progress {
@@ -126,4 +126,13 @@ overflow: hidden;
       background-color: ${thumbHoverColor};
     }
   }
+`;
+
+export const PriceRange = styled.input`
+  accent-color: teal;
+  width: 100%;
+
+  
+ 
+  
 `;

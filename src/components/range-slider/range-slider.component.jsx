@@ -1,10 +1,11 @@
 import React from 'react'
-import { FilterPriceInput } from './range-slider.style'
+import { FilterPriceInput, PriceRange } from './range-slider.style'
 
 const RangeSlider = ({min, max, value }) => {
   return (
     <div>
-      <FilterPriceInput defaultValue={max} type="range" min={min} max={max} />
+      {/* <FilterPriceInput defaultValue={max} type="range" min={min} max={max} /> */}
+      <PriceRange type="range" />
     </div>
   )
 }
