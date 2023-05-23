@@ -26,7 +26,7 @@ const makeLongShadow = (color, size) => {
 };
 
 export const FilterPriceInput = styled.input`
-overflow: hidden;
+  overflow: hidden;
   display: block;
   appearance: none;
   max-width: 700px;
@@ -43,7 +43,6 @@ overflow: hidden;
     width: 100%;
     height: ${height};
     background: ${lowerBackground};
-    
   }
 
   &::-webkit-slider-thumb {
@@ -65,7 +64,6 @@ overflow: hidden;
     width: 100%;
     height: ${height};
     background: ${upperBackground};
-    
   }
 
   &::-moz-range-progress {
@@ -129,31 +127,30 @@ overflow: hidden;
 `;
 
 export const Main = styled.div`
-  width: 80%;
-  margin: 24% auto;
+  width: 100%;
   position: relative;
 `;
 
-
 export const PriceRange = styled.input`
- 
- -webkit-appearance: none;
- background-color: teal;
+  -webkit-appearance: none;
+  background-color: lightgray;
   width: 100%;
-  height: 15px;
+  height: 4px;
   outline: none;
   border-radius: 8px;
+  position: absolute;
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 32px;
-    height: 32px;
-    background-color: orange;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #20b2aa;
     cursor: pointer;
     z-index: 3;
     position: relative;
   }
-
 `;
 
 export const Selctor = styled.div`
@@ -168,7 +165,7 @@ export const Selctor = styled.div`
 `;
 
 export const SelectBtn = styled.div`
-   background-color: red;
+  background-color: red;
   height: 48px;
   width: 48px;
   border-radius: 50%;
@@ -178,11 +175,10 @@ export const SelectBtn = styled.div`
 
 export const ProgressBar = styled.div`
   width: ${(props) => props.width}%;
-  height: 15px;
+  height: 4px;
   border-radius: 8px;
   position: absolute;
   left: 0;
   top: 0;
-  background-color: pink;
+  background-color: teal;
 `;
-
