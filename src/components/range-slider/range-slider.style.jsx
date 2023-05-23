@@ -128,11 +128,61 @@ overflow: hidden;
   }
 `;
 
-export const PriceRange = styled.input`
-  accent-color: teal;
-  width: 100%;
-
-  
- 
-  
+export const Main = styled.div`
+  width: 80%;
+  margin: 24% auto;
+  position: relative;
 `;
+
+
+export const PriceRange = styled.input`
+ 
+ -webkit-appearance: none;
+ background-color: teal;
+  width: 100%;
+  height: 15px;
+  outline: none;
+  border-radius: 8px;
+
+  ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+  }
+
+`;
+
+export const Selctor = styled.div`
+  width: 48px;
+  height: 104px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: yellow;
+`;
+
+export const SelectBtn = styled.div`
+   background-color: red;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const ProgressBar = styled.div`
+  width: ${(props) => props.width}%;
+  height: 15px;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: pink;
+`;
+
