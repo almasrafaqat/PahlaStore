@@ -153,7 +153,7 @@ export const PriceRange = styled.input`
   }
 `;
 
-export const Selctor = styled.div`
+export const Selector = styled.div`
   width: 48px;
   height: 104px;
   position: absolute;
