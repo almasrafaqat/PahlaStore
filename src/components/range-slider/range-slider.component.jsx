@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FilterPriceInput, Main, PriceRange, ProgressBar, Selctor, SelectBtn, Selector } from './range-slider.style'
+import { FilterPriceInput, Main, PriceRange, ProgressBar, Selctor, SelctorValue, SelectBtn, Selector, TextValue } from './range-slider.style'
 
 const RangeSlider = ({ min, max, value }) => {
   const [rangevalue, setRangeValue] = useState(1500);
@@ -8,7 +8,7 @@ const RangeSlider = ({ min, max, value }) => {
 
   const PriceRangeHandler = (event) => {
 
-    
+
     setRangeValue((cur) => cur = event.target.value);
 
   }
@@ -16,10 +16,13 @@ const RangeSlider = ({ min, max, value }) => {
     <Main>
       {/* <FilterPriceInput defaultValue={max} type="range" min={min} max={max} /> */}
       <PriceRange type="range" min="0" max="1500" value={rangevalue} onChange={PriceRangeHandler} />
-      <Selector style={{ left: `${rangevalue / 1500 * 100}` }}>
-        <SelectBtn/>
+      <Selector left={rangevalue / 1500 * 100}>
+        <SelctorValue>
+          <TextValue>{rangevalue}</TextValue>
+        </SelctorValue>
+
       </Selector>
-      <ProgressBar width={rangevalue  / 1500 * 100} />
+      <ProgressBar width={rangevalue / 1500 * 100} />
     </Main>
   )
 }

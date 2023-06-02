@@ -14,6 +14,8 @@ export const Row = styled.div`
 
 export const Column = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
+  height: 1100px;
+  z-index: 1;
 `;
 
 export const ShopPageContainer = styled.div``;
@@ -115,12 +117,15 @@ export const FilterBrand = styled.div``;
 
 export const FilterColor = styled.div``;
 
-export const FilterPrice = styled.div``;
+export const FilterPrice = styled.div`
+  
+`;
 
 export const FilterPriceValue = styled.small`
   font-weight: 500;
   font-size: medium;
   color: teal;
+  
 `;
 
 

@@ -128,50 +128,82 @@ export const FilterPriceInput = styled.input`
 
 export const Main = styled.div`
   width: 100%;
+  height: 100px;
   position: relative;
+ 
 `;
 
 export const PriceRange = styled.input`
-  -webkit-appearance: none;
-  background-color: lightgray;
+ 
+ -webkit-appearance: none;
+ background-color: lightgray;
   width: 100%;
   height: 4px;
   outline: none;
   border-radius: 8px;
   position: absolute;
+ 
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #fff;
-    border: 1px solid #20b2aa;
+    background-color: white;
+    border: 1px solid teal;
     cursor: pointer;
     z-index: 3;
     position: relative;
   }
+
 `;
 
 export const Selector = styled.div`
-  width: 48px;
+  width: 40px;
   height: 104px;
   position: absolute;
   bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: ${(props) => props.left}%;
+  /* transform: translateX(-30px); */
   z-index: 2;
-  background-color: yellow;
+ 
+  
 `;
 
-export const SelectBtn = styled.div`
-  background-color: red;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
+export const SelctorValue = styled.div`
+ width: 40px;
+ height: 45px;
+ position: absolute;
+ top:2px;
+ border-radius: 4px;
+ text-align: center;
+ line-height: 45px;
+ font-size: 16px;
+ font-weight: 300;
+ background-color: orange;
+ z-index: 5;
+color: white;
+ 
+&::before{
+  content: '';
+  border-bottom: 17px solid orange;
+  border-left: 20px solid white;
+  border-right: 20px solid white;
   position: absolute;
-  bottom: 0;
+  top: 0px;
+  left: 0;
+  z-index: 4;
+
+}
+
 `;
+
+export const TextValue = styled.div`
+  
+  margin-top: 5px;
+`;
+
+
 
 export const ProgressBar = styled.div`
   width: ${(props) => props.width}%;
