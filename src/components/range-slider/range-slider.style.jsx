@@ -139,7 +139,7 @@ export const Range = styled.div`
   width: 100%;
   height: 64px;
   max-width: 332px;
-  background-color: aliceblue;
+  background-color: yellow;
   border-radius: 4rem;
   box-shadow: 0 6px 16px hsla(256, 72%, 24%, .15);
   padding-inline: 2.5rem;
@@ -161,12 +161,13 @@ export const SliderRange = styled.div`
   border-radius: 4rem;
   box-shadow: 0 4px 12px hsla(256,72%, 24, .2);
   overflow: hidden;
+  
 `;
 
 export const RangeSliderLine = styled.div`
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: pink;
   width: 0;
 `;
 
@@ -179,6 +180,7 @@ export const RangeThumb = styled.div`
   border-radius: 50%;
   position: absolute;
   left: ${(props) => props.left}px;
+ 
 `;
 
 export const RangeValue = styled.div`
