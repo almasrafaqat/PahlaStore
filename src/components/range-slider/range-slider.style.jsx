@@ -178,7 +178,8 @@ export const RangeThumb = styled.div`
   background-color: teal;
   border-radius: 50%;
   position: absolute;
-  left: ${(props) => props.left}px;
+  left: ${(props) => props.left}%;
+  
 `;
 
 export const RangeValue = styled.div`
@@ -206,9 +207,9 @@ export const SliderInput = styled.input`
   width: 100%;
   height: 16px;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   background-color: red;
-  /* opacity: 0; */
+  opacity: 0;
 
   &::-webkit-slider-thumb{
     appearance: none;

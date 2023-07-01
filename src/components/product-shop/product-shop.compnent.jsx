@@ -84,12 +84,11 @@ const ShopProduct = () => {
                 <FilterItem onClick={HeightHanlder}>
                   <FilterList >
                     <ArrowRightIcon style={{
-                  fontSize: "28px",
-                  transition: "all 0.5s ease",
-                  transform: `rotate(${
-                     "0.2turn"
-                  })`,
-                }} /> Brand
+                      fontSize: "28px",
+                      transition: "all 0.5s ease",
+                      transform: `rotate(${"0.2turn"
+                        })`,
+                    }} /> Brand
                   </FilterList>
                   <SubFilterItem brand>
                     <SubFilterList>Dell</SubFilterList>
@@ -124,7 +123,7 @@ const ShopProduct = () => {
                   </FilterList>
                   <SubFilterItem price>
                     <SubFilterList>
-                      <FilterPriceValue> Rs {min} - Rs {max}</FilterPriceValue>
+
                       <RangeSlider min={min} max={max} />
                     </SubFilterList>
                   </SubFilterItem>
