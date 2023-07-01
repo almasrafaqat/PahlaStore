@@ -1,41 +1,47 @@
 import React, { useState } from 'react'
-import { Container, ProgressBar, Range, RangeContent, RangeInput, RangeMax, RangeMin, RangeMinMax, RangeSliderInline, RangeSliderLine, RangeThumb, RangeValue, RangeValueNumber, Ranger, Selctor, SelctorValue, SelectBtn, SelectValue, Selector, Slider, SliderInput, SliderRange, SliderValue, TextValue, Thumb, ValueSpan } from './range-slider.style'
+import MultiRangeSlider from "multi-range-slider-react";
+import "./rangeslider.css"
+import FormatPrice from '../../helpers/FormatPrice';
 
 const RangeSlider = ({ min, max, value }) => {
-  const [rangevalue, setRangeValue] = useState(1500);
 
+  const [minValue, set_minValue] = useState(0);
+  const [maxValue, set_maxValue] = useState(1000);
+  const handleInput = (e) => {
+    set_minValue(e.minValue);
+    set_maxValue(e.maxValue);
+  };
 
-
-  const PriceRangeHandler = (event) => {
-
-
-    setRangeValue((cur) => cur = event.target.value);
-
-  }
   return (
 
+    <div className="App">
+      <div style={{ display: 'flex', fontSize: "16px" }}>
+        <div style={{ margin: '10px' }}><b>Price:</b></div>
+        <div style={{ margin: '10px' }}><FormatPrice price={minValue} /></div>
+        <div style={{ margin: '10px' }}><FormatPrice price={maxValue} /></div>
+      </div>
 
-    <Container>
-      <Range>
-        <RangeContent>
-          <SliderRange>
-            <RangeSliderLine>
+      <MultiRangeSlider
+        min={0}
+        max={1000}
+        step={1}
+        minValue={minValue}
+        maxValue={maxValue}
+        onInput={(e) => {
+          handleInput(e);
+        }}
+        barInnerColor="#009688"
+        ruler={false}
+        style={{ border: "none", boxShadow: "none" }}
+        label={false}
+      />
 
-            </RangeSliderLine>
-          </SliderRange>
+    </div>
 
-          <RangeThumb left={rangevalue}>
-            <RangeValue>
-              <RangeValueNumber>{rangevalue}</RangeValueNumber>
-            </RangeValue>
-
-          </RangeThumb>
-
-          <SliderInput type="range" class="range__input" id="range-input" min="0" max="100" step="1" onChange={PriceRangeHandler} />
-        </RangeContent>
-      </Range>
-    </Container>
   )
+
+
+
 }
 
 export default RangeSlider
