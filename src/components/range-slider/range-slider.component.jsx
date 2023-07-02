@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import MultiRangeSlider from "multi-range-slider-react";
-import "./rangeslider.css"
-import FormatPrice from '../../helpers/FormatPrice';
+import FormatPrice from "../../helpers/FormatPrice";
+import {
+  MaxValue,
+  MinValue,
+  PriceContainer,
+  SliderContainer,
+} from "./range-slider.style";
 
 const RangeSlider = ({ min, max }) => {
-
   const [minValue, set_minValue] = useState(min);
   const [maxValue, set_maxValue] = useState(max);
   const handleInput = (e) => {
@@ -13,13 +17,15 @@ const RangeSlider = ({ min, max }) => {
   };
 
   return (
-
-    <div className="App">
-      <div style={{ display: 'flex', fontSize: "16px" }}>
-        <div style={{ margin: '10px' }}><b>Price:</b></div>
-        <div style={{ margin: '10px' }}><FormatPrice price={minValue} /></div>
-        <div style={{ margin: '10px' }}><FormatPrice price={maxValue} /></div>
-      </div>
+    <SliderContainer>
+      <PriceContainer>
+        <MinValue>
+          <FormatPrice price={minValue} />
+        </MinValue>
+        <MaxValue>
+          <FormatPrice price={maxValue} />
+        </MaxValue>
+      </PriceContainer>
 
       <MultiRangeSlider
         min={min}
@@ -30,20 +36,13 @@ const RangeSlider = ({ min, max }) => {
         onInput={(e) => {
           handleInput(e);
         }}
-        barInnerColor="#009688"
+        barInnerColor="#008080"
         ruler={false}
         style={{ border: "none", boxShadow: "none" }}
         label={false}
       />
+    </SliderContainer>
+  );
+};
 
-    </div>
-
-  )
-
-
-
-}
-
-export default RangeSlider
-
-
+export default RangeSlider;
