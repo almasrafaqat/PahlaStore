@@ -29,8 +29,7 @@ import { ArrowBack, ArrowRight, KeyboardArrowRight } from "@mui/icons-material";
 import RangeSlider from "../range-slider/range-slider.component";
 
 const ShopProduct = () => {
-  let min = 1;
-  let max = 1500;
+
   const HeightHanlder = (event) => {
     let SubItems = event.target.nextSibling;
     if (SubItems.style.maxHeight) {
@@ -124,7 +123,7 @@ const ShopProduct = () => {
                   <SubFilterItem price>
                     <SubFilterList>
 
-                      <RangeSlider min={min} max={max} />
+                      <RangeSlider min="0" max="5000" />
                     </SubFilterList>
                   </SubFilterItem>
 

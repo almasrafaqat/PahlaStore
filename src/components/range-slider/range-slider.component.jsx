@@ -3,10 +3,10 @@ import MultiRangeSlider from "multi-range-slider-react";
 import "./rangeslider.css"
 import FormatPrice from '../../helpers/FormatPrice';
 
-const RangeSlider = ({ min, max, value }) => {
+const RangeSlider = ({ min, max }) => {
 
-  const [minValue, set_minValue] = useState(0);
-  const [maxValue, set_maxValue] = useState(1000);
+  const [minValue, set_minValue] = useState(min);
+  const [maxValue, set_maxValue] = useState(max);
   const handleInput = (e) => {
     set_minValue(e.minValue);
     set_maxValue(e.maxValue);
@@ -22,8 +22,8 @@ const RangeSlider = ({ min, max, value }) => {
       </div>
 
       <MultiRangeSlider
-        min={0}
-        max={1000}
+        min={min}
+        max={max}
         step={1}
         minValue={minValue}
         maxValue={maxValue}
