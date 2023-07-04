@@ -32,7 +32,6 @@ export const PriceContainer = styled.div`
 
 export const MinValue = styled.div`
   margin: 5px;
-
 `;
 
 export const MaxValue = styled.div`

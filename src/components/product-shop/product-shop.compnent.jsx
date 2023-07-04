@@ -25,17 +25,37 @@ import {
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
-import { ArrowBack, ArrowRight, KeyboardArrowRight } from "@mui/icons-material";
+import {
+  ArrowBack,
+  ArrowLeft,
+  ArrowRight,
+  KeyboardArrowRight,
+} from "@mui/icons-material";
 import RangeSlider from "../range-slider/range-slider.component";
+import { useState } from "react";
 
 const ShopProduct = () => {
+  const [isNavActive, setNavActive] = useState(false);
+  const [filterName, setFilterName] = useState({name: "", value: false});
+
+  const NavActiveHandler = (event) => {
+    // setNavActive((current) => !current);
+
+    setFilterName({name: event, value: true});
+
+    console.log(filterName);
+
+   
+  };
 
   const HeightHanlder = (event) => {
     let SubItems = event.target.nextSibling;
     if (SubItems.style.maxHeight) {
       SubItems.style.maxHeight = null;
+      console.log(event.name);
     } else {
       SubItems.style.maxHeight = SubItems.scrollHeight + "px";
+      
     }
   };
 
@@ -67,8 +87,18 @@ const ShopProduct = () => {
               </FilterSearch>
               <FilterCategory>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList>
-                    <ArrowRightIcon />
+                  <FilterList
+                    onClick={() => NavActiveHandler("category")}
+                    name="cat"
+                  >
+                    <ArrowRightIcon
+                      style={{
+                        transition: "all 0.5s ease",
+                        transform: `rotate(${
+                          filterName.value && filterName.name === "category"  ? "90deg" : 0
+                        })`,
+                      }}
+                    />
                     Category
                   </FilterList>
                   <SubFilterItem category>
@@ -80,14 +110,17 @@ const ShopProduct = () => {
               </FilterCategory>
 
               <FilterBrand>
-                <FilterItem onClick={HeightHanlder}>
-                  <FilterList >
-                    <ArrowRightIcon style={{
-                      fontSize: "28px",
-                      transition: "all 0.5s ease",
-                      transform: `rotate(${"0.2turn"
+                <FilterItem onClick={HeightHanlder} name="brand">
+                  <FilterList onClick={() => NavActiveHandler("brand")}>
+                    <ArrowRightIcon
+                      style={{
+                        transition: "all 0.5s ease",
+                        transform: `rotate(${
+                           filterName === "brand" ? "90deg" : 0
                         })`,
-                    }} /> Brand
+                      }}
+                    />{" "}
+                    Brand
                   </FilterList>
                   <SubFilterItem brand>
                     <SubFilterList>Dell</SubFilterList>
@@ -99,13 +132,11 @@ const ShopProduct = () => {
 
               <FilterColor>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList>
+                  <FilterList onClick={NavActiveHandler} name="category">
                     <ArrowRightIcon /> Color
                   </FilterList>
                   <SubFilterItem color>
-                    <SubFilterList>
-                      All
-                    </SubFilterList>
+                    <SubFilterList>All</SubFilterList>
                     <SubFilterList activeColor color="black">
                       <CheckIcon />
                     </SubFilterList>
@@ -117,18 +148,15 @@ const ShopProduct = () => {
               </FilterColor>
               <FilterPrice>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList>
+                  <FilterList onClick={NavActiveHandler} name="price-range">
                     <ArrowRightIcon /> Price
                   </FilterList>
                   <SubFilterItem price>
                     <SubFilterList>
-
                       <RangeSlider min="0" max="5000" />
                     </SubFilterList>
                   </SubFilterItem>
-
                 </FilterItem>
-
               </FilterPrice>
             </SidebarContainer>
           </Column>
