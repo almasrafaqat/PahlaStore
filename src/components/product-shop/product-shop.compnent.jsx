@@ -75,8 +75,13 @@ const ShopProduct = () => {
               <h2>Filter by:</h2>
               <FilterSearch>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList>
-                    <ArrowRightIcon /> Search
+                  <FilterList  onClick={() => NavActiveHandler("search")}>
+                    <ArrowRightIcon style={{
+                        transition: "all 0.5s ease",
+                        transform: `rotate(${
+                          filterName.includes(("search")) ? "90deg" : 0
+                        })`,
+                      }} /> Search
                   </FilterList>
                   <SubFilterItem search>
                     <SubFilterList search>
@@ -90,7 +95,7 @@ const ShopProduct = () => {
                 <FilterItem onClick={HeightHanlder}>
                   <FilterList
                     onClick={() => NavActiveHandler("category")}
-                    name="cat"
+                    
                   >
                     <ArrowRightIcon
                       style={{
@@ -111,7 +116,7 @@ const ShopProduct = () => {
               </FilterCategory>
 
               <FilterBrand>
-                <FilterItem onClick={HeightHanlder} name="brand">
+                <FilterItem onClick={HeightHanlder}>
                   <FilterList onClick={() => NavActiveHandler("brand")}>
                     <ArrowRightIcon
                       style={{
@@ -133,8 +138,13 @@ const ShopProduct = () => {
 
               <FilterColor>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList onClick={NavActiveHandler} name="category">
-                    <ArrowRightIcon /> Color
+                  <FilterList onClick={() => NavActiveHandler("color")}>
+                    <ArrowRightIcon  style={{
+                        transition: "all 0.5s ease",
+                        transform: `rotate(${
+                          filterName.includes(("color")) ? "90deg" : 0
+                        })`,
+                      }} /> Color
                   </FilterList>
                   <SubFilterItem color>
                     <SubFilterList>All</SubFilterList>
@@ -149,8 +159,13 @@ const ShopProduct = () => {
               </FilterColor>
               <FilterPrice>
                 <FilterItem onClick={HeightHanlder}>
-                  <FilterList onClick={NavActiveHandler} name="price-range">
-                    <ArrowRightIcon /> Price
+                  <FilterList onClick={() => NavActiveHandler("price_range")}>
+                    <ArrowRightIcon style={{
+                        transition: "all 0.5s ease",
+                        transform: `rotate(${
+                          filterName.includes(("price_range")) ? "90deg" : 0
+                        })`,
+                      }} /> Price
                   </FilterList>
                   <SubFilterItem price>
                     <SubFilterList>
