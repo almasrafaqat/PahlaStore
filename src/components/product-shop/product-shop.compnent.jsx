@@ -36,26 +36,27 @@ import { useState } from "react";
 
 const ShopProduct = () => {
   const [isNavActive, setNavActive] = useState(false);
-  const [filterName, setFilterName] = useState({name: "", value: false});
+  const [filterName, setFilterName] = useState([]);
 
   const NavActiveHandler = (event) => {
     // setNavActive((current) => !current);
 
-    setFilterName({name: event, value: true});
-
-    console.log(filterName);
-
-   
+    if (filterName.includes(event)) {
+      setFilterName((prevState) =>
+        prevState.filter((prevItem) => prevItem !== event)
+      );
+    } else {
+      setFilterName([...filterName, event]);
+    }
   };
 
   const HeightHanlder = (event) => {
     let SubItems = event.target.nextSibling;
     if (SubItems.style.maxHeight) {
       SubItems.style.maxHeight = null;
-      console.log(event.name);
+      
     } else {
       SubItems.style.maxHeight = SubItems.scrollHeight + "px";
-      
     }
   };
 
@@ -95,7 +96,7 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.value && filterName.name === "category"  ? "90deg" : 0
+                          filterName.includes(("category"))  ? "90deg" : 0
                         })`,
                       }}
                     />
@@ -116,7 +117,7 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                           filterName === "brand" ? "90deg" : 0
+                          filterName.includes(("brand")) ? "90deg" : 0
                         })`,
                       }}
                     />{" "}
