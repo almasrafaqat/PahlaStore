@@ -25,19 +25,13 @@ import {
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
-import {
-  ArrowBack,
-  ArrowLeft,
-  ArrowRight,
-  KeyboardArrowRight,
-} from "@mui/icons-material";
 import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
-import { useRef } from "react";
+
 
 const ShopProduct = () => {
-  const ref = useRef();
-  const [filterName, setFilterName] = useState([]);
+  
+  const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
 
   const NavActiveHandler = (event) => {
     if (filterName.includes(event)) {
@@ -66,9 +60,10 @@ const ShopProduct = () => {
         );
       }
     } else {
+
       SubItems.style.maxHeight = SubItems.scrollHeight + "px";
 
-      /** add an array of filter name text */
+      /** Fiter name add into an array */
       setFilterName([...filterName, lowercasetext]);
     }
   };
@@ -107,20 +102,20 @@ const ShopProduct = () => {
                   </SubFilterItem>
                 </FilterItem>
               </FilterSearch>
-              <FilterCategory onClick={HeightHanlder}>
-                <FilterItem>
+              <FilterCategory onClick={HeightHanlder} >
+                <FilterItem >
                   <FilterList>
                     <ArrowRightIcon
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.includes("category") ? "90deg" : 0
+                          filterName.includes("category") ? "90deg" : "0"
                         })`,
                       }}
                     />
                     Category
                   </FilterList>
-                  <SubFilterItem category>
+                  <SubFilterItem category style={{maxHeight: "100%"}}>
                     <SubFilterList>All</SubFilterList>
                     <SubFilterList active>Smartphone</SubFilterList>
                     <SubFilterList>Electronics</SubFilterList>
