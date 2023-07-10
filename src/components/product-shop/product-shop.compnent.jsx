@@ -6,12 +6,9 @@ import {
   FilterBrand,
   FilterCategory,
   FilterColor,
-  FilterInputPrice,
   FilterItem,
   FilterList,
   FilterPrice,
-  FilterPriceInput,
-  FilterPriceValue,
   FilterSearch,
   ProductsContainer,
   Row,
@@ -25,29 +22,16 @@ import {
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
-import {
-  ArrowBack,
-  ArrowLeft,
-  ArrowRight,
-  KeyboardArrowRight,
-} from "@mui/icons-material";
+
 import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
-import { useRef } from "react";
+
 
 const ShopProduct = () => {
-  const ref = useRef();
-  const [filterName, setFilterName] = useState([]);
+  
+  const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
 
-  const NavActiveHandler = (event) => {
-    if (filterName.includes(event)) {
-      setFilterName((prevState) =>
-        prevState.filter((prevItem) => prevItem !== event)
-      );
-    } else {
-      setFilterName([...filterName, event]);
-    }
-  };
+
 
   const HeightHanlder = (event) => {
     /** gettting filter text value */
@@ -57,7 +41,10 @@ const ShopProduct = () => {
     let SubItems = event.target.nextSibling;
 
     if (SubItems.style.maxHeight) {
-      SubItems.style.maxHeight = null;
+
+      // SubItems.style.maxHeight = null;
+
+      SubItems.style.maxHeight = "10px";
 
       /** remove an array of filter name text */
       if (filterName.includes(lowercasetext)) {
@@ -99,7 +86,7 @@ const ShopProduct = () => {
                     />{" "}
                     Search
                   </FilterList>
-                  <SubFilterItem search>
+                  <SubFilterItem search style={{maxHeight: "100%"}}>
                     <SubFilterList search>
                       <SearchIcon />
                       <SearchInput placeholder="Search the Product" />
@@ -114,13 +101,13 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.includes("category") ? "90deg" : 0
+                          filterName.includes("category") ? "90deg" : "0"
                         })`,
                       }}
                     />
                     Category
                   </FilterList>
-                  <SubFilterItem category>
+                  <SubFilterItem category style={{maxHeight: "100px"}}>
                     <SubFilterList>All</SubFilterList>
                     <SubFilterList active>Smartphone</SubFilterList>
                     <SubFilterList>Electronics</SubFilterList>
@@ -135,13 +122,13 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.includes("brand") ? "90deg" : 0
+                          filterName.includes("brand") ?  "90deg" : "0"
                         })`,
                       }}
                     />{" "}
                     Brand
                   </FilterList>
-                  <SubFilterItem brand>
+                  <SubFilterItem brand style={{maxHeight: "100%"}}>
                     <SubFilterList>Dell</SubFilterList>
                     <SubFilterList>HP</SubFilterList>
                     <SubFilterList active>Leonova</SubFilterList>
@@ -156,13 +143,13 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.includes("color") ? "90deg" : 0
+                          filterName.includes("color") ? "90deg" : "0"
                         })`,
                       }}
                     />{" "}
                     Color
                   </FilterList>
-                  <SubFilterItem color>
+                  <SubFilterItem color style={{maxHeight: "100%"}}>
                     <SubFilterList>All</SubFilterList>
                     <SubFilterList activeColor color="black">
                       <CheckIcon />
@@ -180,13 +167,13 @@ const ShopProduct = () => {
                       style={{
                         transition: "all 0.5s ease",
                         transform: `rotate(${
-                          filterName.includes("price") ? "90deg" : 0
+                          filterName.includes("price") ? "90deg" : "0"
                         })`,
                       }}
                     />{" "}
                     Price
                   </FilterList>
-                  <SubFilterItem price>
+                  <SubFilterItem price style={{maxHeight: "100%"}}>
                     <SubFilterList>
                       <RangeSlider min="0" max="5000" />
                     </SubFilterList>

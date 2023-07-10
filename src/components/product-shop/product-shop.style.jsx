@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { MarginBottomContainer, PaddingContainer } from "../../GlobalStyle";
-import { CheckOutlined, KeyboardArrowRight, Search } from "@mui/icons-material";
+import { CheckOutlined, KeyboardArrowDown, KeyboardArrowRight, Search } from "@mui/icons-material";
 
 export const Container = styled(MarginBottomContainer)``;
 
