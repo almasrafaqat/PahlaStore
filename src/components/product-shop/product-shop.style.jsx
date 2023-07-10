@@ -44,9 +44,9 @@ export const ArrowRightIcon = styled(KeyboardArrowRight)`
 export const SubFilterItem = styled.ul`
   margin-top: 0.5rem;
   padding-left: 30px;
-  max-height: 0;
+  max-height: 0; 
   height: 100%;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
   display: ${(props) => props.color && "flex"};
 `;

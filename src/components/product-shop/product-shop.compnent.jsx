@@ -22,7 +22,10 @@ import {
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
 import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
 
@@ -30,7 +33,10 @@ import { useState } from "react";
 const ShopProduct = () => {
   
   const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
 
 
   const HeightHanlder = (event) => {
@@ -53,9 +59,10 @@ const ShopProduct = () => {
         );
       }
     } else {
+
       SubItems.style.maxHeight = SubItems.scrollHeight + "px";
 
-      /** add an array of filter name text */
+      /** Fiter name add into an array */
       setFilterName([...filterName, lowercasetext]);
     }
   };
@@ -94,8 +101,8 @@ const ShopProduct = () => {
                   </SubFilterItem>
                 </FilterItem>
               </FilterSearch>
-              <FilterCategory onClick={HeightHanlder}>
-                <FilterItem>
+              <FilterCategory onClick={HeightHanlder} >
+                <FilterItem >
                   <FilterList>
                     <ArrowRightIcon
                       style={{
@@ -107,7 +114,11 @@ const ShopProduct = () => {
                     />
                     Category
                   </FilterList>
+<<<<<<< HEAD
                   <SubFilterItem category style={{maxHeight: "100px"}}>
+=======
+                  <SubFilterItem category style={{maxHeight: "100%"}}>
+>>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
                     <SubFilterList>All</SubFilterList>
                     <SubFilterList active>Smartphone</SubFilterList>
                     <SubFilterList>Electronics</SubFilterList>
