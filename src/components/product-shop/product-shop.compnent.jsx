@@ -22,10 +22,6 @@ import {
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
 import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
 
@@ -33,10 +29,7 @@ import { useState } from "react";
 const ShopProduct = () => {
   
   const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
 
 
   const HeightHanlder = (event) => {
@@ -50,7 +43,7 @@ const ShopProduct = () => {
 
       // SubItems.style.maxHeight = null;
 
-      SubItems.style.maxHeight = "10px";
+      SubItems.style.maxHeight = null;
 
       /** remove an array of filter name text */
       if (filterName.includes(lowercasetext)) {
@@ -114,11 +107,8 @@ const ShopProduct = () => {
                     />
                     Category
                   </FilterList>
-<<<<<<< HEAD
-                  <SubFilterItem category style={{maxHeight: "100px"}}>
-=======
+                  
                   <SubFilterItem category style={{maxHeight: "100%"}}>
->>>>>>> 4ef8c62a3218e1e2d41a0adff9ef454af6af3593
                     <SubFilterList>All</SubFilterList>
                     <SubFilterList active>Smartphone</SubFilterList>
                     <SubFilterList>Electronics</SubFilterList>
