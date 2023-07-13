@@ -24,9 +24,18 @@ import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
 import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
+import { useRef } from "react";
+import { useLayoutEffect } from "react";
 
 
 const ShopProduct = () => {
+
+  const [height, setHeight] = useState(0);
+  const elementRef = useRef(null);
+
+  useLayoutEffect(() => {
+    setHeight(elementRef.current.clientHeight);
+  }, []);
   
   const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
 
@@ -73,7 +82,7 @@ const ShopProduct = () => {
           <Column width="25%">
             <SidebarContainer>
               <h2>Filter by:</h2>
-              <FilterSearch onClick={HeightHanlder}>
+              <FilterSearch onClick={HeightHanlder} ref={elementRef}>
                 <FilterItem>
                   <FilterList>
                     <ArrowRightIcon
@@ -86,7 +95,7 @@ const ShopProduct = () => {
                     />{" "}
                     Search
                   </FilterList>
-                  <SubFilterItem search style={{maxHeight: "100%"}}>
+                  <SubFilterItem search style={{maxHeight: `${height}px`}}>
                     <SubFilterList search>
                       <SearchIcon />
                       <SearchInput placeholder="Search the Product" />
