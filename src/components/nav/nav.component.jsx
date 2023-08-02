@@ -36,7 +36,7 @@ const Nav = () => {
             </MenuList>
           </HotDealContainer>
           <MenuList>
-            <MenuLink> Home </MenuLink>
+            <MenuLink to="/"> Home </MenuLink>
           </MenuList>
           <MenuList>
             <MenuLink> About </MenuLink>

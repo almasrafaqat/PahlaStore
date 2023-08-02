@@ -95,7 +95,7 @@ const ShopProduct = () => {
                     />{" "}
                     Search
                   </FilterList>
-                  <SubFilterItem search style={{maxHeight: `${height}px`}}>
+                  <SubFilterItem search style={{maxHeight: "100%"}}>
                     <SubFilterList search>
                       <SearchIcon />
                       <SearchInput placeholder="Search the Product" />

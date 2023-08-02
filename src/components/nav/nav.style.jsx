@@ -54,11 +54,11 @@ export const MenuLink = styled(Link)`
 /** Dropdown Menu */
 
 export const DropdownItem = styled.ul`
-   background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
   width: 180px;
   line-height: 45px;
   position: absolute;
-  top: 85px;
+  top: 90px;
   transition: all 0.4s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -89,7 +89,7 @@ export const DropdownLink = styled(MenuLink)`
 
 export const MegaBox = styled.div`
   position: absolute;
-  top: 85px;
+  top: 90px;
   left: 0;
   width: 100%;
   padding: 0 1.8rem;
@@ -152,12 +152,12 @@ export const MegaLink = styled(DropdownLink)``;
 export const MenuList = styled.li`
   list-style: none;
   &:hover ${DropdownItem} {
-    top: 70px;
+    top: 80px;
     visibility: visible;
     opacity: 1;
   }
   &:hover ${MegaBox} {
-    top: 70px;
+    top: 80px;
     visibility: visible;
     opacity: 1;
   }
