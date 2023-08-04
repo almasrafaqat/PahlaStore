@@ -26,7 +26,7 @@ const Slider = () => {
         <SlideBox>
           <Slide bg="#FAF0E6">
             <ImageContainer>
-              <Image src="/images/slider/smartphones.png" />
+              <Image src="/images/slider5.png" />
             </ImageContainer>
             <InfoContainer>
               <Title>

@@ -75,7 +75,6 @@ export const MenuLink = styled(Link)`
     display: block;
     width: 100%;
     padding: 9px 15px;
-    font-size: 18px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -91,7 +90,7 @@ export const MenuLink = styled(Link)`
   `;
 
 export const SubLink = styled(MenuLink)`
-    font-size: 16px;
+    font-size: 14px;
   `;
 
 /** Dropdown Menu */
@@ -206,7 +205,7 @@ export const IconBg = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: teal;
+    background:  ${({ theme }) => theme.colors.primary};
     color: white;
     cursor: pointer;
   `;

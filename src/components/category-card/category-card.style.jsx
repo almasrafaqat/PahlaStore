@@ -15,7 +15,7 @@ export const CategoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid teal;
+    border: 1px solid ${ ({theme}) => theme.colors.primary};
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);

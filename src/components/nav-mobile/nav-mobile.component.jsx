@@ -52,7 +52,7 @@ const NavMobile = () => {
         </Header>
         <MenuItem>
           <MenuList>
-            <MenuLink>Home</MenuLink>
+            <MenuLink to="/">Home</MenuLink>
           </MenuList>
           <MenuList>
             <MenuLink>About</MenuLink>
@@ -76,16 +76,19 @@ const NavMobile = () => {
             </MenuLink>
             <DropdownItem>
               <DropdownList>
-                <SubLink>Laravel</SubLink>
+                <SubLink to="/productdetails/id/title">Single Page</SubLink>
               </DropdownList>
               <DropdownList>
-                <SubLink>React JS</SubLink>
+                <SubLink to="/cart">Cart</SubLink>
               </DropdownList>
               <DropdownList>
-                <SubLink>MYsql</SubLink>
+                <SubLink to="/checkout">Checkout</SubLink>
               </DropdownList>
               <DropdownList>
-                <SubLink>Python</SubLink>
+                <SubLink to="/ordersuccess">Order Success</SubLink>
+              </DropdownList>
+              <DropdownList>
+                <SubLink to="/shop">Ohop</SubLink>
               </DropdownList>
             </DropdownItem>
           </MenuList>

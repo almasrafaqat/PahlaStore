@@ -61,6 +61,7 @@ export const PrimaryLogo = styled.div`
 export const MarginBottomContainer = styled.div`
   margin-bottom: 4.5rem;
 
+  ${mobile({ marginBottom: "1.7rem" })}
   ${IpadTablets({ marginBottom: "1.7rem" })}
 `;
 

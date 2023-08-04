@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IpadTablets } from "../../responsive";
+import { IpadTablets, mobile } from "../../responsive";
 
 export const Container = styled.div`
   height: 40px;
@@ -11,5 +11,6 @@ export const Container = styled.div`
   font-weight: 500;
   margin-bottom: 30px;
 
+  ${mobile({ marginBottom: "0px" })};
   ${IpadTablets({ marginBottom: "0px" })};
 `;

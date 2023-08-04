@@ -38,7 +38,7 @@ const Header = () => {
             <SearchContainer className="search-container">
             <DropDown />
               <InputContainer>
-                <Input placeholder="Searh the Products" />
+                <Input placeholder="Searh any Product..." />
                 <SearchIcon />
               </InputContainer>
             </SearchContainer>
@@ -47,7 +47,7 @@ const Header = () => {
             <Link to="/cart">
               <CartContainer>
                 <Badge badgeContent="0" color="success">
-                  <CartIcon style={{ fontSize: "32px" }} />
+                  <CartIcon style={{ fontSize: "30px" }} />
                 </Badge>
 
                 <Text style={{ marginLeft: "12px" }}>Cart</Text>

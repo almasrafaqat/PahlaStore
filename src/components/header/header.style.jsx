@@ -54,6 +54,8 @@ export const Input = styled.input`
     outline: none;
     border: none;
     width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
     
   `;
 
@@ -90,6 +92,6 @@ export const UserContainer = styled.div`
 export const UserIcon = styled(Person2Outlined)``;
 
 export const Text = styled.span`
-    font-size: 18px;
+    
     font-weight: 500;
   `;

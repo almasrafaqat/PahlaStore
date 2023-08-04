@@ -38,7 +38,6 @@ export const MenuItem = styled.ul`
 export const MenuLink = styled(Link)`
   padding: 0.6rem 0.9rem;
   border-radius: 5px;
-  font-size: 1.1rem;
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   display: flex;
@@ -75,7 +74,6 @@ export const DropdownLink = styled(MenuLink)`
   width: 100%;
   display: block;
   border-radius: 0;
-  font-size: 1rem;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.black};
   &:hover {

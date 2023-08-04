@@ -20,6 +20,8 @@ export const Container = styled(MarginBottomContainer)`
   overflow: hidden;
   position: relative;
   display: flex;
+
+  ${mobile({height: "40vh", marginTop: "-2rem"})}
   ${IpadTablets({ height: "40vh" })}
 `;
 
@@ -40,12 +42,13 @@ export const SlideBox = styled.div`
   width: 100vw;
   height: 70vh;
 
+  ${mobile({ height: "40vh" })}
   ${IpadTablets({ height: "40vh" })}
 `;
 
 export const Slide = styled.div`
   display: flex;
-  align-items: center;
+  align-items: center;  
   background-color: ${(props) => props.bg};
   padding: 0 50px;
   width: 100%;
@@ -72,15 +75,18 @@ export const Image = styled.img`
 
 export const InfoContainer = styled.div`
   flex: 1;
-  ${IpadTablets({ flex: "2" })}
+
   ${mobile({ marginLeft: "1rem" })}
+  ${IpadTablets({ flex: "2" })}
   ${DesktopsLargeScreens({ flex: "2" })}
 `;
 
 export const Title = styled.h3`
   font-size: 2.2rem;
   font-weight: 500;
+
   
+  ${mobile({ fontSize: "0.7rem" })}
   ${IpadTablets({ fontSize: "0.8rem" })}
   ${DesktopsLargeScreens({ fontSize: "1.7rem" })}
 `;
@@ -91,11 +97,15 @@ export const Description = styled.p`
   letter-spacing: 1px;
   font-weight: 200;
 
+  ${mobile({ fontSize: "0.7rem" })}
   ${IpadTablets({ fontSize: "0.5rem", margin: "0.8rem 0" })}
   ${DesktopsLargeScreens({ fontSize: "1rem" })}
 `;
 
 export const Button = styled(ButtonPrimary)`
+
+
+${mobile({ fontSize: "0.6rem", padding: "0.4rem" })}
   ${IpadTablets({ fontSize: "0.6rem", padding: "0.4rem" })}
   ${DesktopsLargeScreens({ fontSize: "0.9rem", padding: "0.6rem" })}
 `;
