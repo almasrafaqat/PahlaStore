@@ -6,13 +6,12 @@ import {
 
 
 import styled from "styled-components";
-import {  MarginBottomContainer, PaddingContainer, PrimaryLogo } from "../../GlobalStyle";
+import {   PaddingContainer, PrimaryLogo } from "../../GlobalStyle";
 
 
-export const Container = styled(MarginBottomContainer)`
-    height: 60px;
-    line-height: 60px;
-    
+export const Container = styled.div`
+  margin-bottom: 30px;
+  height: 50px;
   `;
 
 export const Wrapper = styled(PaddingContainer)`
@@ -41,32 +40,36 @@ export const SearchContainer = styled.div`
     align-items: center;
     border: 1px solid ${({ theme }) => theme.colors.border};
     border-radius: 8px;
-    padding: 10px;
+    padding: 5px; 
   
   `;
+
+
 
 export const CategorySelect = styled.select`
     outline: none;
     border: none;
-    font-size: 14px;
     padding: 5px;
     color: #253d4e;
+    font-weight: bold;
     min-width: 150px;
+  
   `;
 
 export const CategoryOption = styled.option`
-    font-size: 16px;
-    font-weight: 300;
+   padding: 5px;
   `;
 export const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-left: 10px;
   `;
 export const Input = styled.input`
     outline: none;
     border: none;
     width: 100%;
+    
   `;
 
 export const SearchIcon = styled(SearchOutlined)`

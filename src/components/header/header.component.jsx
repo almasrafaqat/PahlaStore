@@ -20,6 +20,11 @@ import {
   UserIcon,
   Wrapper,
 } from "./header.style";
+import DropDown from "../dropdown/dropdown.component";
+
+
+
+
 
 const Header = () => {
   return (
@@ -32,13 +37,8 @@ const Header = () => {
             </Link>
           </Left>
           <Center>
-            <SearchContainer>
-              <CategorySelect>
-                <CategoryOption disabled>Select Category</CategoryOption>
-                <CategoryOption>Laptops</CategoryOption>
-                <CategoryOption>Smartphone</CategoryOption>
-                <CategoryOption>Women Dresses</CategoryOption>
-              </CategorySelect>
+            <SearchContainer className="search-container">
+            <DropDown />
               <InputContainer>
                 <Input placeholder="Searh the Products" />
                 <SearchIcon />

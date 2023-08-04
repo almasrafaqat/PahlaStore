@@ -21,6 +21,7 @@ import {
   UserIcon,
   Wrapper,
 } from "./header-mobile.style";
+import DropDown from "../dropdown/dropdown.component";
 
 const HeaderMobile = () => {
   const { isMenuOpen, setIsMenuOpen } = useGlobalContext();
@@ -50,12 +51,7 @@ const HeaderMobile = () => {
           </Left>
           <Center>
             <SearchContainer>
-              <CategorySelect>
-                <CategoryOption disabled>Select Category</CategoryOption>
-                <CategoryOption>Laptops</CategoryOption>
-                <CategoryOption>Smartphone</CategoryOption>
-                <CategoryOption>Women Dresses</CategoryOption>
-              </CategorySelect>
+             <DropDown/>
               <InputContainer>
                 <Input placeholder="Searh the Products" />
                 <SearchIcon />
