@@ -88,20 +88,7 @@ import {
     padding: 10px;
   `;
   
-  export const CategorySelect = styled.select`
-    outline: none;
-    border: none;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px;
-    color: #253d4e;
-    min-width: 110px;
-  `;
-  
-  export const CategoryOption = styled.option`
-    font-size: 16px;
-    font-weight: 300;
-  `;
+
   export const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;

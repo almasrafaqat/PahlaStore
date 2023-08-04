@@ -4,8 +4,6 @@ import Nav from "../nav/nav.component";
 import {
   CartContainer,
   CartIcon,
-  CategoryOption,
-  CategorySelect,
   Center,
   Container,
   Input,

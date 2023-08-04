@@ -11,7 +11,7 @@ const data = [
   {label: 'Laptops', value: "laptop"},
   {label: 'Smartphone', value: "smartphone"},
   {label: 'Women Dresses', value: "womendresses"},
-  {label: 'Ex opt 4', value: 4},
+  {label: 'Men Fashion', value: "menfashion"},
 ]
 
 

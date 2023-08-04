@@ -11,7 +11,7 @@ import {   PaddingContainer, PrimaryLogo } from "../../GlobalStyle";
 
 export const Container = styled.div`
   margin-bottom: 30px;
-  height: 50px;
+  
   `;
 
 export const Wrapper = styled(PaddingContainer)`
@@ -44,21 +44,6 @@ export const SearchContainer = styled.div`
   
   `;
 
-
-
-export const CategorySelect = styled.select`
-    outline: none;
-    border: none;
-    padding: 5px;
-    color: #253d4e;
-    font-weight: bold;
-    min-width: 150px;
-  
-  `;
-
-export const CategoryOption = styled.option`
-   padding: 5px;
-  `;
 export const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;

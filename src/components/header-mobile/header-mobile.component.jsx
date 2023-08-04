@@ -4,8 +4,6 @@ import { useGlobalContext } from "../../context/GlobalContext";
 import {
   CartContainer,
   CartIcon,
-  CategoryOption,
-  CategorySelect,
   Center,
   Container,
   IconMenu,
