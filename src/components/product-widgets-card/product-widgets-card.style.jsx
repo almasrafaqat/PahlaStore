@@ -13,7 +13,7 @@ import {
 } from "../../GlobalStyle";
 
 export const WidgetBox = styled(BoxPrimary)`
-
+ 
 `;
 
 export const Header = styled.div``;

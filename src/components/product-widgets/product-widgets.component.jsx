@@ -1,6 +1,5 @@
 import React from "react";
 import { UseProductContext } from "../../context/ProductContext";
-import { Products } from "../../data";
 import ProductWidgetCard from "../product-widgets-card/product-widgets-card.component";
 import { Container, GridBox, Wrapper } from "./product-widgets.style";
 

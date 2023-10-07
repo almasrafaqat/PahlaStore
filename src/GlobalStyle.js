@@ -137,8 +137,7 @@ export const ImageWrapperPrimary = styled.div`
 `;
 
 export const ImagePrimary = styled.img`
-  // max-width: 70%;
-  // max-height:70%;
+
   width: ${(props) => (props.width ? props.width : "70")}%;
   height: ${(props) => (props.height ? props.height : "70")}%;
   position: absolute;
@@ -250,7 +249,7 @@ export const CartContainerPrimary = styled.div`
 /** Stars Rating */
 
 export const RatingContainerPrimary = styled.div`
-  margin: 0.19rem 0;
+  
   color: ${({ theme }) => theme.colors.star};
 `;
 

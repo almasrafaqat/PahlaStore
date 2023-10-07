@@ -4,7 +4,7 @@ import 'react-js-dropdavn/dist/index.css'
 import { DropDownContainer } from './dropdown.style'
 
 
-const DropDown = () => {
+const DropDown = ( {search} ) => {
 
   
 const data = [
@@ -20,9 +20,7 @@ const data = [
     <SimpleDropdown
     options={data}
     labels={
-      { seachInputPlaceholder : "Search Category" , notSelected : "Category" }
-      
-      
+      { seachInputPlaceholder : "Search Category" , notSelected : "Category" } 
     }
     clearable
     searchable

@@ -28,7 +28,7 @@ const ProductWidgetCard = ({ title, products }) => {
       </Header>
       <BoxColumn>
         {
-          products.slice(0,3).map((product) => {
+          products && products.length > 0 ? products.slice(0,3).map((product) => {
             return (
               <ProductContainer key={product.id}>
                 <ImageContainer>
@@ -54,7 +54,7 @@ const ProductWidgetCard = ({ title, products }) => {
                 </InfoContainer>
               </ProductContainer>
             )
-          })
+          }): " No Product Found"
         }
 
 

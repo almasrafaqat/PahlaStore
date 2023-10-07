@@ -30,7 +30,7 @@ const RangeSlider = ({ min, max }) => {
       <MultiRangeSlider
         min={min}
         max={max}
-        step={1}
+        step={50}
         minValue={minValue}
         maxValue={maxValue}
         onInput={(e) => {

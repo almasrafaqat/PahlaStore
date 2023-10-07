@@ -62,19 +62,23 @@ export const InfoContainer = styled.div`
   margin: 1rem 0;
 `;
 
-export const Title = styled(TitlePrimary)``;
+export const Title = styled(TitlePrimary)`
+  margin-bottom: 0.2rem;
+`;
 
-export const RatingContainer = styled(RatingContainerPrimary)``;
+export const RatingContainer = styled(RatingContainerPrimary)`
+ margin-bottom: 0.2rem;
+`;
 
 export const StartFull = styled(StarFullPrimary)``;
 export const StarEmpty = styled(StarEmptyPrimary)``;
 export const StarHalf = styled(StarHalfPrimary)``;
 
 export const Brand = styled.div`
- margin-bottom: 4rem;
+margin-bottom: 0.2rem;
 `;
 
-export const AddToCardContainer = styled(AddToCardContainerPrimary)`
+export const AddToCardContainer = styled.div`
 
-  
+
 `;

@@ -1,73 +1,44 @@
 import {
-  ArrowRightIcon,
-  CheckIcon,
   Column,
   Container,
-  FilterBrand,
-  FilterCategory,
-  FilterColor,
-  FilterItem,
-  FilterList,
-  FilterPrice,
-  FilterSearch,
+  PaginationContainer,
   ProductsContainer,
   Row,
-  SearchIcon,
-  SearchInput,
   ShopPageContainer,
   SidebarContainer,
-  SubFilterItem,
-  SubFilterList,
+  SortByOrder,
+  SortCountProduct,
+  SortProductContainer,
   Wrapper,
 } from "./product-shop.style";
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
-import RangeSlider from "../range-slider/range-slider.component";
 import { useState } from "react";
-import { useRef } from "react";
-import { useLayoutEffect } from "react";
+import { Products } from "../../data";
+import ProductCard from "../product-card/product-card.component";
+import ProductWidgetCard from "../product-widgets-card/product-widgets-card.component";
+import { UseProductContext } from "../../context/ProductContext";
+import { Pagination } from "@mui/material";
+import Stack from '@mui/material/Stack';
+import BasicAccordion from "../accordion/accordion.component";
 
 
 const ShopProduct = () => {
 
-  const [height, setHeight] = useState(0);
-  const elementRef = useRef(null);
+  const { FeaturedProducts } = UseProductContext();
 
-  useLayoutEffect(() => {
-    setHeight(elementRef.current.clientHeight);
-  }, []);
-  
-  const [filterName, setFilterName] = useState(["search", "category", "brand", "color", "price"]);
+  /**Pagination */
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemPerPage = 3;
+  const TotalProducts = Math.ceil(Products.length / itemPerPage);
+  const startIndex = (currentPage - 1) * itemPerPage;
+  const endIndex = startIndex + itemPerPage;
+  const itemsToDisplay = Products.slice(startIndex, endIndex);
 
-
-
-  const HeightHanlder = (event) => {
-    /** gettting filter text value */
-    const getFilterName = event.target.innerText;
-    let lowercasetext = getFilterName.toLowerCase(); //To convert Lower Case
-
-    let SubItems = event.target.nextSibling;
-
-    if (SubItems.style.maxHeight) {
-
-      // SubItems.style.maxHeight = null;
-
-      SubItems.style.maxHeight = null;
-
-      /** remove an array of filter name text */
-      if (filterName.includes(lowercasetext)) {
-        setFilterName((prevState) =>
-          prevState.filter((prevItem) => prevItem !== lowercasetext)
-        );
-      }
-    } else {
-
-      SubItems.style.maxHeight = SubItems.scrollHeight + "px";
-
-      /** Fiter name add into an array */
-      setFilterName([...filterName, lowercasetext]);
-    }
-  };
+  /**Pagination Handler */
+  const PaginationOnChange = (event, page) => {
+    setCurrentPage(page);
+  }
 
   return (
     <Container>
@@ -77,127 +48,37 @@ const ShopProduct = () => {
             <BasicBreadcrumbs category="mens" link="/shop" />
           </BreadCrumbsContainer>
         </Row>
-
         <Row>
-          <Column width="25%">
-            <SidebarContainer>
-              <h2>Filter by:</h2>
-              <FilterSearch onClick={HeightHanlder} ref={elementRef}>
-                <FilterItem>
-                  <FilterList>
-                    <ArrowRightIcon
-                      style={{
-                        transition: "all 0.5s ease",
-                        transform: `rotate(${
-                          filterName.includes("search") ? "90deg" : 0
-                        })`,
-                      }}
-                    />{" "}
-                    Search
-                  </FilterList>
-                  <SubFilterItem search style={{maxHeight: "100%"}}>
-                    <SubFilterList search>
-                      <SearchIcon />
-                      <SearchInput placeholder="Search the Product" />
-                    </SubFilterList>
-                  </SubFilterItem>
-                </FilterItem>
-              </FilterSearch>
-              <FilterCategory onClick={HeightHanlder} >
-                <FilterItem >
-                  <FilterList>
-                    <ArrowRightIcon
-                      style={{
-                        transition: "all 0.5s ease",
-                        transform: `rotate(${
-                          filterName.includes("category") ? "90deg" : "0"
-                        })`,
-                      }}
-                    />
-                    Category
-                  </FilterList>
-                  
-                  <SubFilterItem category style={{maxHeight: "100%"}}>
-                    <SubFilterList>All</SubFilterList>
-                    <SubFilterList active>Smartphone</SubFilterList>
-                    <SubFilterList>Electronics</SubFilterList>
-                  </SubFilterItem>
-                </FilterItem>
-              </FilterCategory>
-
-              <FilterBrand onClick={HeightHanlder}>
-                <FilterItem>
-                  <FilterList>
-                    <ArrowRightIcon
-                      style={{
-                        transition: "all 0.5s ease",
-                        transform: `rotate(${
-                          filterName.includes("brand") ?  "90deg" : "0"
-                        })`,
-                      }}
-                    />{" "}
-                    Brand
-                  </FilterList>
-                  <SubFilterItem brand style={{maxHeight: "100%"}}>
-                    <SubFilterList>Dell</SubFilterList>
-                    <SubFilterList>HP</SubFilterList>
-                    <SubFilterList active>Leonova</SubFilterList>
-                  </SubFilterItem>
-                </FilterItem>
-              </FilterBrand>
-
-              <FilterColor onClick={HeightHanlder}>
-                <FilterItem>
-                  <FilterList>
-                    <ArrowRightIcon
-                      style={{
-                        transition: "all 0.5s ease",
-                        transform: `rotate(${
-                          filterName.includes("color") ? "90deg" : "0"
-                        })`,
-                      }}
-                    />{" "}
-                    Color
-                  </FilterList>
-                  <SubFilterItem color style={{maxHeight: "100%"}}>
-                    <SubFilterList>All</SubFilterList>
-                    <SubFilterList activeColor color="black">
-                      <CheckIcon />
-                    </SubFilterList>
-                    <SubFilterList color="red"></SubFilterList>
-                    <SubFilterList color="red"></SubFilterList>
-                    <SubFilterList color="yellow"></SubFilterList>
-                  </SubFilterItem>
-                </FilterItem>
-              </FilterColor>
-              <FilterPrice onClick={HeightHanlder}>
-                <FilterItem>
-                  <FilterList>
-                    <ArrowRightIcon
-                      style={{
-                        transition: "all 0.5s ease",
-                        transform: `rotate(${
-                          filterName.includes("price") ? "90deg" : "0"
-                        })`,
-                      }}
-                    />{" "}
-                    Price
-                  </FilterList>
-                  <SubFilterItem price style={{maxHeight: "100%"}}>
-                    <SubFilterList>
-                      <RangeSlider min="0" max="5000" />
-                    </SubFilterList>
-                  </SubFilterItem>
-                </FilterItem>
-              </FilterPrice>
-            </SidebarContainer>
-          </Column>
           <Column>
+            <SidebarContainer className="sidebar">
+              <BasicAccordion />
+              <ProductWidgetCard
+                products={FeaturedProducts}
+                title="Recent Products"
+              />
+            </SidebarContainer>
             <ShopPageContainer>
+              <SortProductContainer>
+                <SortCountProduct><h2> Women Dresses </h2> Showing 1 - 10 of 35 Items</SortCountProduct>
+                <SortByOrder>
+                  <select style={{ fontSize: "16px", outline: "none", border: "1px solid gray", padding: "5px", borderRadius: "5px" }}>
+                    <option style={{ margin: "50px" }}>Default Sorting</option>
+                    <option>Sort by Popularity</option>
+                    <option>Sort by a-z</option>
+                    <option>Sort by z-a</option>
+                    <option>Sort by Price: Low to High</option>
+                    <option>Sort by Price: High to Low </option>
+                  </select>
+                </SortByOrder>
+              </SortProductContainer>
               <ProductsContainer>
-                <h2>Products:</h2>
-                {/* Iterate over products here */}
+                {itemsToDisplay.map((product) => <ProductCard key={product.id} product={product} />)}
               </ProductsContainer>
+              <PaginationContainer className="pagination">
+                <Stack spacing={2}>
+                  <Pagination onChange={PaginationOnChange} color="primary" size="large" count={TotalProducts} />
+                </Stack>
+              </PaginationContainer>
             </ShopPageContainer>
           </Column>
         </Row>

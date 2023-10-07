@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle, theme } from "./GlobalStyle";
 import About from "./components/about/about.component";
-import Practice from "./components/practice/practice";
 import SinglePage from "./pages/SinglePage";
 import ScrollTop from "./components/scroll-top/scroll-top.component";
 import CartPage from "./pages/CartPage";

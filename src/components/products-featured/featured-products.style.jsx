@@ -19,4 +19,5 @@ export const Heading = styled(HeadingPrimary)``;
 
 export const ProductContainer = styled(GridContainer)`
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  
 `;
