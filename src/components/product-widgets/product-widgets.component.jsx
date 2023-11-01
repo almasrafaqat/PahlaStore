@@ -15,6 +15,7 @@ const ProductWidgets = () => {
           <ProductWidgetCard
             products={FeaturedProducts}
             title="Featured Products"
+            
           />
           <ProductWidgetCard products={NewProducts} title="Recent Products" />
           <ProductWidgetCard

@@ -19,7 +19,7 @@ import {
   WidgetBox,
 } from "./product-widgets-card.style";
 
-const ProductWidgetCard = ({ title, products }) => {
+const ProductWidgetCard = ({ title, products, width="120", height="100" , titleSize}) => {
 
   return (
     <WidgetBox>
@@ -31,11 +31,11 @@ const ProductWidgetCard = ({ title, products }) => {
           products && products.length > 0 ? products.slice(0,3).map((product) => {
             return (
               <ProductContainer key={product.id}>
-                <ImageContainer>
+                <ImageContainer width={width} height={height}>
                   <Link><Image src={product.imageUrl} /> </Link>
                 </ImageContainer>
                 <InfoContainer>
-                  <Title><Link> {product.title.slice(0, 50)} </Link></Title>
+                  <Title titleSize={titleSize}><Link> {product.title.slice(0, 50)} </Link></Title>
                   <RatingContainer>
                     <StartFull />
                     <StartFull />

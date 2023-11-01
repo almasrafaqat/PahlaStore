@@ -56,8 +56,8 @@ export const ProductContainer = styled.div`
 export const ImageContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.lightgray};
   border-radius: 10px;
-  width: 150px;
-  height: 100px; 
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px; 
   overflow: hidden;
   position: relative;
   
@@ -65,7 +65,7 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   object-fit: contain;
-  max-width: 80%;
+  max-width: 70%;
   max-height: 80%;
   position: absolute;
   top: 0;
@@ -86,6 +86,7 @@ export const Title = styled(TitlePrimary)`
   color:  ${({ theme }) => theme.colors.black};
   letter-spacing: 1px;
   padding: 0.3rem;
+  font-size: ${(props) => props.titleSize && props.titleSize}px;
 `;
 
 export const RatingContainer = styled(RatingContainerPrimary)`

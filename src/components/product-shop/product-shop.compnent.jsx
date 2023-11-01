@@ -21,6 +21,9 @@ import { UseProductContext } from "../../context/ProductContext";
 import { Pagination } from "@mui/material";
 import Stack from '@mui/material/Stack';
 import BasicAccordion from "../accordion/accordion.component";
+import Promo from "../promo/promo.component";
+import ProductUniWidgets from "../product-uni-widget/product-uni-widget.component";
+
 
 
 const ShopProduct = () => {
@@ -29,7 +32,7 @@ const ShopProduct = () => {
 
   /**Pagination */
   const [currentPage, setCurrentPage] = useState(1);
-  const itemPerPage = 3;
+  const itemPerPage = 5;
   const TotalProducts = Math.ceil(Products.length / itemPerPage);
   const startIndex = (currentPage - 1) * itemPerPage;
   const endIndex = startIndex + itemPerPage;
@@ -55,7 +58,11 @@ const ShopProduct = () => {
               <ProductWidgetCard
                 products={FeaturedProducts}
                 title="Recent Products"
+                width="70"
+                height="80"
+                titleSize="14"
               />
+              <Promo width="99" height="100" title="Sponsor" src="/images/promo/brush.jpg" />
             </SidebarContainer>
             <ShopPageContainer>
               <SortProductContainer>
@@ -79,6 +86,8 @@ const ShopProduct = () => {
                   <Pagination onChange={PaginationOnChange} color="primary" size="large" count={TotalProducts} />
                 </Stack>
               </PaginationContainer>
+
+              <ProductUniWidgets title="Recent History" product={Products}/>
             </ShopPageContainer>
           </Column>
         </Row>
