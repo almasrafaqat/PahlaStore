@@ -6,8 +6,12 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {  FilterItem, FilterList, FilterSection, SearchIcon, SearchInput,  CheckIcon  } from "./accordion.style";
 import RangeSlider from "../range-slider/range-slider.component";
+import { useState } from 'react';
 
 export default function BasicAccordion() {
+
+ 
+
   return (
     <>
       <Accordion defaultExpanded={true} sx={{ boxShadow: 0 }}>
@@ -40,10 +44,10 @@ export default function BasicAccordion() {
         <AccordionDetails>
           <FilterSection>
             <FilterItem  >
-              <FilterList>
+              <FilterList  >
                 All
               </FilterList>
-              <FilterList active>
+              <FilterList active={true}>
                 Smartphone
               </FilterList>
               <FilterList>
@@ -92,17 +96,17 @@ export default function BasicAccordion() {
       </AccordionSummary>
       <AccordionDetails>
         <FilterSection>
-          <FilterItem color >
-            <FilterList color="yellow">
+          <FilterItem color="true" >
+            <FilterList color="#ff0000">
               
             </FilterList>
-            <FilterList activeColor color="black">
+            <FilterList activeColor color="#127887">
             <CheckIcon />
             </FilterList>
-            <FilterList color="blue">
+            <FilterList color="#8b00ff">
               
             </FilterList>
-            <FilterList color="red">
+            <FilterList color="#000">
               
             </FilterList>
           </FilterItem>

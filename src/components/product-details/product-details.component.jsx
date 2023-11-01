@@ -42,7 +42,7 @@ import FormatPrice from "../../helpers/FormatPrice";
 import { BreadCrumbsContainer, Link, TextPrimary } from "../../GlobalStyle";
 import AddToCart from "../add-to-cart/add-to-cart.component";
 import CartAmountToggle from "../cart-amount-toggle/cart-amount-toggle.component";
-import CartPromo from "../cart-promo/cart-promo.component";
+import Promo from "../promo/promo.component";
 import DeliveryDate from "../../helpers/DeliveryDate";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -207,7 +207,7 @@ const ProductDetails = () => {
                 <ShipsInfo>Riyadh KSA</ShipsInfo>
               </ShipsFrom>
             </CartContent>
-            <CartPromo />
+            <Promo width="100" height="100" title="Sponsored" src="/images/promo/brush.jpg" />
           </CartContentContainer>
         </GridWrapper>
       </Wrapper>

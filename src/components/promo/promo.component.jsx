@@ -5,22 +5,22 @@ import {
   ImagePromo,
   Sponsored,
   Wrapper,
-} from "./cart-promo.style";
+} from "./promo.style";
 import { Link } from "../../GlobalStyle";
 
-const CartPromo = () => {
+const Promo = ({ title, width, height , src, url }) => {
   return (
     <Container>
       <Wrapper>
         <Sponsored>
-          Sponsored
+        {title}
         </Sponsored>
         <ImageBanner>
-          <Link><ImagePromo width="100" height="100" src="/images/promo/brush.jpg" /></Link>
+          <Link to={url}><ImagePromo width={width} height={height} src={src} /></Link>
         </ImageBanner>
       </Wrapper>
     </Container>
   );
 };
 
-export default CartPromo;
+export default Promo;

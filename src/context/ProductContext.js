@@ -5,8 +5,8 @@ import { useState } from "react";
 const ProductContext = createContext();
 
 export const ProductContextProvider = ({ children }) => {
+  
   /**Single Page  Product */
-
   const SingleProduct = (id) => {
     return Products.find((product) => product.id == id);
   };
@@ -17,16 +17,15 @@ export const ProductContextProvider = ({ children }) => {
     let imageSrc = event.target.getAttribute("src");
     setImagePreview(imageSrc);
   };
-
   /**Single Page  Product End */
 
+  const AllProducts = [...Products];
   const DealOfWeekProducts = Products.filter((product) => product.deal);
   const FeaturedProducts = Products.filter((product) => product.featured);
   const NewProducts = Products.filter((product) => product.tag === "new");
   const tempPopularProducts = [...Products];
   const tempTopRatingProducts = [...Products];
 
-  /** */
 
   const TopRatingProducts = (a, b) => {
     return b.rating - a.rating;
@@ -39,6 +38,7 @@ export const ProductContextProvider = ({ children }) => {
   const newTopProduct = tempTopRatingProducts.sort(PopularProducts);
 
   const value = {
+    AllProducts,
     DealOfWeekProducts,
     FeaturedProducts,
     NewProducts,
