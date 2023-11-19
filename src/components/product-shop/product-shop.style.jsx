@@ -45,6 +45,7 @@ export const ProductsContainer = styled(GridContainer)`
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-rows: 450px;
   grid-gap: 0.3rem;
+
 `;
 
 
@@ -54,3 +55,4 @@ export const PaginationContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+

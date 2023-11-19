@@ -98,16 +98,13 @@ export default function BasicAccordion() {
         <FilterSection>
           <FilterItem color="true" >
             <FilterList color="#ff0000">
-              
             </FilterList>
             <FilterList activeColor color="#127887">
             <CheckIcon />
             </FilterList>
             <FilterList color="#8b00ff">
-              
             </FilterList>
             <FilterList color="#000">
-              
             </FilterList>
           </FilterItem>
         </FilterSection>

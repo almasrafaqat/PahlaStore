@@ -14,7 +14,6 @@ import {
 import BasicBreadcrumbs from "../breadcrumb/breadcrumb.component";
 import { BreadCrumbsContainer } from "../../GlobalStyle";
 import { useState } from "react";
-import { Products } from "../../data";
 import ProductCard from "../product-card/product-card.component";
 import ProductWidgetCard from "../product-widgets-card/product-widgets-card.component";
 import { UseProductContext } from "../../context/ProductContext";
@@ -22,21 +21,22 @@ import { Pagination } from "@mui/material";
 import Stack from '@mui/material/Stack';
 import BasicAccordion from "../accordion/accordion.component";
 import Promo from "../promo/promo.component";
-import ProductUniWidgets from "../product-uni-widget/product-uni-widget.component";
+
+
 
 
 
 const ShopProduct = () => {
 
-  const { FeaturedProducts } = UseProductContext();
+  const { FeaturedProducts, AllProducts } = UseProductContext();
 
   /**Pagination */
   const [currentPage, setCurrentPage] = useState(1);
-  const itemPerPage = 5;
-  const TotalProducts = Math.ceil(Products.length / itemPerPage);
+  const itemPerPage = 6;
+  const TotalProducts = Math.ceil(AllProducts.length / itemPerPage);
   const startIndex = (currentPage - 1) * itemPerPage;
   const endIndex = startIndex + itemPerPage;
-  const itemsToDisplay = Products.slice(startIndex, endIndex);
+  const itemsToDisplay = AllProducts.slice(startIndex, endIndex);
 
   /**Pagination Handler */
   const PaginationOnChange = (event, page) => {
@@ -64,7 +64,7 @@ const ShopProduct = () => {
               />
               <Promo width="99" height="100" title="Sponsor" src="/images/promo/brush.jpg" />
             </SidebarContainer>
-            <ShopPageContainer>
+            <ShopPageContainer>  
               <SortProductContainer>
                 <SortCountProduct><h2> Women Dresses </h2> Showing 1 - 10 of 35 Items</SortCountProduct>
                 <SortByOrder>
@@ -85,9 +85,7 @@ const ShopProduct = () => {
                 <Stack spacing={2}>
                   <Pagination onChange={PaginationOnChange} color="primary" size="large" count={TotalProducts} />
                 </Stack>
-              </PaginationContainer>
-
-              <ProductUniWidgets title="Recent History" product={Products}/>
+              </PaginationContainer>               
             </ShopPageContainer>
           </Column>
         </Row>

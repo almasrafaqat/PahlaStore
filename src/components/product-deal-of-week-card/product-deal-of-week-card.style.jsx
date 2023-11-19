@@ -5,7 +5,7 @@ import {
   TextPrimary,
   TitlePrimary,
 } from "../../GlobalStyle";
-import { mobile } from "../../responsive";
+
 
 export const Card = styled.div`
   position: relative;

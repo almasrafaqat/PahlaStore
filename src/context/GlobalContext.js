@@ -18,8 +18,7 @@ export const GlobalContextProvider = ({ children }) => {
 
   /** Slider Arrow Left & Right deal of the week product  */
   const [slide, setSlideRef] = useState(null);
-
-
+  
   /** Dropdown Height */
   const DropMenuHandler = (event) => {
     event.preventDefault();
